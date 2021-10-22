@@ -1,0 +1,81 @@
+h2{
+  weight:600px;
+  font-size:36px;
+  margin-bottom: 5px;
+}
+h3{
+  font-size:14px;
+  weight:600px;
+  margin-bottom: 5px;
+}
+h4{
+  font-size:24px;
+  weight:600px;
+  color:#7B6464;
+  margin-top: 15px;
+}
+.produto{
+  display:flex;
+  align-items:center;
+}
+
+.imagem{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  background-image: url("src\assets\Ellipse 1.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 292px;
+  height:292px;
+}
+.informacoes{
+  width: 328.36px;
+  background-color: #CCF1E4;
+  border-radius: 80px 40px 80px 40px;
+  display: flex;
+  flex-direction: column;
+  padding:30px;
+
+
+}
+.buttons{
+
+  display: flex;
+  justify-content: space-around;
+
+}
+button{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  width:45%;
+  height: 35px;
+  font-weight: 600px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.button-adicionar-carrinho{
+  background-color: #FBBA13;
+  text-align: center;
+}
+.button-adicionar-carrinho:hover{
+  background-color:rgba(251,186,19,0.7);
+  border: 1px solid rgba(251, 186, 19, 1);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+
+}
+
+.button-ver-detalhes{
+  background-color:rgba(255, 237, 175, 1);
+}
+.button-ver-detalhes:hover{
+  background-color:rgba(255, 237, 175, 0.5);
+  border: 1px solid rgba(255, 237, 175, 1);
+}
+
+
