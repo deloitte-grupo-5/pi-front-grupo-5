@@ -3,13 +3,12 @@
     <img src="assets\foto.png" alt="">
   </div>
   <article class="informacoes">
-    <h2>Moringa</h2>
-    <h3>(acacia-branca)</h3>
-    <h4>R$30,00</h4>
+    <h2>{{produto.nome}}</h2>
+    <h3>({{produto.descricao}})</h3>
+    <h4>{{produto.preco | currency}}</h4>
     <div class="buttons">
       <button class="button-adicionar-carrinho">Adicionar ao Carrinho</button>
       <button class="button-ver-detalhes">Ver detalhes</button>
     </div>
-
   </article>
 </section>
