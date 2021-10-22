@@ -1,4 +1,4 @@
-<section class="produto">
+<section class="produto" *ngIf="!(produto.id%2 ==0)">
   <div class="imagem">
     <img src="assets\foto.png" alt="">
   </div>
@@ -12,3 +12,20 @@
     </div>
   </article>
 </section>
+
+<section class="produto" *ngIf="(produto.id%2 ==0)">
+  <div class="imagem">
+    <img src="assets\foto.png" alt="">
+  </div>
+  <article class="informacoes yellow">
+    <h2>{{produto.nome}}</h2>
+    <h3>({{produto.descricao}})</h3>
+    <h4>{{produto.preco | currency}}</h4>
+    <div class="buttons">
+      <button class="button-adicionar-carrinho">Adicionar ao Carrinho</button>
+      <button class="button-ver-detalhes blue">Ver detalhes</button>
+    </div>
+  </article>
+</section>
+
+

@@ -1,0 +1,50 @@
+
+.postagem{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+
+.titulo{
+  font-weight: 700;
+  font-size:30px;
+}
+.postagem-article{
+  margin:0;
+}
+.img-postagem{
+  margin:0;
+
+}
+.texto{
+  font-weight: 400;
+  font-size:18px;
+  color: rgba(117, 117, 117, 1);
+
+}
+.enviado{
+  font-weight:400;
+  font-size:18px;
+  color:rgba(117, 117, 117, 1);
+}
+.button-visualizar{
+  background-color: rgba(191, 143, 19, 1);
+  font-family: 'Poppins', sans-serif;
+  color: aliceblue;
+  width: 30%;
+  font-size:16px;
+  border: none;
+}
+.button-visualizar:hover{
+  background-color: rgba(191, 143, 19, 0.7);
+}
+.button-2{
+  background-color:rgba(251, 186, 19, 1);
+}
+.button-2:hover{
+  background-color:rgba(251, 186, 19, 0.7);
+}
+hr{
+  margin: 50px ;
+}

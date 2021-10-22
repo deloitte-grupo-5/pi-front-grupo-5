@@ -8,13 +8,17 @@ import { ProdutoComponent } from './components/produto/produto.component';
 import { ListaProdutoComponent } from './components/lista-produto/lista-produto.component';
 import { FormsModule } from '@angular/forms';
 import localePt from '@angular/common/locales/pt';
+import { PostagemComponent } from './components/postagem/postagem.component';
+import { ListaPostagemComponent } from './components/lista-postagem/lista-postagem.component';
 registerLocaleData(localePt,"pt");
 
 @NgModule({
   declarations: [
     AppComponent,
     ProdutoComponent,
-    ListaProdutoComponent
+    ListaProdutoComponent,
+    PostagemComponent,
+    ListaPostagemComponent
   ],
   imports: [
     BrowserModule,
