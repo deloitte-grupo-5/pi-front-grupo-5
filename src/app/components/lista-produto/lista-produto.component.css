@@ -1,8 +1,47 @@
+.titulo{
+  font-size:40px;
+  font-weight:700;
+  color: rgba(191, 143, 19, 1);
+}
 div{
   display:flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  width:1200px;
-  margin: 0 auto;
+  width:95%;
+  margin: 80px auto;
+}
+.produto{
+
+  flex-grow: 1;
+  transform: scale(0.95);
+}
+
+@media only screen and (max-width: 1437px) {
+  .produto{
+
+    transform: scale(1);
+  }
+
+}
+
+@media only screen and (max-width: 571px) {
+  .produto{
+    width: 100%;
+    transform: scale(0.9);
+  }
+}
+
+@media screen(max-width:540) {
+  .produto{
+  transform: scale(0.7);
+  }
+
+}
+
+@media screen(max-width:522) {
+  .produto{
+  transform: scale(0.1);
+  }
+
 }

@@ -17,6 +17,7 @@ h4{
 .produto{
   display:flex;
   align-items:center;
+  margin: 0 auto;
 
 }
 
@@ -86,6 +87,23 @@ button{
 
 .blue{
   background-color: rgba(204, 241, 228, 1);
+}
+@media only screen and (max-width: 1437px) {
+  .produto{
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+
+@media only screen and (max-width: 1437px) {
+  .produto{
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
 }
 
 

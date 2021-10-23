@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import localePt from '@angular/common/locales/pt';
 import { PostagemComponent } from './components/postagem/postagem.component';
 import { ListaPostagemComponent } from './components/lista-postagem/lista-postagem.component';
+import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
 registerLocaleData(localePt,"pt");
 
 @NgModule({
@@ -18,7 +20,9 @@ registerLocaleData(localePt,"pt");
     ProdutoComponent,
     ListaProdutoComponent,
     PostagemComponent,
-    ListaPostagemComponent
+    ListaPostagemComponent,
+    NavComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

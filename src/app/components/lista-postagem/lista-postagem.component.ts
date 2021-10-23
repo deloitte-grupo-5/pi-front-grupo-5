@@ -10,13 +10,22 @@ import { Postagem } from 'src/app/models/Postagem';
 export class ListaPostagemComponent implements OnInit {
   @Output() postagens:Postagem[] =
   [{id:1,
-    tittle:"postagem teste",
+    tittle:"Erva sidreira",
     body:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem .",
     dateofcreation:"30/04/2018",
     img:"imagem",
     ref:"444",
     editquant:"55",
-    editdate:"555"}];
+    editdate:"555"},
+    {id:2,
+      tittle:"Rosa",
+      body:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem .",
+      dateofcreation:"30/04/2018",
+      img:"imagem",
+      ref:"444",
+      editquant:"55",
+      editdate:"555"}
+  ];
   constructor(private postagemService:PostagemService) {
   }
 

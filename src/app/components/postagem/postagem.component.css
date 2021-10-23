@@ -1,4 +1,6 @@
-
+*{
+  max-width: 100vw;
+}
 .postagem{
   width:100%;
   display: flex;
@@ -12,6 +14,7 @@
 }
 .postagem-article{
   margin:0;
+  flex-grow: 0.75;
 }
 .img-postagem{
   margin:0;
@@ -21,6 +24,7 @@
   font-weight: 400;
   font-size:18px;
   color: rgba(117, 117, 117, 1);
+  margin:30px 0px;
 
 }
 .enviado{
@@ -29,6 +33,7 @@
   color:rgba(117, 117, 117, 1);
 }
 .button-visualizar{
+  margin:30px 0;
   background-color: rgba(191, 143, 19, 1);
   font-family: 'Poppins', sans-serif;
   color: aliceblue;
@@ -46,5 +51,7 @@
   background-color:rgba(251, 186, 19, 0.7);
 }
 hr{
-  margin: 50px ;
+
+  width: 100%;
+  margin: 50px auto ;
 }
