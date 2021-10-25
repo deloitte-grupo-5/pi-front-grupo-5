@@ -1,0 +1,82 @@
+section {
+    box-sizing: border-box;
+    width: 315px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plate img.base {
+    width: 230px;
+    position: absolute;
+}
+
+.plate img.plant {
+    width: 175px;
+    border-radius: 200px;
+    z-index: 1;
+}
+
+.description {
+    background-color: #CCF1E4;
+    padding: 30px 20px 20px;
+    border-radius: 25px;
+    width: 275px;
+    font-family: Poppins, Sans-serif;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    margin: 3px 0 0;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #7B6464;
+    margin: 15px 0 20px;
+}
+
+.description .buttons{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.description button{
+    font-family: Poppins, Sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    padding: 7px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.description button:active{
+    box-shadow: none;
+}
+
+.description button.add {
+    background-color: #FBBA13;
+    font-size: 12px;    
+}
+
+.description button.details {
+    background-color: #FFEDAF;
+}

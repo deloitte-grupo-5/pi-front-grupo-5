@@ -1,0 +1,30 @@
+<header>
+    <div class="container">
+        <img a routerLink="" src="../../../assets/images/logo-white.png" alt="Logo PANCOOK">
+        <div class="main_links">
+            <div class="dropdown">
+                <button (click)="toggleDropdown()" class="dropbtn">☰</button>            
+            </div>
+            <a routerLink="/produtos">Produtos</a>
+            <a routerLink="">Comunidade</a>
+            <a routerLink="">Contato</a>
+        </div>
+        <div class="icons">            
+            <img src="../../../assets/images/icon-search.png" alt="Pesquisar" (click)="toggleSearch()">
+            <img routerLink="login" src="../../../assets/images/icon-user.png" alt="Login">
+            <img routerLink="" src="../../../assets/images/icon-cart.png" alt="Carrinho">
+        </div>
+    </div>
+</header>
+<div class="pseudo_container">
+    <div class="dropdown-content" [ngClass]="showDropdown ? 'show' : 'notShow'">
+        <a routerLink="/produtos" (click)="toggleDropdown()">Produtos</a>
+        <a routerLink="" (click)="toggleDropdown()">Comunidade</a>
+        <a routerLink="" (click)="toggleDropdown()">Contato</a>
+    </div>
+    <div class="search" [ngClass]="showSearch ? 'showSearch' : 'notShowSearch'">
+        <input type="text" placeholder="O que procura?">
+        <button type="submit" (click)="toggleSearch()"><img src="../../../assets/images/icon-search.png" alt=""></button>
+    </div> 
+</div>
+

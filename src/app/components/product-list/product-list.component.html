@@ -1,0 +1,12 @@
+<section>
+    <h1>Produtos</h1>
+    <div class="products">
+        <app-product (onOpenDescription)="showDetails()"></app-product>
+        <app-product (onOpenDescription)="showDetails()"></app-product>
+        <app-product (onOpenDescription)="showDetails()"></app-product>
+        <app-product (onOpenDescription)="showDetails()"></app-product>
+        <app-product (onOpenDescription)="showDetails()"></app-product>
+        <app-product (onOpenDescription)="showDetails()"></app-product>
+    </div>
+</section>
+<app-product-detail (onCloseDescription)="closeDetails()" *ngIf="viewDetails"></app-product-detail>
