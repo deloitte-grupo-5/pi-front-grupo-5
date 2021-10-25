@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Product } from 'src/app/models/Product';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product-detail',
@@ -8,7 +9,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class ProductDetailComponent implements OnInit {
 
   @Output() onCloseDescription:EventEmitter<null> = new EventEmitter();
-  
+  @Input() produto!:Product;
   constructor() { }
 
   ngOnInit(): void {
@@ -17,7 +18,7 @@ export class ProductDetailComponent implements OnInit {
   addToCart(){
     console.log("Add ao carrinho.")
   }
-  
+
   closeDetails(){
     this.onCloseDescription.emit();
   }

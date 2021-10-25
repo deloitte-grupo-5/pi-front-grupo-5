@@ -4,9 +4,9 @@
         <img class="plant" src="../../../assets/images/laterFromBank/Moringa.jpg" alt="Imagem da planta">
     </div>
     <div class="description">
-        <h2>Moringa</h2>
-        <h3>(acássia-branca)</h3>
-        <p>R$40,00</p>
+        <h2>{{produto.nome}}</h2>
+        <h3>({{produto.desc}})</h3>
+        <p>{{produto.valor}}</p>
         <div class="buttons">
             <button class="add" (click)="addToCart()">Adicionar ao carrinho</button>
             <button class="details" (click)="openDetails()">Ver detalhes</button>
