@@ -1,8 +1,9 @@
+<h1>Cadastro de Produtos</h1>
 <form>
-  <input type="text" name="codigo" placeholder="nome" [(ngModel)]="nome" >
-  <input type="text" name="descricao" placeholder="desc" [(ngModel)]="desc">
-  <input type="text" name="nome" placeholder="valor" [(ngModel)]="valor">
-  <input type="text" name="quantidade_estoque" placeholder="quantidade_estoque" [(ngModel)]="quantidade_estoque">
+  <input type="text" name="codigo" placeholder="Digite o nome do produto" [(ngModel)]="nome" >
+  <input type="text" name="descricao" placeholder="Digite a descrição do produto" [(ngModel)]="desc">
+  <input type="number" name="nome" placeholder="Digite o valor do produto" [(ngModel)]="valor">
+  <input type="number" name="quantidade_estoque" placeholder="Digite a quantidade do estoque" [(ngModel)]="quantidade_estoque">
 
   <button (click)="criarProduto()">Criar</button>
 
