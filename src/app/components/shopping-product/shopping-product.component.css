@@ -1,0 +1,126 @@
+section {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.plate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.plate img.base {
+    width: 150px;
+    position: absolute;
+}
+.plate img.plant {
+    width: 120px;
+    border-radius: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.description {
+    background-color: #CCF1E4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 20px 30px;
+    border-radius: 25px;
+    width: 700px;
+    font-family: Poppins, Sans-serif;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+    margin: 3px 0 0;
+}
+
+.description .name {
+    width: 50%;
+}
+.description .amount{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.description .quantity {
+    width: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.description span {
+    font-size: 20px;
+    
+}
+.description button {    
+    border: none;    
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.description button:hover,
+.description img:hover{
+    opacity: 0.8;
+}
+.description button:active{
+    box-shadow: none;
+}
+.description button.minus {
+    background-color: #F8BA13;
+    font-size: 12px;
+    padding: 8px 13px;
+}
+.description button.add {
+    background-color: #FEEDAF;
+    font-size: 12px;
+    padding: 8px 11.5px;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #7B6464;
+}
+.description img {
+    width: 40px;
+    cursor: pointer;
+}
+
+@media (max-width:930px) {
+    .description {
+        width: 400px;
+        flex-direction: column;
+    }
+    .description .name {
+        width: 100%;
+    }
+    .description .amount{
+        width: 100%;
+    }
+}
+
+@media (max-width: 620px) {
+    .description {
+        width: 260px;
+        flex-direction: column;
+    }    
+}
+
+@media (max-width: 480px) {
+    section {
+        flex-direction: column;
+    }
+}

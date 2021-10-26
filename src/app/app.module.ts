@@ -18,6 +18,8 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 //ajustando currency
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { ShoppingProductComponent } from './components/shopping-product/shopping-product.component';
 registerLocaleData(localePt,"pt");
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ registerLocaleData(localePt,"pt");
     SignInComponent,
     PostComponent,
     ListaPostagemComponent,
+    ShoppingCartComponent,
+    ShoppingProductComponent,
 
 
   ],
