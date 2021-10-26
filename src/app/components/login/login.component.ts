@@ -1,5 +1,5 @@
+import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from 'src/app/services/product.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   usuario:string="";
   senha:string="";
-  constructor(private service:ProductService,private router:Router) { }
+  constructor(private service:UserService,private router:Router) { }
 
   ngOnInit(): void {
   }

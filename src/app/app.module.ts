@@ -1,3 +1,5 @@
+import { PostComponent } from './components/post/post.component';
+import { ListaPostagemComponent } from './components/lista-postagem/lista-postagem.component';
 import { NgModule ,DEFAULT_CURRENCY_CODE, LOCALE_ID} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http'
@@ -28,6 +30,9 @@ registerLocaleData(localePt,"pt");
     ProductDetailComponent,
     LoginComponent,
     SignInComponent,
+    PostComponent,
+    ListaPostagemComponent,
+
 
   ],
   imports: [
