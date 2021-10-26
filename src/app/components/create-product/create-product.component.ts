@@ -17,10 +17,18 @@ export class CreateProductComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  limparCampos(){
+    this.nome='';
+    this.desc='';
+
+  }
 
   criarProduto(){
     this.productService.criarProduto(this.nome,this.desc,this.valor,this.quantidade_estoque).subscribe(
-      (dados)=> console.log(dados)
+      dados=> {this.productService.showMensage("Produto criado com sucesso!")
+        this.limparCampos()
+    },
+      error => this.productService.showMensage("Falha ao criar produto!")
     );
   }
 

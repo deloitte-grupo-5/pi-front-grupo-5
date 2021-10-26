@@ -25,7 +25,10 @@ export class SignInComponent implements OnInit {
   cadastrarUsuario(){
     this.service.cadastrarUsuario(this.nome,this.email,
       this.sobrenome,this.telefone,this.senha,this.usuario).subscribe(
-        (dados)=> window.sessionStorage.setItem('token',((<Usuario>dados).token))
+        (dados)=> {window.sessionStorage.setItem('token',((<Usuario>dados).token))
+        this.service.showMensage("Cadastro realizado com sucesso!");}
+        ,
+        error=> this.service.showMensage("Erro! Não foi possivel cadastrar usuário!")
         );
   }
 }
