@@ -27,6 +27,7 @@ section app-product {
 
 section app-product:nth-child(even) ::ng-deep .description{
     background-color: #FFEDAF;
+
 }
 section app-product:nth-child(even) ::ng-deep .description button.details{
     background-color: #CCF1E4;
@@ -36,5 +37,5 @@ section app-product:nth-child(even) ::ng-deep .description button.details{
     section app-product {
         margin: 25px 0;
     }
-    
+
 }

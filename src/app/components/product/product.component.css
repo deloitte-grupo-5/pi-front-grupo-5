@@ -55,7 +55,7 @@ p {
 .description .buttons{
     display: flex;
     justify-content: space-around;
-    
+
 }
 
 .description button{
@@ -67,14 +67,16 @@ p {
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
+.description button:hover{
+  opacity: 0.8;
+}
 .description button:active{
     box-shadow: none;
 }
 
 .description button.add {
     background-color: #FBBA13;
-    font-size: 12px;    
+    font-size: 12px;
 }
 
 .description button.details {

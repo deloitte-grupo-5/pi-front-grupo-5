@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule ,DEFAULT_CURRENCY_CODE, LOCALE_ID} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
@@ -12,8 +12,11 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
-import { AdmComponent } from './components/adm/adm.component';
 
+//ajustando currency
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localePt,"pt");
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,7 @@ import { AdmComponent } from './components/adm/adm.component';
     ProductDetailComponent,
     LoginComponent,
     SignInComponent,
-    AdmComponent
+
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,10 @@ import { AdmComponent } from './components/adm/adm.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: LOCALE_ID, useValue:"pt"},
+    {provide: DEFAULT_CURRENCY_CODE, useValue:"BRL"}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
