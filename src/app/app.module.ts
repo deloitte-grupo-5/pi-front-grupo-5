@@ -18,6 +18,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 //ajustando currency
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { ShoppingProductComponent } from './components/shopping-product/shopping-product.component';
 import { CreateProductComponent } from './components/create-product/create-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 registerLocaleData(localePt,"pt");
@@ -34,6 +36,8 @@ registerLocaleData(localePt,"pt");
     SignInComponent,
     PostComponent,
     ListaPostagemComponent,
+    ShoppingCartComponent,
+    ShoppingProductComponent,
     CreateProductComponent,
 
 
