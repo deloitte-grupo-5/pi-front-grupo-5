@@ -22,7 +22,7 @@ export class SignInComponent implements OnInit {
   cadastrarUsuario(){
     this.service.cadastrarUsuario(this.nome,this.email,
       this.sobrenome,this.telefone,this.senha,this.usuario).subscribe((token)=>{
-        this.router.navigateByUrl("/produtos")
+
       });
   }
 }

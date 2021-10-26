@@ -1,7 +1,7 @@
 <section>
     <h1>Produtos</h1>
     <div class="products">
-        <app-product (onOpenDescription)="showDetails()" *ngFor="let produto of produtos" [produto]="produto" ></app-product>
+        <app-product (onOpenDescription)="showDetails($event)" *ngFor="let produto of produtos" [produto]="produto" ></app-product>
     </div>
 </section>
-<app-product-detail (onCloseDescription)="closeDetails()" *ngIf="viewDetails"></app-product-detail>
+<app-product-detail (onCloseDescription)="closeDetails()" *ngIf="viewDetails" [produto]="produtoSelecionado"></app-product-detail>

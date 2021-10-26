@@ -1,3 +1,4 @@
+
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/models/Product';
 
@@ -8,7 +9,7 @@ import { Product } from 'src/app/models/Product';
 })
 export class ProductComponent implements OnInit {
 
-  @Output() onOpenDescription:EventEmitter<null> = new EventEmitter();
+  @Output() onOpenDescription:EventEmitter<Product> = new EventEmitter();
   @Input() produto!:Product;
   constructor() { }
 
@@ -20,6 +21,6 @@ export class ProductComponent implements OnInit {
   }
 
   openDetails(){
-    this.onOpenDescription.emit();
+    this.onOpenDescription.emit(this.produto);
   }
 }
