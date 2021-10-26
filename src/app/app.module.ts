@@ -20,6 +20,7 @@ import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { ShoppingProductComponent } from './components/shopping-product/shopping-product.component';
+import { CreateProductComponent } from './components/create-product/create-product.component';
 registerLocaleData(localePt,"pt");
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ registerLocaleData(localePt,"pt");
     ListaPostagemComponent,
     ShoppingCartComponent,
     ShoppingProductComponent,
+    CreateProductComponent,
 
 
   ],

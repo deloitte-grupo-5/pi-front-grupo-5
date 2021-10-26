@@ -9,7 +9,7 @@ import { Postagem } from 'src/app/models/Postagem';
 })
 export class ListaPostagemComponent implements OnInit {
   @Output() postagens:Postagem[] =
-  [{id:1,
+  [/*{id:1,
     tittle:"Erva sidreira",
     body:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem .",
     dateofcreation:"30/04/2018",
@@ -24,7 +24,7 @@ export class ListaPostagemComponent implements OnInit {
       img:"imagem",
       ref:"444",
       editquant:"55",
-      editdate:"555"}
+      editdate:"555"}*/
   ];
   constructor(private postagemService:PostagemService) {
   }

@@ -1,6 +1,9 @@
+
+import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Router } from '@angular/router';
+import { Usuario } from 'src/app/models/usuario';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -14,15 +17,15 @@ export class SignInComponent implements OnInit {
   senha:string=""
   usuario:string=""
 
-  constructor(private service:ProductService,private router:Router) {
+  constructor(private service:UserService,private router:Router) {
   }
 
   ngOnInit(): void {
   }
   cadastrarUsuario(){
     this.service.cadastrarUsuario(this.nome,this.email,
-      this.sobrenome,this.telefone,this.senha,this.usuario).subscribe((token)=>{
-
-      });
+      this.sobrenome,this.telefone,this.senha,this.usuario).subscribe(
+        (dados)=> window.sessionStorage.setItem('token',((<Usuario>dados).token))
+        );
   }
 }

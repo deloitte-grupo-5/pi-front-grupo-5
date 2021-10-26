@@ -1,3 +1,4 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -15,12 +16,13 @@ export class ProductService {
 
     return this.http.get<Product[]>(url);
   }
+  criarProduto(nome:string,descricao:string,valor:number,quantidade_estoque:number){
+    const url = "http://localhost:8080/produtos"
+    let token = window.sessionStorage.getItem("token");
+    let teste =token!.replace(/"([^"]+(?="))"/g, '$1');
+    return this.http.post(url,{descricao,nome,quantidade_estoque,valor},{headers:{Authorization:teste}})
+  }
 
-  cadastrarUsuario(nome:string,email:string,sobrenome:string,telefone:string,senha:string,usuario:string){
-    const url = "http://localhost:8080/usuario/cadastrar"
-    return this.http.post(url,{nome,email,sobrenome,telefone,senha,usuario})
-  }
-  login(usuario:string,senha:string){
-    return this.http.post("http://localhost:8080/usuario/logar",{usuario,senha})
-  }
+
+
 }
