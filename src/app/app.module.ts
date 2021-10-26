@@ -14,11 +14,12 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 //ajustando currency
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { CreateProductComponent } from './components/create-product/create-product.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 registerLocaleData(localePt,"pt");
 @NgModule({
   declarations: [
@@ -36,12 +37,15 @@ registerLocaleData(localePt,"pt");
     CreateProductComponent,
 
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue:"pt"},

@@ -20,8 +20,11 @@ export class LoginComponent implements OnInit {
     this.service.login(this.usuario,this.senha).subscribe((token)=>{
       window.sessionStorage.setItem('token', JSON.stringify((<Usuario>token).token))
       console.log(token)
+      this.service.showMensage("Sucesso no login!");
       this.router.navigateByUrl("/produtos")
-    });
+    },
+    error => {this.service.showMensage("Falha no login!");}
+    );
   }
 
 }
