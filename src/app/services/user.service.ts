@@ -1,3 +1,4 @@
+import { Usuario } from 'src/app/models/usuario';
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 @Injectable({
@@ -11,6 +12,7 @@ export class UserService {
   }
   cadastrarUsuario(nome:string,email:string,sobrenome:string,telefone:string,senha:string,usuario:string){
     const url = "http://localhost:8080/usuario/cadastrar"
+    //return this.http.post(url,{nome,email,sobrenome,telefone,senha,usuario})
     return this.http.post(url,{nome,email,sobrenome,telefone,senha,usuario})
   }
 }
