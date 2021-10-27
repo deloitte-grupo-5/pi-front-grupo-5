@@ -24,6 +24,7 @@ import { CreateProductComponent } from './components/create-product/create-produ
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule} from '@angular/material/paginator';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import {MatIconModule} from '@angular/material/icon';
 registerLocaleData(localePt,"pt");
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ registerLocaleData(localePt,"pt");
     BrowserAnimationsModule,
     MatSnackBarModule,
     MatPaginatorModule,
+    MatIconModule
 
   ],
   providers: [

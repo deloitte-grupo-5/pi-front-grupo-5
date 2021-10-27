@@ -82,3 +82,14 @@ p {
 .description button.details {
     background-color: #FFEDAF;
 }
+.lixeira{
+  position: relative;
+  left: 50%;
+  cursor: pointer;
+
+
+}
+.lixeira:hover{
+  opacity: 0.6;
+
+}

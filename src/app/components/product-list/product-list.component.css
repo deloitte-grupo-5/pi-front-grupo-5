@@ -43,5 +43,5 @@ section app-product:nth-child(even) ::ng-deep .description button.details{
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00000;
+  color: #000000;
 }

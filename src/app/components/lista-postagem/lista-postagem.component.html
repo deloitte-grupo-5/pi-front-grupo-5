@@ -1,9 +1,5 @@
 <div>
-<app-post *ngFor="let postagem of postagens" [postagem]="postagem" ></app-post>
+<app-post *ngFor="let postagem of postagens" [postagem]="postagem"  ></app-post>
 </div>
-<mat-paginator>
-  [length]="this.produtos.length"
-  [pageSize]="3"
-  [pageSizeOptions]=[3,6,9]
-</mat-paginator>
+
 
