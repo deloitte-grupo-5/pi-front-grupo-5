@@ -5,9 +5,9 @@
             <div class="dropdown">
                 <button (click)="toggleDropdown()" class="dropbtn">☰</button>
             </div>
-            <a routerLink="/produtos">Produtos</a>
-            <a routerLink="/comunidade">Comunidade</a>
-            <a routerLink="">Contato</a>
+            <a routerLink="produtos">Produtos</a>
+            <a routerLink="comunidade">Comunidade</a>
+            <a routerLink="sobre">Sobre nós</a>
         </div>
         <div class="icons">
             <img src="../../../assets/images/icon-search.png" alt="Pesquisar" (click)="toggleSearch()">
@@ -18,9 +18,9 @@
 </header>
 <div class="pseudo_container">
     <div class="dropdown-content" [ngClass]="showDropdown ? 'show' : 'notShow'">
-        <a routerLink="/produtos" (click)="toggleDropdown()">Produtos</a>
-        <a routerLink="/comunidade" (click)="toggleDropdown()">Comunidade</a>
-        <a routerLink="" (click)="toggleDropdown()">Contato</a>
+        <a routerLink="produtos" (click)="toggleDropdown()">Produtos</a>
+        <a routerLink="comunidade" (click)="toggleDropdown()">Comunidade</a>
+        <a routerLink="sobre" (click)="toggleDropdown()">Sobre nós</a>
     </div>
     <div class="search" [ngClass]="showSearch ? 'showSearch' : 'notShowSearch'">
         <input type="text" placeholder="O que procura?">

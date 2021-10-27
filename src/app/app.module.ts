@@ -23,8 +23,7 @@ import { ShoppingProductComponent } from './components/shopping-product/shopping
 import { CreateProductComponent } from './components/create-product/create-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule} from '@angular/material/paginator';
-
-
+import { AboutUsComponent } from './components/about-us/about-us.component';
 registerLocaleData(localePt,"pt");
 @NgModule({
   declarations: [
@@ -42,6 +41,7 @@ registerLocaleData(localePt,"pt");
     ShoppingCartComponent,
     ShoppingProductComponent,
     CreateProductComponent,
+    AboutUsComponent,
 
   ],
   imports: [
