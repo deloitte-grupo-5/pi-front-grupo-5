@@ -1,7 +1,7 @@
 <section>
     <div class="plate">
         <img class="base" src="../../../assets/images/plate.png">
-        <img class="plant" src="../../../assets/images/laterFromBank/Moringa.jpg" alt="Imagem da planta">
+        <img class="plant" (click)="openDetails()" src="../../../assets/images/laterFromBank/Moringa.jpg" alt="Imagem da planta">
     </div>
     <div class="description">
         <div class="name">
@@ -15,7 +15,7 @@
                 <button class="add">+</button>
             </div>
             <p>R$40,00</p>
-            <img class="remove" src="../../../assets/images/trash.png" alt="">
+            <img class="remove" (click)="removeFromCart()" src="../../../assets/images/trash.png" alt="">
         </div>
     </div>
 </section>
