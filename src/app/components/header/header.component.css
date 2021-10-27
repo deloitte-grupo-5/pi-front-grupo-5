@@ -121,7 +121,7 @@ header .container .icons img {
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 2;
         min-width: 160px;
-        left: calc(50vw - 110px)
+        left: calc(50vw - 80px)
     }
 
     .dropdown-content a {
