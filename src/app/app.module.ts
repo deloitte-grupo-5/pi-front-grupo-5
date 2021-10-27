@@ -22,6 +22,9 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { ShoppingProductComponent } from './components/shopping-product/shopping-product.component';
 import { CreateProductComponent } from './components/create-product/create-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatPaginatorModule} from '@angular/material/paginator';
+
+
 registerLocaleData(localePt,"pt");
 @NgModule({
   declarations: [
@@ -40,8 +43,6 @@ registerLocaleData(localePt,"pt");
     ShoppingProductComponent,
     CreateProductComponent,
 
-
-
   ],
   imports: [
     BrowserModule,
@@ -49,7 +50,9 @@ registerLocaleData(localePt,"pt");
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatPaginatorModule,
+
   ],
   providers: [
     {provide: LOCALE_ID, useValue:"pt"},

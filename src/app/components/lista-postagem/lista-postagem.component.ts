@@ -35,6 +35,8 @@ export class ListaPostagemComponent implements OnInit {
     this.postagemService.getPostagens().subscribe((
       postagens:Postagem[])=>{this.postagens= postagens}
     );
+
+
   }
 
 }

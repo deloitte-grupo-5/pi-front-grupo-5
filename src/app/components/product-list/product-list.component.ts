@@ -1,7 +1,8 @@
 import { Product } from './../../models/Product';
 import { ProductService } from './../../services/product.service';
 import { Component, OnInit,Input } from '@angular/core';
-
+import { MatPaginatorIntl } from '@angular/material/paginator';
+import { PageEvent } from '@angular/material/paginator';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -40,9 +41,15 @@ export class ProductListComponent implements OnInit {
   @Input() produtoSelecionado!:Product;
   viewDetails = false;
 
-  constructor(private service:ProductService) {
+  constructor(private service:ProductService,teste:MatPaginatorIntl) {
     this.getProducts();
+    teste.nextPageLabel="Proxima pagina"
+    teste.itemsPerPageLabel="Items por pagina"
+    teste.previousPageLabel="Pagina anterior"
+
   }
+
+  public produtosExibidos = this.produtos.slice(0,3);
 
   getProducts(){
     this.service.getProducts().subscribe(
@@ -61,5 +68,15 @@ export class ProductListComponent implements OnInit {
 
   closeDetails(){
     this.viewDetails = false;
+  }
+
+  OnPageChange(event:PageEvent) {
+    console.log(event)
+    const startIndex = event.pageIndex + event.pageSize;
+    let endIndex = startIndex + event.pageSize;
+    if(endIndex > this.produtos.length){
+      endIndex = this.produtos.length;
+    }
+    this.produtosExibidos = this.produtos.slice(startIndex, endIndex);
   }
 }
