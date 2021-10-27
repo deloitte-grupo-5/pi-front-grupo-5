@@ -12,4 +12,7 @@ export class ShoppingProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openDetails() {}
+
+  removeFromCart() {}
 }

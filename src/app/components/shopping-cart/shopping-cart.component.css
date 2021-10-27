@@ -48,6 +48,7 @@ button {
     border: none;
     width: 85px;
     margin-left: 5px;
+    cursor: pointer;
 }
 
 .total_price {
