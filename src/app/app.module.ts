@@ -25,6 +25,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule} from '@angular/material/paginator';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import {MatIconModule} from '@angular/material/icon';
+import { TesteComponent } from './teste/teste.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
 registerLocaleData(localePt,"pt");
 @NgModule({
   declarations: [
@@ -43,6 +46,7 @@ registerLocaleData(localePt,"pt");
     ShoppingProductComponent,
     CreateProductComponent,
     AboutUsComponent,
+    TesteComponent,
 
   ],
   imports: [
@@ -53,7 +57,9 @@ registerLocaleData(localePt,"pt");
     BrowserAnimationsModule,
     MatSnackBarModule,
     MatPaginatorModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule,
+    MatSortModule
 
   ],
   providers: [

@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
+
   produtos:Product[]= [/*{id:1,
     nome:"Erva",
     desc:"lotem ipsu faf asf a  sadf",
@@ -39,30 +40,35 @@ export class ProductListComponent implements OnInit {
           thumb:"aaaa",
           quantide_estoque:1}
         */];
+
+
+
   @Input() produtoSelecionado!:Product;
   viewDetails = false;
-  primeiroCarregamento = true;
+  public produtosExibidos:Product[] =[];
+
+
 
   constructor(private service:ProductService,teste:MatPaginatorIntl,private router:Router) {
     this.getProducts();
+    console.log(this.produtosExibidos);
     teste.nextPageLabel="Proxima pagina"
     teste.itemsPerPageLabel="Items por pagina"
     teste.previousPageLabel="Pagina anterior"
-
-
   }
 
-  public produtosExibidos = this.produtos.slice(0,3) ;
 
   getProducts(){
     this.service.getProducts().subscribe(
       (produtos:Product[]) =>{
        this.produtos = produtos;
         console.log(produtos)
+        this.atualizarProdutosExibidos();
       });
 
   }
   ngOnInit(): void {
+
   }
 
   showDetails(produto:Product){
@@ -74,20 +80,26 @@ export class ProductListComponent implements OnInit {
     this.viewDetails = false;
   }
 
-  OnPageChange(event:PageEvent) {
-    console.log(event)
-    const startIndex = event.pageIndex + event.pageSize;
-    let endIndex = startIndex + event.pageSize;
-    if(endIndex > this.produtos.length){
-      endIndex = this.produtos.length;
-    }
-    this.produtosExibidos = this.produtos.slice(startIndex, endIndex);
-  }
+
+
   atualizarPagina(){
     let currentUrl = this.router.url;
     this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
         this.router.navigate([currentUrl]);
     });
+  }
+
+  atualizarProdutosExibidos(){
+    this.produtosExibidos = this.produtos.slice(0,3)
+
+  }
+  OnPageChange(event:PageEvent){
+    const startIndex = event.pageIndex * event.pageSize;
+    let endIndex = startIndex + event.pageSize;
+    if(endIndex>this.produtos.length){
+      endIndex = this.produtos.length;
+    }
+    this.produtosExibidos = this.produtos.slice(startIndex,endIndex);
   }
 
 

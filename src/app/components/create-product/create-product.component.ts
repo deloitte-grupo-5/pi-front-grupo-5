@@ -1,5 +1,5 @@
 import { ProductService } from './../../services/product.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-create-product',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-product.component.css']
 })
 export class CreateProductComponent implements OnInit {
+  @Output() onCreateProduct:EventEmitter<any> = new EventEmitter();
+
   nome=""
   desc=""
   quantidade_estoque!:number
@@ -27,6 +29,7 @@ export class CreateProductComponent implements OnInit {
     this.productService.criarProduto(this.nome,this.desc,this.valor,this.quantidade_estoque).subscribe(
       dados=> {this.productService.showMensage("Produto criado com sucesso!")
         this.limparCampos()
+        this.onCreateProduct.emit();
     },
       error => this.productService.showMensage("Falha ao criar produto!")
     );

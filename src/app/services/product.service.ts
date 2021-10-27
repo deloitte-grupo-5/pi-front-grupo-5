@@ -20,7 +20,11 @@ export class ProductService {
   criarProduto(nome:string,descricao:string,valor:number,quantidade_estoque:number){
     const url = "http://localhost:8080/produtos"
     let token = window.sessionStorage.getItem("token");
-    let teste =token!.replace(/"([^"]+(?="))"/g, '$1');
+    let teste ='';
+    if (token){
+      teste =token!.replace(/"([^"]+(?="))"/g, '$1');
+    }
+
     return this.http.post(url,{descricao,nome,quantidade_estoque,valor},{headers:{Authorization:teste}})
   }
   showMensage(msg:string){
@@ -29,7 +33,10 @@ export class ProductService {
   delete(produto:Product):Observable<any>{
     const url = "http://localhost:8080/produtos"
     let token = window.sessionStorage.getItem("token");
-    let teste =token!.replace(/"([^"]+(?="))"/g, '$1');
+    let teste = ''
+    if (token){
+      teste =token!.replace(/"([^"]+(?="))"/g, '$1');
+    }
     let id = produto.id.toString();
     return this.http.delete(url+`/${id}`,{headers:{Authorization:teste}})
   }
