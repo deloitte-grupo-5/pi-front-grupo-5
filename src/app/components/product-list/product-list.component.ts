@@ -84,7 +84,10 @@ export class ProductListComponent implements OnInit {
     this.produtosExibidos = this.produtos.slice(startIndex, endIndex);
   }
   atualizarPagina(){
-    window.location.reload();
+    let currentUrl = this.router.url;
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+        this.router.navigate([currentUrl]);
+    });
   }
 
 
