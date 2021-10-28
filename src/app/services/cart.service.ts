@@ -21,11 +21,18 @@ export class CartService {
     this.productList.next(product);
   }
   addtoCart(product : any){
+    let produtoRepetido= false;
+    this.cartItemList.map((a:any, index:any)=>{
+      if(product.id=== a.id){
+        this.showMensage("Erro! Esse produto já foi adicionado!")
+        produtoRepetido = true;
+      }
+    })
+    if(!produtoRepetido){
     this.cartItemList.push(product);
     this.productList.next(this.cartItemList);
     this.getTotalPrice();
-
-
+    }
   }
   getTotalPrice() : number{
     let totalAbsolute = 0;
