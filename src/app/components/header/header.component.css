@@ -91,6 +91,11 @@ header .container .main_links a {
 header .container .icons img {
     height: 30px;
     cursor: pointer;
+
+}
+header .container .icons{
+  display: flex;
+  align-items: center;
 }
 
 
@@ -154,4 +159,19 @@ header .container .icons img {
     header .container div {
         gap: 10px;
     }
+}
+.card-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 239, 239);
+  align:top;
+  position: relative;
+  padding: 10px;
+  border-radius: 100px;
+  background-color: rgb(105, 105, 105);
+  font-size: 10;
+}
+.card-number:hover{
+  opacity: 0.8;
 }

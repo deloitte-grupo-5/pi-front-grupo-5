@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Product } from 'src/app/models/Product';
+import { Component, OnInit, Input } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-shopping-product',
@@ -6,13 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shopping-product.component.css']
 })
 export class ShoppingProductComponent implements OnInit {
-
-  constructor() { }
+  @Input() produto!:Product;
+  constructor(private service:CartService) { }
 
   ngOnInit(): void {
+
   }
 
   openDetails() {}
 
-  removeFromCart() {}
+  removeFromCart() {
+
+    this.service.removeCartItem(this.produto);
+  }
 }

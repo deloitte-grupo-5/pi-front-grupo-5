@@ -1,3 +1,4 @@
+import { CartService } from './../../services/cart.service';
 
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/models/Product';
@@ -12,14 +13,14 @@ export class ProductComponent implements OnInit {
   @Output () onDelete:EventEmitter<any> = new EventEmitter();
   @Output() onOpenDescription:EventEmitter<Product> = new EventEmitter();
   @Input() produto!:Product;
-  constructor(private service:ProductService) { }
+  constructor(private service:ProductService,private cartService:CartService) { }
 
   ngOnInit(): void {
   }
-
   addToCart(){
-    console.log("Add ao carrinho.")
+    this.cartService.addtoCart(this.produto);
   }
+
 
   openDetails(){
     this.onOpenDescription.emit(this.produto);
@@ -34,5 +35,6 @@ export class ProductComponent implements OnInit {
 
     )
   }
+
 
 }

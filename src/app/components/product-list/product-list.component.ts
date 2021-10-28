@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ProductListComponent implements OnInit {
 
-  produtos:Product[]= [/*{id:1,
+  produtos:Product[]= [{id:1,
     nome:"Erva",
     desc:"lotem ipsu faf asf a  sadf",
     img:"ttt",
@@ -39,7 +39,7 @@ export class ProductListComponent implements OnInit {
           valor:15,
           thumb:"aaaa",
           quantide_estoque:1}
-        */];
+        ];
 
 
 
@@ -49,9 +49,9 @@ export class ProductListComponent implements OnInit {
 
 
 
+
   constructor(private service:ProductService,teste:MatPaginatorIntl,private router:Router) {
     this.getProducts();
-    console.log(this.produtosExibidos);
     teste.nextPageLabel="Proxima pagina"
     teste.itemsPerPageLabel="Itens por pagina"
     teste.previousPageLabel="Pagina anterior"
@@ -62,7 +62,7 @@ export class ProductListComponent implements OnInit {
     this.service.getProducts().subscribe(
       (produtos:Product[]) =>{
        this.produtos = produtos;
-        console.log(produtos)
+
         this.atualizarProdutosExibidos();
       });
 

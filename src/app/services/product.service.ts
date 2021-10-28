@@ -1,6 +1,6 @@
 
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from '../models/Product';
 import {MatSnackBar} from '@angular/material/snack-bar';
@@ -9,6 +9,8 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   providedIn: 'root'
 })
 export class ProductService {
+  static onAddCart:EventEmitter<Product[]> = new EventEmitter();
+  static produtosNoCarrinho:Product[] = [];
 
   constructor(private http:HttpClient,private matSnackBar:MatSnackBar) { }
 
@@ -39,6 +41,10 @@ export class ProductService {
     }
     let id = produto.id.toString();
     return this.http.delete(url+`/${id}`,{headers:{Authorization:teste}})
+  }
+
+  addToCart(produto:Product){
+
   }
 
 

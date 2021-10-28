@@ -5,7 +5,7 @@
     </div>
     <div class="description">
         <div class="name">
-            <h2>Castanha-do-Maranhão</h2>
+            <h2>{{produto.nome}}</h2>
             <h3>(acássia)</h3>
         </div>
         <div class="amount">
@@ -14,7 +14,7 @@
                 <span>10</span>
                 <button class="add">+</button>
             </div>
-            <p>R$40,00</p>
+            <p>{{produto.valor| currency}}</p>
             <img class="remove" (click)="removeFromCart()" src="../../../assets/images/trash.png" alt="">
         </div>
     </div>

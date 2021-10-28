@@ -1,3 +1,4 @@
+import { CartService } from 'src/app/services/cart.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   showDropdown = false;
   showSearch = false;
-  constructor() { }
+  rangeProducts:any;
+
+  constructor(private service:CartService) { }
 
   ngOnInit(): void {
+
+    this.service.getProducts().subscribe(
+      (resp)=> this.rangeProducts = resp.length
+    )
   }
 
   toggleDropdown(){
@@ -19,5 +26,7 @@ export class HeaderComponent implements OnInit {
 
   toggleSearch(){
     this.showSearch = !this.showSearch;
-  }  
+  }
+
+
 }

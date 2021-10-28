@@ -1,10 +1,66 @@
 <h1>Cadastro de Produtos</h1>
-<form>
-  <input type="text" name="codigo" placeholder="Digite o nome do produto" [(ngModel)]="nome" >
-  <input type="text" name="descricao" placeholder="Digite a descrição do produto" [(ngModel)]="desc">
-  <input type="number" name="nome" placeholder="Digite o valor do produto" [(ngModel)]="valor">
-  <input type="number" name="quantidade_estoque" placeholder="Digite a quantidade do estoque" [(ngModel)]="quantidade_estoque">
+<section>  
+  <div class="cropper">
+    <input type="file" (change)="fileChangeEvent($event)" />
+    
+    <image-cropper
+    [imageChangedEvent]="imageChangedEvent"
+    [maintainAspectRatio]="true"
+    [aspectRatio]="1/1"
+    format="png"
+    (imageCropped)="imageCropped($event)"
+    (imageLoaded)="imageLoaded()"
+    (cropperReady)="cropperReady()"
+    (loadImageFailed)="loadImageFailed()"
+    [roundCropper]="true"
+    [cropperMinWidth]=500
+    ></image-cropper>
+    
+    <img class="productImageToSave" [src]="croppedImage" />
+  </div>
+  <form>
+    <input type="text" name="codigo" placeholder="Digite o código do produto">
+    <input type="text" name="nome" placeholder="Digite o nome do produto" [(ngModel)]="nome" >
+    <input type="text" name="cientifico" placeholder="Digite o nome científico do produto">
+    <input type="text" name="outrosNomes" placeholder="Digite os demais nomes do produto">
+    <input type="text" name="descricao" placeholder="Digite a descrição do produto" [(ngModel)]="desc">
+    <input type="number" name="valor" placeholder="Digite o valor do produto" [(ngModel)]="valor">
+    <input type="number" name="quantidade_estoque" placeholder="Digite a quantidade do estoque" [(ngModel)]="quantidade_estoque">
+    
+    <button (click)="criarProduto()">Criar</button>
 
-  <button (click)="criarProduto()">Criar</button>
-
-</form>
+  </form>
+  <div>
+    <div class="partes">
+      <span class="obs">Orientações:</span>
+      <div>
+        <input type="checkbox">
+        <span>1 (Pode ser cozido)</span>
+      </div>
+      <div>
+        <input type="checkbox">
+        <span>2 (DEVE ser cozido)</span>
+      </div>
+      <div>
+        <input type="checkbox">
+        <span>3 (Folhas comentíveis)</span>
+      </div>
+      <div>
+        <input type="checkbox">
+        <span>4 (Raízes comestíveis)</span>
+      </div>
+      <div>
+        <input type="checkbox">
+        <span>5 (Frutos comentíveis)</span>
+      </div>
+      <div>
+        <input type="checkbox">
+        <span>6 (Flores comestíveis)</span>
+      </div>
+      <div>
+        <input type="checkbox">
+        <span>7 (Sementes comestíveis)</span>
+      </div>
+    </div>
+  </div>
+  </section>  

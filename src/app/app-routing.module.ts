@@ -7,6 +7,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,8 @@ const routes: Routes = [
     path:"carrinho", component:ShoppingCartComponent
   },{
     path:"sobre", component:AboutUsComponent
+  },{
+    path:"perfil", component:PerfilComponent
   }
 ];
 

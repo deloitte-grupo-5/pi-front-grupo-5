@@ -2,10 +2,7 @@
     <h1>Carrinho</h1>
 </section>
 <section class="products">
-    <app-shopping-product></app-shopping-product>
-    <app-shopping-product></app-shopping-product>
-    <app-shopping-product></app-shopping-product>
-    <app-shopping-product></app-shopping-product>
+    <app-shopping-product *ngFor="let produto of products" [produto]="produto"></app-shopping-product>
 </section>
 <section class="bottom">
     <hr>
@@ -22,7 +19,7 @@
     <div class="total_price">
         <p>Frete: R$10,00</p>
         <p>Desconto Cupom: R$-5,00</p>
-        <p class="total">Total: R$45,00</p>
+        <p class="total">Total: {{totalPrice| currency}}</p>
     </div>
     <div class="buttons">
         <button class="keep_shopping" routerLink="/produtos">Continuar comprando</button>
@@ -30,5 +27,5 @@
     </div>
 </section>
 <section class="no_itens">
-    
+
 </section>
