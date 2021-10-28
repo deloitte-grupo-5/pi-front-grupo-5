@@ -28,6 +28,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { TesteComponent } from './teste/teste.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
+import { ImageCropperModule } from 'ngx-image-cropper';
+import { PerfilComponent } from './components/perfil/perfil.component';
 registerLocaleData(localePt,"pt");
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ registerLocaleData(localePt,"pt");
     CreateProductComponent,
     AboutUsComponent,
     TesteComponent,
+    PerfilComponent,
 
   ],
   imports: [
@@ -59,8 +62,8 @@ registerLocaleData(localePt,"pt");
     MatPaginatorModule,
     MatIconModule,
     MatTableModule,
-    MatSortModule
-
+    MatSortModule,
+    ImageCropperModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue:"pt"},
