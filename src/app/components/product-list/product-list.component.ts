@@ -53,7 +53,7 @@ export class ProductListComponent implements OnInit {
     this.getProducts();
     console.log(this.produtosExibidos);
     teste.nextPageLabel="Proxima pagina"
-    teste.itemsPerPageLabel="Items por pagina"
+    teste.itemsPerPageLabel="Itens por pagina"
     teste.previousPageLabel="Pagina anterior"
   }
 
