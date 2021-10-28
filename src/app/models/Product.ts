@@ -5,6 +5,6 @@ export interface Product{
   img:any,
   valor:number,
   thumb:any
-  quantide_estoque:number
+  quantidade_estoque:number
 
 }

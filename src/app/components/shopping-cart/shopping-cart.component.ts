@@ -16,10 +16,11 @@ export class ShoppingCartComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.service.getProducts().subscribe((resp)=>{
+    this.service.getProducts().subscribe((resp:Product[]) => {
       this.products= resp;
+      console.log("array do carrinho:" + this.products);
+      console.log("array do service:" + resp);
       this.totalPrice = this.service.getTotalPrice()
-
     })
 
   }

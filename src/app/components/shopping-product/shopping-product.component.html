@@ -10,9 +10,9 @@
         </div>
         <div class="amount">
             <div class="quantity">
-                <button class="minus">-</button>
-                <span>10</span>
-                <button class="add">+</button>
+                <button class="minus" (click)="diminuirProduto()">-</button>
+                <span>{{quantidate_produto}}</span>
+                <button class="add" (click)="adicionarProduto()">+</button>
             </div>
             <p>{{produto.valor| currency}}</p>
             <img class="remove" (click)="removeFromCart()" src="../../../assets/images/trash.png" alt="">
