@@ -41,4 +41,8 @@ input {
 width: 260px;
 }
 
+.adm app-create-product {
+    max-width:90%
+}
+
 

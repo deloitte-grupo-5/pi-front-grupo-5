@@ -87,11 +87,11 @@ p {
 }
 .obs div{
   text-align: center;
-  width: 75px;
+  width: 86px;
   margin: 5px;
 }
 .obs img {
-  height: 45px;
+  width: 75px;
 }
 .obs input{
   display: none;
