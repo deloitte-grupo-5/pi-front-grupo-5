@@ -19,14 +19,16 @@ export class ShoppingProductComponent implements OnInit {
   diminuirProduto(){
     if(this.quantidate_produto>1){
     this.quantidate_produto--;
+    this.service.removeValue(this.produto.valor);
     }
+
   }
   adicionarProduto(){
     console.log(this.produto.quantidade_estoque)
     console.log(this.produto.quantidade_estoque)
     if(this.quantidate_produto<this.produto.quantidade_estoque){
-
     this.quantidate_produto++;
+    this.service.addValue(this.produto.valor);
     }
   }
 

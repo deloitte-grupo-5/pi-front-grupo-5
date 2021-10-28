@@ -1,17 +1,22 @@
 import { Product } from 'src/app/models/Product';
 import { Injectable } from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject, Subject, Observable } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
+  totalAbsoluto!:number;
 
   constructor(private matSnackBar: MatSnackBar) { }
 
   public cartItemList : any =[]
   public productList = new BehaviorSubject<any>([]);
   public search = new BehaviorSubject<string>("");
+  public subjectTotal = new Subject();
+  public total = 0;
+
   getProducts(){
     return this.productList.asObservable();
   }
@@ -31,16 +36,25 @@ export class CartService {
     if(!produtoRepetido){
     this.cartItemList.push(product);
     this.productList.next(this.cartItemList);
+    this.total+= product.valor;
     this.getTotalPrice();
     }
   }
-  getTotalPrice() : number{
-    let totalAbsolute = 0;
-    this.cartItemList.map((a:any)=>{
-      totalAbsolute += a.valor;
-    })
-    return totalAbsolute;
+
+  getTotalPrice():Observable<any>{
+    this.subjectTotal.next(this.total)
+    return this.subjectTotal.asObservable();
   }
+  addValue(valor:number){
+    this.total+= valor;
+    return this.subjectTotal.next(this.total);
+  }
+  removeValue(valor:number){
+    this.total-= valor;
+    return this.subjectTotal.next(this.total);
+  }
+
+
   removeCartItem(product: any){
     this.cartItemList.map((a:any, index:any)=>{
       if(product.id=== a.id){
