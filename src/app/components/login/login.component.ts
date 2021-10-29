@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
       window.sessionStorage.setItem('token', JSON.stringify((<Usuario>token).token))
       console.log(token)
       this.service.showMensage("Sucesso no login!");
-      this.router.navigateByUrl("/produtos")
+      this.router.navigateByUrl("/")
     },
     error => {this.service.showMensage("Falha no login!");}
     );

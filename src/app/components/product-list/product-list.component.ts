@@ -91,7 +91,7 @@ export class ProductListComponent implements OnInit {
   }
 
   atualizarProdutosExibidos(){
-    this.produtosExibidos = this.produtos.slice(0,3)
+    this.produtosExibidos = this.produtos.slice(0,6)
 
   }
   OnPageChange(event:PageEvent){

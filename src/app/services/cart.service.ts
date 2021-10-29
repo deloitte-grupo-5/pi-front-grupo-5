@@ -1,93 +1,96 @@
 import { Product } from 'src/app/models/Product';
 import { Injectable, EventEmitter } from '@angular/core';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { BehaviorSubject, Subject, Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
+  constructor(private matSnackBar: MatSnackBar) {}
 
-  constructor(private matSnackBar: MatSnackBar) { }
-  public OnPrecoMudou:EventEmitter<number> = new EventEmitter();
-  public cartItemList : any =[]
+  public OnPrecoMudou: EventEmitter<number> = new EventEmitter();
+  public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);
-  public search = new BehaviorSubject<string>("");
-  public subjectTotal = new Subject();
   public total = 0;
 
-  getProducts(){
+  getProducts() {
     return this.productList.asObservable();
   }
 
-  setProduct(product : any){
+  setProduct(product: any) {
     this.cartItemList.push(...product);
     this.productList.next(product);
   }
-  addtoCart(product : any){
-    let produtoRepetido= false;
-    this.cartItemList.map((a:any, index:any)=>{
-      if(product.id=== a.id){
-        this.showMensage("Erro! Esse produto já foi adicionado!")
+  addtoCart(product: any) {
+    let produtoRepetido = false;
+    this.cartItemList.map((a: any, index: any) => {
+      if (product.id === a.id) {
+        if (a.quantidade < a.quantidade_estoque) {
+          a.quantidade++;
+          console.log(a);
+          this.showMensage(`Agora você tem ${a.quantidade} unidades de ${a.nome} no carrinho`)
+        } else {
+          this.showMensage('Não é possivel comprar mais desse produtos!');
+        }
         produtoRepetido = true;
       }
-    })
-    if(!produtoRepetido){
-    this.cartItemList.push(product);
-    this.productList.next(this.cartItemList);
-    this.total+= product.valor;
-    this.getTotalPrice();
-    console.log(product)
+    });
+    if (!produtoRepetido) {
+      this.cartItemList.push(product);
+      this.productList.next(this.cartItemList);
+      this.total += product.valor;
+      this.getTotalPrice();
+      console.log(product);
     }
   }
 
-  getTotalPrice(){
+  getTotalPrice() {
     let grandTotal = 0;
-    this.cartItemList.map((a:any)=>{
+    this.cartItemList.map((a: any) => {
       let valor = a.valor * a.quantidade;
       grandTotal += valor;
-    })
+    });
     return grandTotal;
   }
-  addValue(produto:Product){
-    this.cartItemList.map((a:any)=>{
-      if(produto.id===a.id){
-        a= produto;
-        console.log(produto)
-        console.log(a)
+  addValue(produto: Product) {
+    this.cartItemList.map((a: any) => {
+      if (produto.id === a.id) {
+        a = produto;
+        console.log(produto);
+        console.log(a);
       }
-    })
+    });
     this.OnPrecoMudou.emit(this.getTotalPrice());
-
   }
-  removeValue(produto:Product){
-    this.cartItemList.map((a:any)=>{
-      if(produto.id===a.id){
-        a= produto;
-
+  removeValue(produto: Product) {
+    this.cartItemList.map((a: any) => {
+      if (produto.id === a.id) {
+        a = produto;
       }
-    })
+    });
     this.OnPrecoMudou.emit(this.getTotalPrice());
-
   }
 
-
-  removeCartItem(product: any){
-    this.cartItemList.map((a:any, index:any)=>{
-      if(product.id=== a.id){
-        this.cartItemList.splice(index,1);
+  removeCartItem(product: any) {
+    this.cartItemList.map((a: any, index: any) => {
+      if (product.id === a.id) {
+        this.cartItemList.splice(index, 1);
       }
-    })
+    });
     this.productList.next(this.cartItemList);
     this.OnPrecoMudou.emit(this.getTotalPrice());
   }
-  removeAllCart(){
-    this.cartItemList = []
+  removeAllCart() {
+    this.cartItemList = [];
     this.productList.next(this.cartItemList);
   }
-  showMensage(msg:string){
-    this.matSnackBar.open(msg,'',{duration:3000,horizontalPosition:"right",verticalPosition:"top"});
+  showMensage(msg: string) {
+    this.matSnackBar.open(msg, '', {
+      duration: 3000,
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+    });
   }
-
-
+  finalizarCompra() {}
 }
