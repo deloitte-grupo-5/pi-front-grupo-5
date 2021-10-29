@@ -11,7 +11,7 @@
         <div class="amount">
             <div class="quantity">
                 <button class="minus" (click)="diminuirProduto()">-</button>
-                <span>{{quantidate_produto}}</span>
+                <span>{{produto.quantidade}}</span>
                 <button class="add" (click)="adicionarProduto()">+</button>
             </div>
             <p>{{produto.valor| currency}}</p>

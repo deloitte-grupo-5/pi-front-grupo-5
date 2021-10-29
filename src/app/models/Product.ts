@@ -6,4 +6,5 @@ export interface Product{
   valor:number,
   thumb:any
   quantidade_estoque:number
+  quantidade:number;
 }

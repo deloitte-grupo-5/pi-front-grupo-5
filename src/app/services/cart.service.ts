@@ -1,5 +1,5 @@
 import { Product } from 'src/app/models/Product';
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { BehaviorSubject, Subject, Observable } from 'rxjs';
 
@@ -7,10 +7,9 @@ import { BehaviorSubject, Subject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CartService {
-  totalAbsoluto!:number;
 
   constructor(private matSnackBar: MatSnackBar) { }
-
+  public OnPrecoMudou:EventEmitter<number> = new EventEmitter();
   public cartItemList : any =[]
   public productList = new BehaviorSubject<any>([]);
   public search = new BehaviorSubject<string>("");
@@ -38,20 +37,38 @@ export class CartService {
     this.productList.next(this.cartItemList);
     this.total+= product.valor;
     this.getTotalPrice();
+    console.log(product)
     }
   }
 
-  getTotalPrice():Observable<any>{
-    this.subjectTotal.next(this.total)
-    return this.subjectTotal.asObservable();
+  getTotalPrice(){
+    let grandTotal = 0;
+    this.cartItemList.map((a:any)=>{
+      let valor = a.valor * a.quantidade;
+      grandTotal += valor;
+    })
+    return grandTotal;
   }
-  addValue(valor:number){
-    this.total+= valor;
-    return this.subjectTotal.next(this.total);
+  addValue(produto:Product){
+    this.cartItemList.map((a:any)=>{
+      if(produto.id===a.id){
+        a= produto;
+        console.log(produto)
+        console.log(a)
+      }
+    })
+    this.OnPrecoMudou.emit(this.getTotalPrice());
+
   }
-  removeValue(valor:number){
-    this.total-= valor;
-    return this.subjectTotal.next(this.total);
+  removeValue(produto:Product){
+    this.cartItemList.map((a:any)=>{
+      if(produto.id===a.id){
+        a= produto;
+
+      }
+    })
+    this.OnPrecoMudou.emit(this.getTotalPrice());
+
   }
 
 
@@ -62,6 +79,7 @@ export class CartService {
       }
     })
     this.productList.next(this.cartItemList);
+    this.OnPrecoMudou.emit(this.getTotalPrice());
   }
   removeAllCart(){
     this.cartItemList = []

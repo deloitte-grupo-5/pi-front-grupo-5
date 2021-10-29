@@ -11,24 +11,23 @@ import { CartService } from 'src/app/services/cart.service';
 export class ShoppingProductComponent implements OnInit {
   @Input() produto!:Product;
   constructor(private service:CartService) { }
-  quantidate_produto:number = 1;
+
 
   ngOnInit(): void {
 
   }
   diminuirProduto(){
-    if(this.quantidate_produto>1){
-    this.quantidate_produto--;
-    this.service.removeValue(this.produto.valor);
+    if(this.produto.quantidade>1){
+    this.produto.quantidade--;
+    this.service.removeValue(this.produto);
     }
 
   }
   adicionarProduto(){
-    console.log(this.produto.quantidade_estoque)
-    console.log(this.produto.quantidade_estoque)
-    if(this.quantidate_produto<this.produto.quantidade_estoque){
-    this.quantidate_produto++;
-    this.service.addValue(this.produto.valor);
+
+    if(this.produto.quantidade<this.produto.quantidade_estoque){
+    this.produto.quantidade++;
+    this.service.addValue(this.produto);
     }
   }
 

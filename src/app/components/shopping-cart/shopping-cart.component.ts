@@ -20,10 +20,12 @@ export class ShoppingCartComponent implements OnInit {
       this.products= resp;
       console.log("array do carrinho:" + this.products);
       console.log("array do service:" + resp);
+      this.totalPrice =this.service.getTotalPrice();
     })
-    this.service.getTotalPrice().subscribe(
-      (valor)=> this.totalPrice = valor
-    )
+    this.service.OnPrecoMudou.subscribe((resp)=>this.totalPrice= resp)
+
+
+
 
   }
 

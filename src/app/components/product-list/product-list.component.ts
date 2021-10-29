@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ProductListComponent implements OnInit {
 
-  produtos:Product[]= [{id:1,
+  produtos:Product[]= [/*{id:1,
     nome:"Erva",
     desc:"lotem ipsu faf asf a  sadf",
     img:"ttt",
@@ -39,7 +39,7 @@ export class ProductListComponent implements OnInit {
           valor:15,
           thumb:"aaaa",
           quantidade_estoque:1}
-        ];
+        */];
 
 
 
@@ -62,7 +62,8 @@ export class ProductListComponent implements OnInit {
     this.service.getProducts().subscribe(
       (produtos:Product[]) =>{
        this.produtos = produtos;
-
+        this.produtos.map((a)=>a.quantidade = 1);
+        console.log(produtos)
         this.atualizarProdutosExibidos();
       });
 
