@@ -9,8 +9,8 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   providedIn: 'root'
 })
 export class ProductService {
-  static onAddCart:EventEmitter<Product[]> = new EventEmitter();
-  static produtosNoCarrinho:Product[] = [];
+  onProdutosMudaram:EventEmitter<null>= new EventEmitter();
+
 
   constructor(private http:HttpClient,private matSnackBar:MatSnackBar) { }
 

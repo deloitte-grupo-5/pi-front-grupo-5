@@ -1,3 +1,4 @@
+
 a:hover,.icons img:hover{
   opacity:0.7
 }
@@ -161,7 +162,7 @@ header .container .icons{
     header .container img {
         height: 50px;
     }
-    header .container div {        
+    header .container div {
         gap: 10px;
     }
     .container img.size {
@@ -171,7 +172,7 @@ header .container .icons{
         display:block;
     }
 }
-.card-number {
+header .container div.card-number {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -179,8 +180,32 @@ header .container .icons{
   padding: 10px;
   border-radius: 100px;
   background-color: #0D6238;
-  font-size: 10;
+  font-size: 18px;
+  gap: 10px
 }
-.card-number:hover{
+header .container div.card-number:hover{
   opacity: 0.8;
+}
+
+header .container div.login{
+  display: flex;
+  flex-direction: column;
+  color: #FFFfff;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap:0;
+}
+header .container div.login p {
+  font-size: 10px;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+}
+header .container .logout{
+  color: #FFFfff;
+}
+header .container .logout:hover{
+  opacity: 0.8;
+  cursor: pointer;
 }
