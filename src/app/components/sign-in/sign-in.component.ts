@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario';
+
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -26,7 +27,9 @@ export class SignInComponent implements OnInit {
     this.service.cadastrarUsuario(this.nome,this.email,
       this.sobrenome,this.telefone,this.senha,this.usuario).subscribe(
         (dados)=> {window.sessionStorage.setItem('token',((<Usuario>dados).token))
-        this.service.showMensage("Cadastro realizado com sucesso!");}
+        this.service.showMensage("Cadastro realizado com sucesso!");
+        this.router.navigateByUrl("/login")
+        }
         ,
         error=> this.service.showMensage("Erro! Não foi possivel cadastrar usuário!")
         );
