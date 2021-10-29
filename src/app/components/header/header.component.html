@@ -1,19 +1,19 @@
 <header>
     <div class="container">
-        <img routerLink="" src="../../../assets/images/logo-white.png" alt="Logo PANCOOK">
+        <img routerLink="" src="../../../assets/images/logo-white.png" alt="Logo PANCOOK" draggable="false">
         <div class="main_links">
             <div class="dropdown">
                 <button (click)="toggleDropdown()" class="dropbtn">☰</button>
             </div>
-            <a routerLink="produtos">Produtos</a>
-            <a routerLink="comunidade">Comunidade</a>
-            <a routerLink="sobre">Sobre</a>
+            <a routerLink="produtos" draggable="false">Produtos</a>
+            <a routerLink="comunidade" draggable="false">Comunidade</a>
+            <a routerLink="sobre" draggable="false">Sobre</a>
         </div>
         <div class="icons">
-            <img src="../../../assets/images/icon-search.png" alt="Pesquisar" (click)="toggleSearch()">
-            <img class="size" routerLink="login" src="../../../assets/images/icon-user.png" alt="Login">
+            <img src="../../../assets/images/icon-search.png" alt="Pesquisar" (click)="toggleSearch()" draggable="false">
+            <img class="size" routerLink="login" src="../../../assets/images/icon-user.png" alt="Login" draggable="false">
             <div class="card-number">
-            <img routerLink="carrinho" src="../../../assets/images/icon-cart.png" alt="Carrinho">
+            <img routerLink="carrinho" src="../../../assets/images/icon-cart.png" alt="Carrinho" draggable="false">
             {{rangeProducts}}
             </div>
         </div>
