@@ -30,6 +30,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 registerLocaleData(localePt,"pt");
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ registerLocaleData(localePt,"pt");
     MatIconModule,
     MatTableModule,
     MatSortModule,
-    ImageCropperModule
+    ImageCropperModule,
+    IvyCarouselModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue:"pt"},

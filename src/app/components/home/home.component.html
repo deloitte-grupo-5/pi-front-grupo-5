@@ -9,14 +9,21 @@
         <p>
             Se você não conhece tanto sobre elas e gostaria de saber mais, vem com a gente!
         </p>
-        <img src="../../../assets/images/arrow.png">
+        <img routerLink="sobre" src="../../../assets/images/arrow.png">
     </div>
 </section>
 <section class="second">
     <p>
         Nosso destaque de receitas enviadas por vocês, colaboradores dessa horta!
     </p>
-    <div class="carousel">
-
-    </div>
+    <carousel
+    [images]="images"
+    [loop]="true"
+    [autoplay]="true"
+    [autoplayInterval]="1000"
+    [transitionDuration]="1000"
+    [height]="150"
+    [cellWidth]="200"
+    >
+    </carousel>
 </section>

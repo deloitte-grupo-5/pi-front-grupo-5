@@ -30,8 +30,15 @@
         <p>
             &nbsp;&nbsp;&nbsp;&nbsp;Não ser convencional não torna menos digna de atenção essas verdinhas, que nem sempre são tão verdinhas! Levar a vocês informações, cuidados, receitas e troca de figurinhas é o objetivo do Jardim na Panela! Traga seu livro de receitas ou caderninho e faça parte desta hortinha!
         </p>
-        <div class="carousel">
-
-        </div>
+        <carousel
+        [images]="images"
+        [loop]="true"
+        [autoplay]="true"
+        [autoplayInterval]="1000"
+        [transitionDuration]="1000"
+        [height]="150"
+        [cellWidth]="200"
+        >
+        </carousel>
     </div>
 </section>
