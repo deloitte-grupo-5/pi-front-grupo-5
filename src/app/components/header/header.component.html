@@ -1,5 +1,5 @@
 <header>
-  <div class="container">
+  <!--<div class="container">
     <img routerLink="" src="../../../assets/images/logo-white.png" alt="Logo PANCOOK">
     <div class="main_links">
       <div class="dropdown">
@@ -8,27 +8,37 @@
       <a routerLink="produtos">Produtos</a>
       <a routerLink="comunidade">Comunidade</a>
       <a routerLink="sobre">Sobre</a>
+  </div> -->
+<div class="container">
+  <img routerLink="" src="../../../assets/images/logo-white.png" alt="Logo PANCOOK">
+  <div class="main_links">
+    <div class="dropdown">
+      <button (click)="toggleDropdown()" class="dropbtn">☰</button>
     </div>
+    <a routerLink="produtos">Produtos</a>
+    <a routerLink="comunidade">Comunidade</a>
+    <a routerLink="sobre">Sobre</a>
+        </div>
+
     <div class="icons">
-      <img src="../../../assets/images/icon-search.png" alt="Pesquisar" (click)="toggleSearch()">
+      <img src="../../../assets/images/icon-search.png" alt="Pesquisar" (click)="toggleSearch()"draggable="false">
       <div class="login" *ngIf="((!usuarioLogou))">
         <img class="size" routerLink="login" src="../../../assets/images/icon-user.png" alt="Login">
         <p>{{usuarioLogado.usuario}}</p>
       </div>
       <div class="login" *ngIf="((usuarioLogou))">
-        <img class="size" routerLink="perfil" src="../../../assets/images/icon-user.png" alt="Login">
+        <img class="size" routerLink="perfil" src="../../../assets/images/icon-user.png" alt="Login" draggable="false">
         <p>{{usuarioLogado.usuario}}</p>
       </div>
       <div class="card-number">
-        <img routerLink="carrinho" src="../../../assets/images/icon-cart.png" alt="Carrinho">
+        <img routerLink="carrinho" src="../../../assets/images/icon-cart.png" alt="Carrinho" draggable="false">
         {{rangeProducts}}
       </div>
     </div>
     <span class="material-icons logout" *ngIf="((usuarioLogou))" (click)="logout()">
       exit_to_app
       </span>
-
-  </div>
+    </div>
 </header>
 <div class="pseudo_container">
   <div class="dropdown-content" [ngClass]="showDropdown ? 'show' : 'notShow'">
