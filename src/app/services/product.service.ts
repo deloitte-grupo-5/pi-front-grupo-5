@@ -15,12 +15,12 @@ export class ProductService {
   constructor(private http:HttpClient,private matSnackBar:MatSnackBar) { }
 
   getProducts():Observable<Product[]>{
-    const url ="http://localhost:8080/produtos"
+    const url ="http://localhost:8080/produto"
 
     return this.http.get<Product[]>(url);
   }
   criarProduto(nome:string,descricao:string,valor:number,quantidade_estoque:number){
-    const url = "http://localhost:8080/produtos"
+    const url = "http://localhost:8080/produto"
     let token = window.sessionStorage.getItem("token");
     let teste ='';
     if (token){
@@ -42,10 +42,5 @@ export class ProductService {
     let id = produto.id.toString();
     return this.http.delete(url+`/${id}`,{headers:{Authorization:teste}})
   }
-
-  addToCart(produto:Product){
-
-  }
-
 
 }
