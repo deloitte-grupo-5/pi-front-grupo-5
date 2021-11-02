@@ -8,6 +8,6 @@ export interface Product{
   img:any,
   valor:number,
   thumb:any
-  quantidadeEstoque:number
+  quantidade_estoque:number
   quantidade:number;
 }

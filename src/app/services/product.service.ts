@@ -15,7 +15,7 @@ export class ProductService {
   constructor(private http:HttpClient,private matSnackBar:MatSnackBar) { }
 
   getProducts():Observable<Product[]>{
-    const url ="http://localhost:8080/produto"
+    const url ="http://localhost:8080/produtos"
 
     return this.http.get<Product[]>(url);
   }

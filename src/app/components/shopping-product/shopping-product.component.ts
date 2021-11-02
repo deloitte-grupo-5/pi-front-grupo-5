@@ -25,7 +25,7 @@ export class ShoppingProductComponent implements OnInit {
   }
   adicionarProduto(){
 
-    if(this.produto.quantidade<this.produto.quantidadeEstoque){
+    if(this.produto.quantidade<this.produto.quantidade_estoque){
     this.produto.quantidade++;
     this.service.addValue(this.produto);
     }

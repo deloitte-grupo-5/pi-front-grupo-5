@@ -31,7 +31,7 @@ export class CartService {
           console.log(a);
           this.showMensage(`Agora você tem ${a.quantidade} unidades de ${a.nome} no carrinho`)
         } else {
-          this.showMensage('Não é possivel comprar mais desse produtos!');
+          this.showMensage('Não é possivel adicionar mais desse produto no carrinho!');
         }
         produtoRepetido = true;
       }

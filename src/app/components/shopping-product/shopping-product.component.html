@@ -12,7 +12,7 @@
             <div class="quantity">
                 <button class="minus" (click)="diminuirProduto()"*ngIf="(!(produto.quantidade==1));else desativado1">-</button>
                 <span>{{produto.quantidade}}</span>
-                <button class="add" (click)="adicionarProduto()" *ngIf="(!(produto.quantidade==produto.quantidadeEstoque));else desativado">+</button>
+                <button class="add" (click)="adicionarProduto()" *ngIf="(!(produto.quantidade==produto.quantidade_estoque));else desativado">+</button>
             </div>
             <p>{{produto.valor| currency}}</p>
             <img class="remove" (click)="removeFromCart()" src="../../../assets/images/trash.png" alt="">
