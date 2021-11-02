@@ -32,6 +32,7 @@ import { ImageCropperModule } from 'ngx-image-cropper';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { PostSelectedComponent } from './components/post-selected/post-selected.component';
+import { CreatePostComponent } from './components/create-post/create-post.component';
 registerLocaleData(localePt,"pt");
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ registerLocaleData(localePt,"pt");
     AboutUsComponent,
     PerfilComponent,
     PostSelectedComponent,
+    CreatePostComponent,
 
   ],
   imports: [

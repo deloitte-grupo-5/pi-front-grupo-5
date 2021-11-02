@@ -1,3 +1,4 @@
+import { CreatePostComponent } from './components/create-post/create-post.component';
 import { PostSelectedComponent } from './components/post-selected/post-selected.component';
 import { ListaPostagemComponent } from './components/lista-postagem/lista-postagem.component';
 import { NgModule } from '@angular/core';
@@ -32,6 +33,8 @@ const routes: Routes = [
     path:"teste", component:ProductDetailComponent
   },{
     path:"view-post", component:PostSelectedComponent
+  },{
+    path:"create-post", component:CreatePostComponent
   }
 ];
 

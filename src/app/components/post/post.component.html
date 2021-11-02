@@ -1,9 +1,14 @@
+
+
 <div *ngIf="(!(postagem.id%2==0))">
-<section class="postagem">
+  <section class="postagem">
+  <button class="button-visualizar new-post" routerLink="/create-post">Criar nova postagem</button>
 
   <img src="assets\Rectangle 2.png" alt="" class="img-postagem">
 
+
 <article class="postagem-article">
+
 
   <h2 class="titulo">{{postagem.tittle}}</h2>
   <p class="texto">{{postagem.body}}</p>

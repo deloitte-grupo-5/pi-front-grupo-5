@@ -6,6 +6,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content:space-around;
+  flex-direction: column;
+  align-items: center;
 }
 
 .titulo{
@@ -41,6 +43,7 @@
   font-size:16px;
   border: none;
 }
+
 .button-visualizar:hover{
   background-color: rgba(191, 143, 19, 0.7);
 }
@@ -54,4 +57,10 @@ hr{
 
   width: 100%;
   margin: 50px auto ;
+}
+
+@media (max-width: 900px) {
+  button.new-post {
+    width: 50%;
+  }
 }
