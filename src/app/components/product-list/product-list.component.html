@@ -8,10 +8,10 @@
 
 <mat-paginator class="paginacao"
 [length]="produtos.length"
-[pageSize]="3"
-[pageSizeOptions]="[3,6,9,12]"
+[pageSize]="6"
+[pageSizeOptions]="[6,9,12]"
 (page)="OnPageChange($event)">
 </mat-paginator>
 
-<app-create-product (onCreateProduct)="atualizarPagina();atualizarProdutosExibidos()"></app-create-product>
+
 

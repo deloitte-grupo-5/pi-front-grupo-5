@@ -11,23 +11,28 @@ import { CartService } from 'src/app/services/cart.service';
 export class ShoppingCartComponent implements OnInit {
   products:Product[] = [];
   totalPrice:any;
+  frete:any = 0 ;
   constructor(private service:CartService) {}
 
 
 
   ngOnInit(): void {
+
+
     this.service.getProducts().subscribe((resp:Product[]) => {
       this.products= resp;
-      console.log("array do carrinho:" + this.products);
-      console.log("array do service:" + resp);
       this.totalPrice =this.service.getTotalPrice();
+      this.frete = this.service.calcularFrete();
+
     })
-    this.service.OnPrecoMudou.subscribe((resp)=>this.totalPrice= resp)
-
-
+    this.service.OnPrecoMudou.subscribe((resp)=>{this.totalPrice= resp
+      this.frete = this.service.calcularFrete();
+    })
 
 
   }
+
+
 
 
 

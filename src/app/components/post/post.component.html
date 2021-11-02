@@ -1,20 +1,25 @@
+
+
 <div *ngIf="(!(postagem.id%2==0))">
-<section class="postagem">
+  <section class="postagem">
+  <button class="button-visualizar new-post" routerLink="/create-post">Criar nova postagem</button>
 
   <img src="assets\Rectangle 2.png" alt="" class="img-postagem">
 
+
 <article class="postagem-article">
+
 
   <h2 class="titulo">{{postagem.tittle}}</h2>
   <p class="texto">{{postagem.body}}</p>
 
     <p class="enviado">Enviado por ******</p>
-      <button class="button-visualizar">visualizar</button>
+      <button class="button-visualizar" routerLink="/view-post">visualizar</button>
 </article>
 
 
 </section>
-  <hr>
+  <!-- <hr>
 </div>
 
 
@@ -26,13 +31,14 @@
 <article class="postagem-article">
 
   <h2 class="titulo">{{postagem.tittle}}</h2>
+
   <p class="texto">{{postagem.body}}</p>
 
     <p class="enviado">Enviado por ******</p>
-      <button class="button-visualizar button-2">visualizar</button>
+      <button class="button-visualizar button-2" >visualizar</button>
 
 </article>
 
 </section>
-<hr>
+<hr> -->
 </div>

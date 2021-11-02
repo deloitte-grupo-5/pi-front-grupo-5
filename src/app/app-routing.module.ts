@@ -1,3 +1,5 @@
+import { CreatePostComponent } from './components/create-post/create-post.component';
+import { PostSelectedComponent } from './components/post-selected/post-selected.component';
 import { ListaPostagemComponent } from './components/lista-postagem/lista-postagem.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -9,7 +11,6 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
     path:"perfil", component:PerfilComponent
   },{
     path:"teste", component:ProductDetailComponent
+  },{
+    path:"view-post", component:PostSelectedComponent
+  },{
+    path:"create-post", component:CreatePostComponent
   }
 ];
 
