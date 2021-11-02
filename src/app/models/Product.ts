@@ -10,4 +10,5 @@ export interface Product{
   thumb:any
   quantidade_estoque:number
   quantidade:number;
+  valorFrete:number;
 }

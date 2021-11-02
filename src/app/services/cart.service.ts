@@ -13,6 +13,7 @@ export class CartService {
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);
   public total = 0;
+  public frete = 0;
 
   getProducts() {
     return this.productList.asObservable();
@@ -35,6 +36,7 @@ export class CartService {
         }
         produtoRepetido = true;
       }
+
     });
     if (!produtoRepetido) {
       this.cartItemList.push(product);
@@ -43,6 +45,7 @@ export class CartService {
       this.getTotalPrice();
       console.log(product);
     }
+
   }
 
   getTotalPrice() {
@@ -51,7 +54,7 @@ export class CartService {
       let valor = a.valor * a.quantidade;
       grandTotal += valor;
     });
-    return grandTotal;
+    return grandTotal + this.calcularFrete();
   }
   addValue(produto: Product) {
     this.cartItemList.map((a: any) => {
@@ -62,6 +65,8 @@ export class CartService {
       }
     });
     this.OnPrecoMudou.emit(this.getTotalPrice());
+
+
   }
   removeValue(produto: Product) {
     this.cartItemList.map((a: any) => {
@@ -70,6 +75,8 @@ export class CartService {
       }
     });
     this.OnPrecoMudou.emit(this.getTotalPrice());
+
+
   }
 
   removeCartItem(product: any) {
@@ -78,8 +85,12 @@ export class CartService {
         this.cartItemList.splice(index, 1);
       }
     });
+    this.calcularFrete();
     this.productList.next(this.cartItemList);
     this.OnPrecoMudou.emit(this.getTotalPrice());
+
+
+
   }
   removeAllCart() {
     this.cartItemList = [];
@@ -92,5 +103,22 @@ export class CartService {
       verticalPosition: 'top',
     });
   }
+
+  calcularFrete(){
+    let freteTotal = 0;
+    this.cartItemList.map((a: any) => {
+      let freteProduto = a.valorFrete;
+      if(a.quantidade>1){
+
+        freteProduto += a.quantidade *1.5 - 1.5;
+      }
+      freteTotal += freteProduto;
+    });
+    this.frete = freteTotal;
+    return freteTotal;
+
+  }
+
   finalizarCompra() {}
 }
+
