@@ -30,7 +30,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { PerfilComponent } from './components/perfil/perfil.component';
-import { IvyCarouselModule } from 'angular-responsive-carousel';
+import {IvyCarouselModule} from './ivyсarousel_pro/carousel.module';
+
 registerLocaleData(localePt,"pt");
 @NgModule({
   declarations: [

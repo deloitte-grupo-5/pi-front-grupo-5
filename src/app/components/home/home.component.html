@@ -1,5 +1,42 @@
 <img class="banner" src="../../../assets/images/banner.jpg" alt="">
-<section class="first">
+<section class="to_products">
+    <p>Mudas mais compradas:</p>
+    <carousel class="produtos">
+        <div class="carousel-cell">
+            <img src="../../../assets/images/plants/castanha-do-maranhao.png" alt="">
+            <p>Castanha-do-maranhão</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="../../../assets/images/plants/shisso.png" alt="">
+            <p>Shisso</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="../../../assets/images/plants/bertalha-coracao.png" alt="">
+            <p>Bertalha-coração</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="../../../assets/images/plants/taioba.png" alt="">
+            <p>Taioba</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="../../../assets/images/plants/caxi.png" alt="">
+            <p>Caxi</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="../../../assets/images/plants/beldroega.png" alt="">
+            <p>Beldroega</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="../../../assets/images/plants/capicoba.png" alt="">
+            <p>Capicoba</p>
+        </div>
+        <div class="carousel-cell">
+            <img src="../../../assets/images/plants/celosia.png" alt="">
+            <p>Celósia</p>
+        </div>
+    </carousel>
+</section>
+<section class="to_about">
     <div class="text">
         <p>
             &nbsp;&nbsp;&nbsp;&nbsp;Venha conhecer as <b>PANCs</b>(<b>P</b>lantas <b>A</b>limentícias <b>N</b>ão <b>C</b>onvencionais)! Elas trazem mais nutrientes e cores aos pratos do dia-a-dia, vindas das mais diversas fontes e regiões. Além de conhecê-las aqui, você terá a chance de obter mudas para sua horta e colocar seu <span>Jardim na Panela</span> também, com o conhecimento, ingredientes e receitas que irá encontrar aqui!
@@ -12,18 +49,48 @@
         <img routerLink="sobre" src="../../../assets/images/arrow.png">
     </div>
 </section>
-<section class="second">
+<section class="to_recipes">
     <p>
         Nosso destaque de receitas enviadas por vocês, colaboradores dessa horta!
     </p>
-    <carousel
-    [images]="images"
+    <carousel class="receitas"
     [loop]="true"
     [autoplay]="true"
     [autoplayInterval]="1000"
     [transitionDuration]="1000"
-    [height]="150"
-    [cellWidth]="200"
+    (click)="handleCarouselEvents()"
     >
+    <div class="carousel-cell">
+        <img src="../../../assets/images/plants/castanha-do-maranhao.png" alt="">
+        <!-- <p>Castanha-do-maranhão</p> -->
+    </div>
+    <div class="carousel-cell">
+        <img src="../../../assets/images/plants/shisso.png" alt="">
+        <!-- <p>Shissô</p> -->
+    </div>
+    <div class="carousel-cell">
+        <img src="../../../assets/images/plants/bertalha-coracao.png" alt="">
+        <!-- <p>Bertalha-coração</p> -->
+    </div>
+    <div class="carousel-cell">
+        <img src="../../../assets/images/plants/taioba.png" alt="">
+        <!-- <p>Taioba</p> -->
+    </div>
+    <div class="carousel-cell">
+        <img src="../../../assets/images/plants/caxi.png" alt="">
+        <!-- <p>Caxi</p> -->
+    </div>
+    <div class="carousel-cell">
+        <img src="../../../assets/images/plants/beldroega.png" alt="">
+        <!-- <p>Beldroega</p> -->
+    </div>
+    <div class="carousel-cell">
+        <img src="../../../assets/images/plants/capicoba.png" alt="">
+        <!-- <p>Capicoba</p> -->
+    </div>
+    <div class="carousel-cell">
+        <img src="../../../assets/images/plants/celosia.png" alt="">
+        <!-- <p>Celósia</p> -->
+    </div>
     </carousel>
 </section>

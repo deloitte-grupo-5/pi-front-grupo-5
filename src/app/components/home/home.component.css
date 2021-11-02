@@ -1,14 +1,14 @@
 .banner {
     width: 100%;
-    max-height: 500px;
-    min-height: 200px;
+    max-height: 300px;
+    min-height: 140px;
     object-fit: cover;
 }
 
 section {
     width: 1400px;
     max-width: 90%;
-    margin: 20px auto;
+    margin: 30px auto;
 }
 
 p,
@@ -23,14 +23,41 @@ span {
     color: #BF8F13;
 }
 
-.first {
+.to_products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.to_products carousel.produtos {
+    background-color: rgba(255, 210, 95, 0.8);
+    margin-top: 10px;
+    border-radius: 20px;
+    padding-top: 15px;
+}
+.to_products carousel.produtos .carousel-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.to_products carousel.produtos .carousel-cell p {
+    font-size: 16px;
+    font-weight: 600;
+}
+.to_products carousel.produtos .carousel-cell img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.to_about {
     display: flex;
     align-items: center;
 }
 
 .text,
-.know_more,
-.second {
+.know_more {
     padding: 25px;
     border-radius: 15px;
 }
@@ -55,29 +82,52 @@ span {
     cursor: pointer;
 }
 
-.second {
+.to_recipes {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.to_recipes .receitas {
+    background-color: rgba(255, 210, 95, 0.8);
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 100%
+}
+.to_recipes carousel.receitas .carousel-cell {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+/* .to_recipes carousel.receitas .carousel-cell p {
+    position: absolute;
+    background: rgba(196, 196, 196, 0.5);
+    width: 180px;
+    height: 135px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.carousel {
-    margin-top: 15px;
-    background-color: #CCF1E4;
-    max-width: 100%;
-    width: 70%;
+    font-size: 16px;
+    font-weight: 600;
+} */
+.to_recipes carousel.receitas .carousel-cell img {
+    width: 180px;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-@media (max-width: 1080px) {
-    .first {
+@media (max-width: 1100px) {
+    .to_about {
         flex-direction: column;
     }
     .know_more {
         margin-left: 0;
         margin-top: 15px;
-    }
-    .carousel {
-        width: 90%;
     }
 }
 @media (max-width: 490px) {
