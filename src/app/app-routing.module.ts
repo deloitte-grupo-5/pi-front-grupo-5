@@ -12,6 +12,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ShoppingBillingComponent } from './components/shopping-billing/shopping-billing.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -29,7 +30,9 @@ const routes: Routes = [
   },{
     path:"sobre", component:AboutUsComponent
   },{
-    path:"perfil", component:PerfilComponent
+    path:"perfil", 
+    canActivate: [AuthGuard],
+    component:PerfilComponent
   },{
     path:"teste", component:ProductDetailComponent
   },{
