@@ -6,7 +6,7 @@
 }
 
 section {
-    width: 1400px;
+    width: 1200px;
     max-width: 90%;
     margin: 30px auto;
 }
@@ -23,6 +23,16 @@ span {
     color: #BF8F13;
 }
 
+.first_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+img {
+    width: 300px;
+}
+
 .to_products {
     display: flex;
     flex-direction: column;
@@ -32,7 +42,8 @@ span {
     background-color: rgba(255, 210, 95, 0.8);
     margin-top: 10px;
     border-radius: 20px;
-    padding-top: 15px;
+    padding-top: 15px;    
+    width: 90%;
 }
 .to_products carousel.produtos .carousel-cell {
     display: flex;
@@ -53,6 +64,7 @@ span {
 
 .to_about {
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -73,13 +85,15 @@ span {
     margin-left: 30px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 50px
 }
 
 .know_more img {
     padding: 10px 15px;
-    margin-left: 10px;
     width: 100px;
     cursor: pointer;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .to_recipes {
@@ -91,7 +105,7 @@ span {
     background-color: rgba(255, 210, 95, 0.8);
     margin-top: 10px;
     border-radius: 20px;
-    width: 100%
+    width: 90%;
 }
 .to_recipes carousel.receitas .carousel-cell {
     display: flex;
@@ -121,13 +135,30 @@ span {
     cursor: pointer;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1110px) {
+    .first_text {
+        flex-direction: column;
+    }
+    img.planta {
+        margin-left: 0;
+        margin-top: 20px;
+        width:70%;
+        height: 200px;
+        object-fit:cover;
+    }
     .to_about {
         flex-direction: column;
     }
     .know_more {
         margin-left: 0;
         margin-top: 15px;
+    }
+    
+}
+@media (max-width:750px) {
+    .to_products carousel.produtos,
+    .to_recipes carousel.receitas {
+        width: 65%
     }
 }
 @media (max-width: 490px) {
@@ -137,6 +168,7 @@ span {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center
+        justify-content: center;
+        gap:20px
     }
 }

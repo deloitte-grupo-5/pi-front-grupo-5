@@ -12,4 +12,13 @@ export class ShoppingBillingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  finalizar(){
+    let tudoCerto = true;
+    if (tudoCerto) {
+      alert("Compra aprovada!");
+      console.log("router para produtos")
+    } else {
+      alert("Ops, houve algum problema! Por favor, verifique todos os campos.")
+    }
+  }
 }

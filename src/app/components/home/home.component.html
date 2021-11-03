@@ -1,7 +1,22 @@
 <img class="banner" src="../../../assets/images/banner.jpg" alt="">
+<section class="first_text">
+    <img class="planta" src="../../../assets/images/erva-luisa.jpg" alt="">
+    <div class="text">
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;Venha conhecer as <b>PANCs</b>(<b>P</b>lantas <b>A</b>limentícias <b>N</b>ão <b>C</b>onvencionais)! Elas trazem mais nutrientes e cores aos pratos do dia-a-dia, vindas das mais diversas fontes e regiões. Além de conhecê-las aqui, você terá a chance de obter mudas para sua horta e colocar seu <span>Jardim na Panela</span> também, com o conhecimento, ingredientes e receitas que irá encontrar aqui!
+        </p>
+    </div>
+    <img class="planta" src="../../../assets/images/goya.jpg" alt="">
+</section>
 <section class="to_products">
-    <p>Mudas mais compradas:</p>
-    <carousel class="produtos">
+    <p>As mudas mais pedidas:</p>
+    <carousel class="produtos"
+    [arrowsOutside]="true"
+    [loop]="true"
+    [autoplay]="true"
+    [autoplayInterval]="800"
+    [transitionDuration]="2000"
+    >
         <div class="carousel-cell">
             <img src="../../../assets/images/plants/castanha-do-maranhao.png" alt="">
             <p>Castanha-do-maranhão</p>
@@ -37,14 +52,10 @@
     </carousel>
 </section>
 <section class="to_about">
-    <div class="text">
-        <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;Venha conhecer as <b>PANCs</b>(<b>P</b>lantas <b>A</b>limentícias <b>N</b>ão <b>C</b>onvencionais)! Elas trazem mais nutrientes e cores aos pratos do dia-a-dia, vindas das mais diversas fontes e regiões. Além de conhecê-las aqui, você terá a chance de obter mudas para sua horta e colocar seu <span>Jardim na Panela</span> também, com o conhecimento, ingredientes e receitas que irá encontrar aqui!
-        </p>
-    </div>
+    <img class="planta" src="../../../assets/images/centella.jpg" alt="">
     <div class="know_more">
         <p>
-            Se você não conhece tanto sobre elas e gostaria de saber mais, vem com a gente!
+            Se você não conhece tanto sobre elas e gostaria de saber mais, <b>vem com a gente!</b>
         </p>
         <img routerLink="sobre" src="../../../assets/images/arrow.png">
     </div>
@@ -54,10 +65,11 @@
         Nosso destaque de receitas enviadas por vocês, colaboradores dessa horta!
     </p>
     <carousel class="receitas"
+    [arrowsOutside]="true"
     [loop]="true"
     [autoplay]="true"
-    [autoplayInterval]="1000"
-    [transitionDuration]="1000"
+    [autoplayInterval]="800"
+    [transitionDuration]="2000"
     (click)="handleCarouselEvents()"
     >
     <div class="carousel-cell">
