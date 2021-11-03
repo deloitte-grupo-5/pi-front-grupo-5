@@ -1,0 +1,36 @@
+<section>
+    <h1>Confirmação de pedido</h1>
+    <form class="cadastro">
+        <p>Dados pessoais</p>
+        <input type="text" name="nome" placeholder="nome">
+        <input type="tel" name="telefone" placeholder="telefone" mask="(00)00000-0000">
+        <input type="text" name="cep" placeholder="cep">
+        <input type="text" name="endereco" placeholder="endereco">
+        <input type="text" name="numero" placeholder="número">
+        <input type="text" name="complemento" placeholder="complemento">
+        <input type="text" name="bairro" placeholder="bairro">
+        <input type="text" name="cidade" placeholder="cidade">
+        <input type="text" name="estado" placeholder="estado">
+    </form>
+    <div class="pagamento">
+        <form>
+            <p>Forma de pagamento</p>
+            <select>
+                <option value="">Escolha a forma de pagamento:</option>
+                <option value="boleto">Boleto</option>
+                <option value="credito">Cartão de crédito</option>
+                <option value="debito">Cartão de débito</option>                
+            </select>
+        </form>
+        <div class="resumo">
+            <p>Resumo</p>
+            <div>
+                <span>Valor dos produtos:</span><span>R$30,00</span>
+                <span>Frete:</span><span>R$10,00</span>
+                <span class="total">VALOR TOTAL:</span><span>R$40,00</span>
+            </div>
+            <button class="finalizar">Finalizar</button>
+            <button class="voltar"> Voltar</button>
+        </div>
+    </div>
+</section>

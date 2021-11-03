@@ -1,0 +1,91 @@
+section {
+    width: 1400px;
+    margin: 0 auto;
+    max-width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+h1{
+    width: 100%;
+    color: #BF8F13;
+    font-family: Nunito, Sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 60px 0 30px;
+}
+
+.cadastro,
+.pagamento,
+form,
+.resumo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro,
+form,
+.resumo {
+    box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    width: 350px;
+    max-width: 100%;
+}
+.resumo div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 260px
+}
+
+.pagamento {
+    gap: 20px;
+}
+
+p {
+    font-family: Nunito, Sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+span {
+    font-family: Nunito, Sans-serif;
+    font-size: 20px;
+}
+span.total {
+    font-weight: 600;
+}
+
+input,
+select,
+option{
+    font-family: Nunito, Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 7px 0;
+    width: 260px;
+}
+
+button {
+    font-family: Nunito, Sans-serif;
+    font-style: normal;
+    font-size: 24px;    
+    padding: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button.finalizar {
+    background-color: #FBBA13;
+    border: none;
+    width: 250px;
+    margin: 10px 0;
+}
+button.voltar {
+    border: solid 3px #FBBA13;
+    width: 220px;
+}
