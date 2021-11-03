@@ -2,19 +2,19 @@
 
 <div *ngIf="(!(postagem.id%2==0))">
   <section class="postagem">
-  <button class="button-visualizar new-post" routerLink="/create-post">Criar nova postagem</button>
 
-  <img src="assets\Rectangle 2.png" alt="" class="img-postagem">
+
+  <!-- <img src="assets\Rectangle 2.png" alt="" class="img-postagem"> -->
 
 
 <article class="postagem-article">
 
 
-  <h2 class="titulo">{{postagem.tittle}}</h2>
-  <p class="texto">{{postagem.body}}</p>
+  <h2 class="titulo">{{postagem.titulo}}</h2>
+  <p class="texto">{{postagem.texto}}</p>
 
-    <p class="enviado">Enviado por ******</p>
-      <button class="button-visualizar" routerLink="/view-post">visualizar</button>
+    <p class="enviado">Enviado por {{postagem.user.nome}}</p>
+      <button class="button-visualizar"  (click)="visualizar()">visualizar</button>
 </article>
 
 

@@ -10,37 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
-  produtos: Product[] = [
-    /*{id:1,
-    nome:"Erva",
-    desc:"lotem ipsu faf asf a  sadf",
-    img:"ttt",
-    valor:1,
-    thumb:"aaaa",
-    quantidade_estoque:1},
-    {id:2,
-      nome:"Erva1",
-      desc:"lotem ipsu faf asf a  sadf",
-      img:"ttt",
-      valor:3,
-      thumb:"aaaa",
-      quantidade_estoque:1},
-      {id:3,
-        nome:"Erva2",
-        desc:"lotem ipsu faf asf a  sadf",
-        img:"ttt",
-        valor:12,
-        thumb:"aaaa",
-        quantidade_estoque:1},
-        {id:4,
-          nome:"Erva3",
-          desc:"lotem ipsu faf asf a  sadf",
-          img:"ttt",
-          valor:15,
-          thumb:"aaaa",
-          quantidade_estoque:1}
-        */
-  ];
+  produtos: Product[] = [];
 
   @Input() produtoSelecionado!: Product;
   viewDetails = false;
