@@ -34,6 +34,7 @@ import { IvyCarouselModule } from './ivyсarousel_pro/carousel.module';
 import { PostSelectedComponent } from './components/post-selected/post-selected.component';
 import { CreatePostComponent } from './components/create-post/create-post.component';
 import { ShoppingBillingComponent } from './components/shopping-billing/shopping-billing.component';
+import { UpdateProductComponent } from './components/update-product/update-product.component';
 registerLocaleData(localePt,"pt");
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ registerLocaleData(localePt,"pt");
     PostSelectedComponent,
     CreatePostComponent,
     ShoppingBillingComponent,
+    UpdateProductComponent,
 
   ],
   imports: [

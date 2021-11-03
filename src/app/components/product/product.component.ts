@@ -35,6 +35,9 @@ export class ProductComponent implements OnInit {
 
     )
   }
+  updade(){
+    console.log("update")
+  }
 
 
 }

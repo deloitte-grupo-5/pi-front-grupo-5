@@ -1,4 +1,4 @@
-<h1>Cadastro de Produtos</h1>
+<h1>Edição Produto</h1>
 <section>
   <div class="cropper">
     <input type="file" (change)="fileChangeEvent($event)" />
@@ -70,9 +70,10 @@
     <input type="text" name="outrosNomes" placeholder="Digite os demais nomes do produto">
     <input type="text" name="descricao" placeholder="Digite a descrição do produto" [(ngModel)]="desc">
     <input type="number" name="valor" placeholder="Digite o valor do produto" [(ngModel)]="valor">
+    <input type="text" name="codigo" placeholder="Digite o frete do produto">
     <input type="number" name="quantidade_estoque" placeholder="Digite a quantidade do estoque" [(ngModel)]="quantidade_estoque">
 
-    <button (click)="criarProduto()">Criar</button>
+    <button >Concluir</button>
 
   </form>
 </section>
