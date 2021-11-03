@@ -6,7 +6,7 @@
         <div class="first_part">
             <div class="image">
                 <img class="plate" src="../../../assets/images/plate.png">
-                <img class="plant" src="../../../assets/images/laterFromBank/Moringa.jpg" alt="Planta Moringa">
+                <img class="plant" src="{{produto.img}}" alt="Planta Moringa">
             </div>
             <ul>
                 <li><img src="../../../assets/images/laterFromBank/care-raw.png" alt=""></li>
@@ -26,7 +26,7 @@
                 <span class="price">{{produto.valor | currency}}</span>
             </div>
             <p>
-               {{produto.descricao}}
+               {{produto.outrosNomes}}<br>{{produto.descricao}}
             </p>
             <div class="buttons">
                 <button class="add" (click)="addToCart()">Adicionar ao carrinho</button>

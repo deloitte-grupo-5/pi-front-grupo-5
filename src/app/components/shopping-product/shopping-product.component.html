@@ -1,12 +1,12 @@
 <section>
     <div class="plate">
         <img class="base" src="../../../assets/images/plate.png">
-        <img class="plant" (click)="openDetails()" src="../../../assets/images/laterFromBank/Moringa.jpg" alt="Imagem da planta">
+        <img class="plant" (click)="openDetails()" src="{{produto.img}}" alt="Imagem da planta">
     </div>
     <div class="description">
         <div class="name">
             <h2>{{produto.nome}}</h2>
-            <h3>(acássia)</h3>
+            <h3>{{produto.nomeCientifico}}</h3>
         </div>
         <div class="amount">
             <div class="quantity">

@@ -31,7 +31,7 @@ const routes: Routes = [
     path:"sobre", component:AboutUsComponent
   },{
     path:"perfil", 
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     component:PerfilComponent
   },{
     path:"teste", component:ProductDetailComponent
