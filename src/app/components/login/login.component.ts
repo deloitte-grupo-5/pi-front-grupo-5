@@ -2,7 +2,7 @@
 import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from 'src/app/models/usuario';
+// import { Usuario } from 'src/app/models/usuario';
 
 
 
@@ -14,6 +14,7 @@ import { Usuario } from 'src/app/models/usuario';
 export class LoginComponent implements OnInit {
   usuario:string="";
   senha:string="";
+  id:number=0;
 
   usuarioLogado!:any;
   constructor(private service:UserService,private router:Router) { }
@@ -29,6 +30,8 @@ export class LoginComponent implements OnInit {
       this.service.showMensage("Sucesso no login!");
       this.router.navigateByUrl("/")
       this.service.logar(this.usuarioLogado);
+
+      console.log(this.usuarioLogado)
 
     },
     error => {this.service.showMensage("Falha no login!");}

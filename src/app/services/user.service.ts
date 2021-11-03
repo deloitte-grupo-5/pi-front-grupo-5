@@ -20,7 +20,7 @@ export class UserService {
       senha,
     });
   }
-
+ 
   showMensage(msg: string) {
     this.matSnackBarModule.open(msg, '', {
       duration: 3000,
@@ -55,6 +55,4 @@ export class UserService {
     window.sessionStorage.removeItem("token")
     this.onlogoff.emit();
   }
-
-
 }

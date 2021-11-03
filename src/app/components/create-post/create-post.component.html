@@ -1,12 +1,15 @@
 <section>
     <div class="signIn">
         <p>Postagem</p>
-        <input type="text" placeholder="titulo" name="titulo">
-        <textarea placeholder="texto"></textarea>
-        <input type="text" placeholder="tempo de preparo" name="tempo de preparo">
-        <input type="number" placeholder="rendimento" name="rendimento">
-        <input type="number" placeholder="referencias" name="referencias">
-        <input type="file" placeholder="imagem" name="imagem">
-        <button type="submit">Enviar</button>
+        <input type="text" placeholder="titulo" name="titulo" [(ngModel)]="titulo">
+        <textarea placeholder="texto" [(ngModel)]="texto"></textarea>
+        <input type="text" placeholder="tempo de preparo" name="tempo de preparo" [(ngModel)]="preparo">
+        <input type="number" placeholder="rendimento" name="rendimento" [(ngModel)]="porcao">
+        <input type="text" placeholder="referencias" name="referencias" [(ngModel)]="referencias">
+        <!-- <input type="text" placeholder="user" name="user" [(ngModel)]="user"> -->
+
+        <button type="submit" (click)="criarPostagem()">Enviar</button>
+
+        {{titulo}} || {{texto}} || {{preparo}} || {{porcao}} || {{referencias}} ||
     </div>
 </section>

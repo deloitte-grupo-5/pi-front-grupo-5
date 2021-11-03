@@ -8,16 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-selected.component.css']
 })
 export class PostSelectedComponent implements OnInit {
-  postagem:Postagem = {id: 0,
+  postagem:Postagem = 
+  {
+    id: 0,
     comentários:0,
     curtidas:0,
-    data:"sssss",
+    data:  new Date(),
     porcao:5,
     preparo:6,
     referencias:"555",
     texto:"5555",
     titulo:"5555",
-    user:{ nome:"5555",
+    user:{ 
+      id: 1,
+      nome:"5555",
     usuario:"5555",
     senha:"5555",
     token:"555"}

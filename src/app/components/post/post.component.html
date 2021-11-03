@@ -1,6 +1,5 @@
 
-
-<div *ngIf="(!(postagem.id%2==0))">
+<div>
   <section class="postagem">
 
 
@@ -12,8 +11,9 @@
 
   <h2 class="titulo">{{postagem.titulo}}</h2>
   <p class="texto">{{postagem.texto}}</p>
+  <p>{{postagem.data}}</p>
 
-    <p class="enviado">Enviado por {{postagem.user.nome}}</p>
+    <!-- <p class="enviado">Enviado por {{postagem.user.nome}}</p> -->
       <button class="button-visualizar"  (click)="visualizar()">visualizar</button>
 </article>
 

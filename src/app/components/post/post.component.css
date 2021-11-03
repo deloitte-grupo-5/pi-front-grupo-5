@@ -8,20 +8,26 @@
   justify-content:space-around;
   flex-direction: column;
   align-items: center;
+  padding: 20px 0;
 }
 
 .titulo{
   font-weight: 700;
   font-size:30px;
 }
+
 .postagem-article{
   margin:0;
   flex-grow: 0.75;
+  width: 500px;
+  height: 200px;
 }
+
 .img-postagem{
   margin:0;
 
 }
+
 .texto{
   font-weight: 400;
   font-size:18px;
@@ -29,17 +35,19 @@
   margin:30px 0px;
 
 }
+
 .enviado{
   font-weight:400;
   font-size:18px;
   color:rgba(117, 117, 117, 1);
 }
+
 .button-visualizar{
   margin:30px 0;
   background-color: rgba(191, 143, 19, 1);
   font-family: 'Poppins', sans-serif;
   color: aliceblue;
-  width: 30%;
+  width: 120px;
   font-size:16px;
   border: none;
 }
