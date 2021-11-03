@@ -8,10 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-selected.component.css']
 })
 export class PostSelectedComponent implements OnInit {
-  postagem:Postagem = 
-  {
-    id: 0,
-    comentários:0,
+  postagem:Postagem = {id: 0,
+    comentarios:[{title:"55",body:"muito boa",usuario:{id:1,nome:"55555",usuario:"5555",senha:"5555",token:"555"}}],
     curtidas:0,
     data:  new Date(),
     porcao:5,
@@ -33,8 +31,7 @@ export class PostSelectedComponent implements OnInit {
     this.service.getPostagens().subscribe((postagem:Postagem[])=>{
       this.visualizar = true;
       this.postagem = postagem[0];
-
-
+      console.log(postagem)
     })
   }
 

@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
     this.service.login(this.usuario,this.senha).subscribe((token)=>{
 
       this.usuarioLogado= token;
+      window.sessionStorage.setItem("usuario",JSON.stringify(token))
       window.sessionStorage.setItem('token', JSON.stringify(this.usuarioLogado.token))
       this.service.showMensage("Sucesso no login!");
       this.router.navigateByUrl("/")

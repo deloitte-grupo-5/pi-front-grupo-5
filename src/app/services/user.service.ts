@@ -53,6 +53,7 @@ export class UserService {
   }
   logout() {
     window.sessionStorage.removeItem("token")
+    window.sessionStorage.removeItem("usuario")
     this.onlogoff.emit();
   }
 }

@@ -12,6 +12,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductComponent implements OnInit {
   @Output () onDelete:EventEmitter<any> = new EventEmitter();
   @Output() onOpenDescription:EventEmitter<Product> = new EventEmitter();
+  @Output() onEdit:EventEmitter<Product> = new EventEmitter();
   @Input() produto!:Product;
   constructor(private service:ProductService,private cartService:CartService) { }
 
@@ -34,6 +35,9 @@ export class ProductComponent implements OnInit {
       (error)=>{this.service.showMensage("Falha ao excluir produto!")}
 
     )
+  }
+  updade(){
+    this.onEdit.emit(this.produto);
   }
 
 

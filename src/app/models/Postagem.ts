@@ -1,8 +1,9 @@
-import { Usuario } from 'src/app/models/usuario';
+import { Comentario } from './Comentario';
+import { Usuario } from "./usuario";
 
 export interface Postagem {
   id: number,
-  comentários:number
+  comentarios:Comentario[]
   curtidas:number
   data:Date
   porcao:number

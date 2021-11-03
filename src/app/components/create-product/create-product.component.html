@@ -1,8 +1,8 @@
 <h1>Cadastro de Produtos</h1>
-<section>  
+<section>
   <div class="cropper">
     <input type="file" (change)="fileChangeEvent($event)" />
-    
+
     <image-cropper
     [imageChangedEvent]="imageChangedEvent"
     [maintainAspectRatio]="true"
@@ -15,9 +15,9 @@
     [roundCropper]="true"
     [cropperMinWidth]=500
     ></image-cropper>
-    
+
     <img class="productImageToSave" [src]="croppedImage" />
-  </div>  
+  </div>
   <div class="obs">
     <p>Selecione as características:</p>
     <div>
@@ -71,8 +71,8 @@
     <input type="text" name="descricao" placeholder="Digite a descrição do produto" [(ngModel)]="desc">
     <input type="number" name="valor" placeholder="Digite o valor do produto" [(ngModel)]="valor">
     <input type="number" name="quantidade_estoque" placeholder="Digite a quantidade do estoque" [(ngModel)]="quantidade_estoque">
-    
+
     <button (click)="criarProduto()">Criar</button>
 
   </form>
-</section>  
+</section>

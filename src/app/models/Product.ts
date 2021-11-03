@@ -1,6 +1,6 @@
 export interface Product{
   id:number,
-  codigo:number,
+  codigo:string,
   nome:string,
   nomeCientifico:string,
   outrosNomes:string,

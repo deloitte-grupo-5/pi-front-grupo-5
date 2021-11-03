@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 
 import { CartService } from 'src/app/services/cart.service';
 import { Component, OnInit } from '@angular/core';
@@ -16,12 +17,20 @@ export class HeaderComponent implements OnInit {
   usuarioLogado:any = {};
   usuarioLogou = false;
 
-  constructor(private service: CartService, private userService: UserService) {}
+  constructor(private service: CartService, private userService: UserService,private router:Router) {
+    if(window.sessionStorage.getItem("usuario")){
+      this.usuarioLogou = true;
+      let usuario = window.sessionStorage.getItem("usuario")
+      this.usuarioLogado = JSON.parse(usuario!)
+    }
+  }
 
   ngOnInit(): void {
+
     this.userService.onlogoff.subscribe((resp)=>{
       this.usuarioLogado = {}
       this.usuarioLogou= false;
+      this.router.navigateByUrl("/");
     })
 
     this.userService.onlogar.subscribe((resp) => {

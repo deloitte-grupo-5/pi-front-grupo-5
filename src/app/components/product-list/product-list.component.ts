@@ -13,7 +13,11 @@ export class ProductListComponent implements OnInit {
   produtos: Product[] = [];
 
   @Input() produtoSelecionado!: Product;
+
+  @Input() produtoEditando!:any;
+
   viewDetails = false;
+  viewEdit =false;
   public produtosExibidos: Product[] = [];
 
   constructor(
@@ -65,5 +69,15 @@ export class ProductListComponent implements OnInit {
       endIndex = this.produtos.length;
     }
     this.produtosExibidos = this.produtos.slice(startIndex, endIndex);
+  }
+
+  update(produto:Product) {
+    this.produtoEditando = produto;
+    this.viewEdit= true;
+  }
+  closeUpdate(){
+    this.viewEdit= false;
+    this.atualizarPagina();
+
   }
 }

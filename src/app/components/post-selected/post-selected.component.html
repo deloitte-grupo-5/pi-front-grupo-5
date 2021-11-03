@@ -40,7 +40,7 @@
         <li>ingrediente 5</li>
       </ul>
     </article>
-    <article class="preparation">
+    <article class="preparation" >
       <h2>Modo de preparo</h2>
 
       <p>
@@ -68,100 +68,22 @@
       <textarea placeholder="Deixe seu comentário"></textarea>
       <button type="submit">Enviar</button>
     </article>
-
     <article>
       <h2>Comentários</h2>
       <div class="comments">
-      <div class="infos-comment">
-        <h3>Jonathan Brant</h3>
-        <p>08/11/2021</p>
-      </div>
-      <div>
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-          dolorum aliquam laboriosam praesentium modi, esse placeat doloribus
-          cum vero dolor ipsam voluptatem numquam. At sit ut praesentium
-          molestiae laborum itaque soluta laudantium quo quidem inventore. Ipsa
-          culpa quas reprehenderit eos quae, nulla error ratione aut maxime
-          perspiciatis, harum in sint quaerat exercitationem quo hic aliquam
-          accusantium. Beatae, eaque modi eveniet, ipsam, placeat ea itaque
-          debitis tempora facere voluptatem dolorem. Dicta, consequatur
-          consequuntur quisquam possimus quidem facere recusandae temporibus
-          delectus tenetur vitae? Deserunt quis, saepe dolores repellat nobis
-          facere officiis minima aperiam ipsum sequi amet asperiores modi, nemo
-          facilis, ducimus non!
-        </p>
+      <div class="comentario" *ngFor="let comentario of postagem.comentarios">
+        <div class="infos-comment" >
+          <h3>{{comentario.usuario.nome}}</h3>
+          <p>08/11/2021</p>
+        </div>
+        <div>
+          <p class="text">
+            {{comentario.body}}
+          </p>
+        </div>
       </div>
     </div>
 
-    <div class="comments">
-      <div class="infos-comment">
-        <h3>Jonathan Brant</h3>
-        <p>08/11/2021</p>
-      </div>
-      <div>
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-          dolorum aliquam laboriosam praesentium modi, esse placeat doloribus
-          cum vero dolor ipsam voluptatem numquam. At sit ut praesentium
-          molestiae laborum itaque soluta laudantium quo quidem inventore. Ipsa
-          culpa quas reprehenderit eos quae, nulla error ratione aut maxime
-          perspiciatis, harum in sint quaerat exercitationem quo hic aliquam
-          accusantium. Beatae, eaque modi eveniet, ipsam, placeat ea itaque
-          debitis tempora facere voluptatem dolorem. Dicta, consequatur
-          consequuntur quisquam possimus quidem facere recusandae temporibus
-          delectus tenetur vitae? Deserunt quis, saepe dolores repellat nobis
-          facere officiis minima aperiam ipsum sequi amet asperiores modi, nemo
-          facilis, ducimus non!
-        </p>
-      </div>
-    </div>
-
-    <div class="comments">
-      <div class="infos-comment">
-        <h3>Jonathan Brant</h3>
-        <p>08/11/2021</p>
-      </div>
-      <div>
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-          dolorum aliquam laboriosam praesentium modi, esse placeat doloribus
-          cum vero dolor ipsam voluptatem numquam. At sit ut praesentium
-          molestiae laborum itaque soluta laudantium quo quidem inventore. Ipsa
-          culpa quas reprehenderit eos quae, nulla error ratione aut maxime
-          perspiciatis, harum in sint quaerat exercitationem quo hic aliquam
-          accusantium. Beatae, eaque modi eveniet, ipsam, placeat ea itaque
-          debitis tempora facere voluptatem dolorem. Dicta, consequatur
-          consequuntur quisquam possimus quidem facere recusandae temporibus
-          delectus tenetur vitae? Deserunt quis, saepe dolores repellat nobis
-          facere officiis minima aperiam ipsum sequi amet asperiores modi, nemo
-          facilis, ducimus non!
-        </p>
-      </div>
-    </div>
-
-    <div class="comments">
-      <div class="infos-comment">
-        <h3>Jonathan Brant</h3>
-        <p>08/11/2021</p>
-      </div>
-      <div>
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-          dolorum aliquam laboriosam praesentium modi, esse placeat doloribus
-          cum vero dolor ipsam voluptatem numquam. At sit ut praesentium
-          molestiae laborum itaque soluta laudantium quo quidem inventore. Ipsa
-          culpa quas reprehenderit eos quae, nulla error ratione aut maxime
-          perspiciatis, harum in sint quaerat exercitationem quo hic aliquam
-          accusantium. Beatae, eaque modi eveniet, ipsam, placeat ea itaque
-          debitis tempora facere voluptatem dolorem. Dicta, consequatur
-          consequuntur quisquam possimus quidem facere recusandae temporibus
-          delectus tenetur vitae? Deserunt quis, saepe dolores repellat nobis
-          facere officiis minima aperiam ipsum sequi amet asperiores modi, nemo
-          facilis, ducimus non!
-        </p>
-      </div>
-    </div>
 
     </article>
   </section>
