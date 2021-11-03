@@ -11,6 +11,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ShoppingBillingComponent } from './components/shopping-billing/shopping-billing.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,8 @@ const routes: Routes = [
     path:"view-post", component:PostSelectedComponent
   },{
     path:"create-post", component:CreatePostComponent
+  },{
+    path:"billing", component:ShoppingBillingComponent
   }
 ];
 
