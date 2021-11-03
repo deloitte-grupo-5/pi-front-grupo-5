@@ -59,6 +59,7 @@ a.hide {
 }
 
 .search {
+    position: absolute;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     text-align: right;
@@ -79,7 +80,6 @@ a.hide {
     height: 20px;
     padding: 4px 3px 1px;
 }
-
 
 .showSearch {
     display: flex;
@@ -165,7 +165,8 @@ header .container .icons{
     header .container div {
         gap: 10px;
     }
-    .container img.size {
+    .container img.size,
+    header .container div.login p {
         display: none
     }
     .dropdown-content a.hide {

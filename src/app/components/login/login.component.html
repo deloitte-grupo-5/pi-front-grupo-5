@@ -5,8 +5,8 @@
     <img class="sideImage" src="../../../assets/images/login.png">
     <div class="login">
         <p>Login</p>
-        <input type="text" placeholder="usuário" name="usuario"[(ngModel)]="usuario">
-        <input type="password" placeholder="senha" [(ngModel)]="senha">
+        <input type="text" placeholder="usuário" name="usuario"[(ngModel)]="usuario" (keyup.enter)="login()">
+        <input type="password" placeholder="senha" [(ngModel)]="senha" (keyup.enter)="login()">
         <button type="submit" (click)="login()">Entrar</button>
         <span routerLink="/cadastrar">Ainda não tenho cadastro</span>
     </div>
