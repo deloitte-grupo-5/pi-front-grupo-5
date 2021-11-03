@@ -1,7 +1,7 @@
 <section>
     <h1>Produtos</h1>
     <div class="products">
-        <app-product (onOpenDescription)="showDetails($event)" *ngFor="let produto of produtosExibidos" [produto]="produto"  (onDelete)="atualizarPagina()"></app-product>
+        <app-product (onOpenDescription)="showDetails($event)" *ngFor="let produto of produtosExibidos" [produto]="produto"  (onDelete)="atualizarPagina()" (onEdit)="update($event)"></app-product>
     </div>
 </section>
 <app-product-detail (onCloseDescription)="closeDetails()" *ngIf="viewDetails" [produto]="produtoSelecionado"></app-product-detail>
@@ -14,4 +14,4 @@
 </mat-paginator>
 
 
-<app-update-product></app-update-product>
+<app-update-product [produto]="produtoEditando" *ngIf="viewEdit" (onCloseUpdate)="closeUpdate()"></app-update-product>

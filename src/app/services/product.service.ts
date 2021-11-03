@@ -43,4 +43,16 @@ export class ProductService {
     return this.http.delete(url+`/${id}`,{headers:{Authorization:teste}})
   }
 
+  update(produto:Product){
+    const url = "http://localhost:8080/produtos"
+    let token = window.sessionStorage.getItem("token");
+    let teste = ''
+    if (token){
+      teste =token!.replace(/"([^"]+(?="))"/g, '$1');
+    }
+    console.log(produto)
+    return this.http.put(url,produto,{headers:{Authorization:teste}})
+
+  }
+
 }
