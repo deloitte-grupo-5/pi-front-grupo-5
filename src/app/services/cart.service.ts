@@ -7,7 +7,14 @@ import { BehaviorSubject, Subject, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CartService {
-  constructor(private matSnackBar: MatSnackBar) {}
+  constructor(private matSnackBar: MatSnackBar) {
+    let dados = window.sessionStorage.getItem("cart")
+    if(dados){
+      this.cartItemList = JSON.parse(dados)
+      this.productList.next(this.cartItemList)
+    }
+
+  }
 
   public OnPrecoMudou: EventEmitter<number> = new EventEmitter();
   public cartItemList: any = [];
@@ -31,7 +38,7 @@ export class CartService {
           a.quantidade++;
           console.log(a);
           this.showMensage(`Agora você tem ${a.quantidade} unidades de ${a.nome} no carrinho`)
-
+          window.sessionStorage.setItem("cart",JSON.stringify(this.cartItemList))
         } else {
           this.showMensage('Não é possivel adicionar mais desse produto no carrinho!');
         }
@@ -47,6 +54,7 @@ export class CartService {
 
       this.getTotalPrice();
       console.log(product);
+      window.sessionStorage.setItem("cart",JSON.stringify(this.cartItemList))
     }
 
   }
@@ -68,7 +76,7 @@ export class CartService {
       }
     });
     this.OnPrecoMudou.emit(this.getTotalPrice());
-
+    window.sessionStorage.setItem("cart",JSON.stringify(this.cartItemList))
 
   }
   removeValue(produto: Product) {
@@ -92,7 +100,7 @@ export class CartService {
     this.productList.next(this.cartItemList);
     this.OnPrecoMudou.emit(this.getTotalPrice());
 
-
+    window.sessionStorage.setItem("cart",JSON.stringify(this.cartItemList))
 
   }
   removeAllCart() {
