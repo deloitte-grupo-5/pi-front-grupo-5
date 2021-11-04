@@ -41,13 +41,37 @@ export class SignInComponent implements OnInit {
     }
 
     if(this.usuario==""){
+      validacao = false
       this.erros.push("Preencha o campo Usuário")
     }
     if(this.senha==""){
+      validacao = false
       this.erros.push("Preencha o campo Senha")
     }
-
-
+    if(this.usuario.length<5){
+      validacao = false
+      this.erros.push("O seu usuário deve ter no minimo 5 caracteres")
+    }
+    if(this.usuario.length<5){
+      validacao = false
+      this.erros.push("Sua senha deve ter no minimo 5 caracteres")
+    }
+    if(this.nome.length>100){
+      validacao = false
+      this.erros.push("O seu nome deve conter no máximo 100 cacteres")
+    }
+    if(this.usuario.length>100){
+      validacao = false
+      this.erros.push("O seu usuário deve conter no máximo 100 cacteres")
+    }
+    if(this.senha.length>100){
+      validacao = false
+      this.erros.push("A sua senha deve conter no máximo 100 cacteres")
+    }
+    if(this.email.length>100){
+      validacao = false
+      this.erros.push("O seu email deve conter no máximo 100 cacteres")
+    }
 
 
 

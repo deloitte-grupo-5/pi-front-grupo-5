@@ -75,7 +75,9 @@
     <input type="number" name="quantidade_estoque" placeholder="Digite a quantidade do estoque" [(ngModel)]="quantidade_estoque">
     <textarea  name="descricao" placeholder="Digite a descrição do produto" [(ngModel)]="descricao"></textarea>
     <button (click)="criarProduto()">Criar</button>
-
+    <ul>
+      <li *ngFor="let erro of erros"></li>
+    </ul>
   </form>
 </section>
 </div>

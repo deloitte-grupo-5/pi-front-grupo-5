@@ -22,6 +22,7 @@ export class CreateProductComponent implements OnInit {
   valor!: number
   quantidade_estoque!: number
   valorFrete!: number
+  erros:string[] = []
 
   constructor(private productService: ProductService,private router: Router) {
     if(window.sessionStorage.getItem("usuario")){
@@ -46,6 +47,8 @@ export class CreateProductComponent implements OnInit {
   }
 
   criarProduto() {
+    let validacao = false
+
     let produto= {
     codigo: this.codigo,
     nome: this.nome,

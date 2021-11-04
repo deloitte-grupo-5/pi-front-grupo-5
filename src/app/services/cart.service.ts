@@ -31,6 +31,7 @@ export class CartService {
           a.quantidade++;
           console.log(a);
           this.showMensage(`Agora você tem ${a.quantidade} unidades de ${a.nome} no carrinho`)
+
         } else {
           this.showMensage('Não é possivel adicionar mais desse produto no carrinho!');
         }
@@ -40,8 +41,10 @@ export class CartService {
     });
     if (!produtoRepetido) {
       this.cartItemList.push(product);
+      this.showMensage(`${product.nome} adicionado ao carrinho `)
       this.productList.next(this.cartItemList);
       this.total += product.valor;
+
       this.getTotalPrice();
       console.log(product);
     }
@@ -98,7 +101,7 @@ export class CartService {
   }
   showMensage(msg: string) {
     this.matSnackBar.open(msg, '', {
-      duration: 3000,
+      duration: 1000,
       horizontalPosition: 'right',
       verticalPosition: 'top',
     });
