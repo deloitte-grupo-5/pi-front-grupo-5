@@ -1,4 +1,4 @@
-import { Usuario } from './usuario';
+import { Usuario } from './Usuario';
 export interface Comentario{
   user:Usuario;
   title:string;

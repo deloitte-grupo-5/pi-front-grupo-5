@@ -1,5 +1,5 @@
 import { Comentario } from './Comentario';
-import { Usuario } from "./usuario";
+import { Usuario } from "./Usuario";
 
 export interface Postagem {
   id: number
