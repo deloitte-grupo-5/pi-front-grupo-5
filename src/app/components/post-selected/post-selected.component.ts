@@ -32,32 +32,15 @@ export class PostSelectedComponent implements OnInit {
   //   user: this.user
   // }
 
-  postagem: Postagem = {
-    id: 1,
-    comentarios: [],
-    curtidas: 0,
-    data: new Date(),
-    porcao: 0,
-    preparo: 0,
-    referencias: '',
-    texto: '',
-    titulo: '',
-    user: {
-      id: 1,
-      nome: '',
-      usuario: '',
-      senha: '',
-      token: '',
-    },
-  };
+  postagem!: Postagem ;
   visualizar = false;
   constructor(private service: PostagemService) {
     let usuario = window.sessionStorage.getItem("usuario")
-    let id = JSON.parse(usuario!)   
+    let id = JSON.parse(usuario!)
     this.id = id.id
   }
 
-  id:any 
+  id:any
 
   ngOnInit(): void {
     this.service.getPostagens().subscribe((postagem: Postagem[]) => {
@@ -67,15 +50,7 @@ export class PostSelectedComponent implements OnInit {
   }
 
   criarComentario() {
-    this.user.id = this.id;
-    this.service
-      .criarComentario( this.user, this.title, this.body)
-      .subscribe(
-        (dados) => {
-          this.service.showMensage('Comentário enviado');
-        },
-        (error) => this.service.showMensage('Falha ao criar post!')
-      );
+
   }
 
   delete() {

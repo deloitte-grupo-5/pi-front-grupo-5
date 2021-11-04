@@ -10,4 +10,7 @@
         <button type="submit" (click)="login()">Entrar</button>
         <span routerLink="/cadastrar">Ainda não tenho cadastro</span>
     </div>
+    <ul class="erros">
+      <li *ngFor="let erro of erros">{{erro}}</li>
+    </ul>
 </section>

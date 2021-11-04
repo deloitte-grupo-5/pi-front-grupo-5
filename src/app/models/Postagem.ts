@@ -3,13 +3,13 @@ import { Usuario } from "./Usuario";
 
 export interface Postagem {
   id: number
-  titulo:string  
+  title:string
   texto:string
   comentarios:Comentario[]
-  curtidas:number
+  stars:number
   porcao:number
   preparo:number
-  data:Date
+  data:string
   referencias:string
-  user:Usuario 
+  user:Usuario
 }
