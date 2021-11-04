@@ -17,6 +17,8 @@ section {
 }
 .plate img.plant {
     width: 120px;
+    height: 120px;
+    object-fit: cover;
     border-radius: 200px;
     position: relative;
     z-index: 1;

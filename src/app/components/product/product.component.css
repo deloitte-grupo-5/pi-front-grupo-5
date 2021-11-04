@@ -20,6 +20,8 @@ section {
 
 .plate img.plant {
     width: 175px;
+    height: 175px;
+    object-fit: cover;
     border-radius: 200px;
     z-index: 1;
 }
@@ -84,8 +86,8 @@ p {
 }
 .edit{
   position: relative;
-  left: 45%;
   display: flex;
+  left: 40%;
 
   cursor: pointer;
 
