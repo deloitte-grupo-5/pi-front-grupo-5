@@ -30,6 +30,9 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
 
   }
+
+  adm = true;
+
   addToCart(){
     this.cartService.addtoCart(this.produto);
   }
@@ -37,6 +40,7 @@ export class ProductComponent implements OnInit {
   openDetails(){
     this.onOpenDescription.emit(this.produto);
   }
+
   delete(){
       this.service.delete(this.produto).subscribe(
       (resposta)=>{
@@ -47,9 +51,9 @@ export class ProductComponent implements OnInit {
 
     )
   }
+
   updade(){
     this.onEdit.emit(this.produto);
   }
-
 
 }
