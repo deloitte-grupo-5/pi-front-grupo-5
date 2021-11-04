@@ -20,7 +20,7 @@ export class ProductComponent implements OnInit {
     if(window.sessionStorage.getItem("usuario")){
       let usuario = window.sessionStorage.getItem("usuario")
       let usuarioObj = JSON.parse(usuario!);
-      if(usuarioObj.id == 1){
+      if(usuarioObj.id == 5){
         this.usuarioAdm= true;
       }
     }
