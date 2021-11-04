@@ -6,7 +6,6 @@
     </div>
     <h1>Edição Produto</h1>
     <section>
-<<<<<<< HEAD
       <div class="cropper">
         <input type="file" (change)="fileChangeEvent($event)" />
 
@@ -14,27 +13,6 @@
           format="png" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()"
           (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()" [roundCropper]="true"
           [cropperMinWidth]=500></image-cropper>
-=======
-        <form class=>
-          <label for="">Codigo Produto:</label>
-          <input type="text" name="codigo" placeholder="Digite o código do produto" [(ngModel)]="produto.codigo">
-          <label for="">Nome:</label>
-          <input type="text" name="nome" placeholder="Digite o nome do produto" [(ngModel)]="produto.nome" >
-          <label for="">Nome ciêntifico:</label>
-          <input type="text" name="cientifico" placeholder="Digite o nome científico do produto"[(ngModel)]="produto.nomeCientifico">
-          <label for="">Outro nome:</label>
-          <input type="text" name="outrosNomes" placeholder="Digite os demais nomes do produto"[(ngModel)]="produto.outrosNomes">
-          <label for="">Valor:</label>
-          <input type="number" name="valor" placeholder="Digite o valor do produto" [(ngModel)]="produto.valor">
-          <label for="">Valor do Frete:</label>
-          <input type="text" name="frete" placeholder="Digite o frete do produto"[(ngModel)]="produto.valorFrete">
-          <label for="">Quantidade no estoque:</label>
-          <input type="number" name="quantidade_estoque" placeholder="Digite a quantidade do estoque" [(ngModel)]="produto.quantidade_estoque">
-          <label for="">Descrição:</label>
-          <textarea name="descricao" placeholder="Digite a descrição do produto" [(ngModel)]="produto.descricao"></textarea>
-          <button (click)="update()">Concluir</button>
-        </form>
->>>>>>> 79e9ad31432a011a8e394605926104b837aaac8c
 
         <img class="productImageToSave" [src]="croppedImage" />
       </div>
