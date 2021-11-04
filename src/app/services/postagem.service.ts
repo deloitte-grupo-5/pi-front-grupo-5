@@ -4,7 +4,7 @@ import { Observable, Subject } from 'rxjs';
 import { Postagem } from './../models/Postagem';
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Usuario } from '../models/usuario';
+import { Usuario } from '../models/Usuario';
 import { Comentario } from '../models/Comentario';
 
 @Injectable({
