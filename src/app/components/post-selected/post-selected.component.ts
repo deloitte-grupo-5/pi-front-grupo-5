@@ -1,38 +1,94 @@
 import { Postagem } from 'src/app/models/Postagem';
 import { PostagemService } from 'src/app/services/postagem.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-post-selected',
   templateUrl: './post-selected.component.html',
-  styleUrls: ['./post-selected.component.css']
+  styleUrls: ['./post-selected.component.css'],
 })
 export class PostSelectedComponent implements OnInit {
-  postagem:Postagem = {id: 0,
-    comentarios:[{title:"55",body:"muito boa",usuario:{id:1,nome:"55555",usuario:"5555",senha:"5555",token:"555"}}],
-    curtidas:0,
-    data:  new Date(),
-    porcao:5,
-    preparo:6,
-    referencias:"555",
-    texto:"5555",
-    titulo:"5555",
-    user:{ 
+  @Output() onDelete: EventEmitter<any> = new EventEmitter();
+  user = {
+    id: 1,
+    nome: '',
+    usuario: '',
+    senha: '',
+    token: '',
+  };
+  title = '';
+  body = '';
+
+  // post = {
+  //   id: 1,
+  //   comentarios: [],
+  //   curtidas: 0,
+  //   data: new Date(),
+  //   porcao: 0,
+  //   preparo: 0,
+  //   referencias: '',
+  //   texto: '',
+  //   titulo: '',
+  //   user: this.user
+  // }
+
+  postagem: Postagem = {
+    id: 1,
+    comentarios: [],
+    curtidas: 0,
+    data: new Date(),
+    porcao: 0,
+    preparo: 0,
+    referencias: '',
+    texto: '',
+    titulo: '',
+    user: {
       id: 1,
-      nome:"5555",
-    usuario:"5555",
-    senha:"5555",
-    token:"555"}
+      nome: '',
+      usuario: '',
+      senha: '',
+      token: '',
+    },
   };
   visualizar = false;
-  constructor(private service:PostagemService) { }
-
-  ngOnInit(): void {
-    this.service.getPostagens().subscribe((postagem:Postagem[])=>{
-      this.visualizar = true;
-      this.postagem = postagem[0];
-      console.log(postagem)
-    })
+  constructor(private service: PostagemService) {
+    let usuario = window.sessionStorage.getItem("usuario")
+    let id = JSON.parse(usuario!)   
+    this.id = id.id
   }
 
+  id:any 
+
+  ngOnInit(): void {
+    this.service.getPostagens().subscribe((postagem: Postagem[]) => {
+      this.visualizar = true;
+      this.postagem = postagem[0];
+    });
+  }
+
+  criarComentario() {
+    this.user.id = this.id;
+    this.service
+      .criarComentario( this.user, this.title, this.body)
+      .subscribe(
+        (dados) => {
+          this.service.showMensage('Comentário enviado');
+        },
+        (error) => this.service.showMensage('Falha ao criar post!')
+      );
+  }
+
+  delete() {
+    this.service.delete(this.postagem).subscribe(
+      (resposta) => {
+        this.service.showMensage('Produto excluido com sucesso!');
+        this.onDelete.emit();
+      },
+      (error) => {
+        this.service.showMensage('Falha ao excluir produto!');
+      }
+    );
+  }
+
+  enviarComentario() {}
 }

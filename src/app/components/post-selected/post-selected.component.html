@@ -2,6 +2,8 @@
   <section>
     <article class="img">
       <h1>{{postagem.titulo}}</h1>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class=".lixeira" (click)="delete()">delete</mat-icon>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class=".update">edit</mat-icon>
       <img
         src="../../../assets/images/lambari-da-horta.jpg"
         alt=""
@@ -42,38 +44,21 @@
     </article>
     <article class="preparation" >
       <h2>Modo de preparo</h2>
-
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
-        tempore aliquid a delectus? Consectetur ipsa eveniet blanditiis quam in
-        recusandae nostrum excepturi ipsam dolores corporis ratione, aspernatur
-        illum sapiente suscipit nisi laboriosam ducimus voluptas consequatur
-        unde veniam iste commodi dolorum? Molestiae nihil nobis itaque unde est
-        eaque illo eum voluptas corporis blanditiis! Sint esse sunt explicabo,
-        aut quisquam, labore eum reprehenderit ad hic aliquam accusantium
-        voluptas velit, accusamus saepe! Veniam nulla architecto molestiae
-        sequi, maiores libero et magni commodi aperiam odit! Eum, eligendi
-        reprehenderit aliquam neque modi nobis accusamus et quo ducimus vero vel
-        sint delectus atque. Voluptas quaerat voluptate perspiciatis modi odio
-        alias eaque nesciunt error quas sequi quisquam quidem perferendis aut
-        atque iure nemo voluptatem labore itaque, voluptatum doloremque, porro
-        et sint amet. Facilis, inventore quas atque assumenda, rerum
-        exercitationem incidunt placeat a ex, blanditiis iure. Repudiandae nulla
-        obcaecati consequuntur voluptates libero. Laborum odit officiis
-        asperiores consequuntur dolores?
+        {{postagem.texto}}
       </p>
     </article>
-
     <article class="send-comment">
-      <textarea placeholder="Deixe seu comentário"></textarea>
-      <button type="submit">Enviar</button>
+      <input type="text" name="tituloComentario" placeholder="Titulo do comentário" [(ngModel)]="title">
+      <textarea placeholder="Deixe seu comentário" [(ngModel)]="body"></textarea>
+      <button type="submit" (click)="criarComentario()">Enviar</button>
     </article>
     <article>
       <h2>Comentários</h2>
       <div class="comments">
       <div class="comentario" *ngFor="let comentario of postagem.comentarios">
         <div class="infos-comment" >
-          <h3>{{comentario.usuario.nome}}</h3>
+          <h3>{{comentario.user.nome}}</h3>
           <p>08/11/2021</p>
         </div>
         <div>
@@ -83,8 +68,6 @@
         </div>
       </div>
     </div>
-
-
     </article>
   </section>
 </div>

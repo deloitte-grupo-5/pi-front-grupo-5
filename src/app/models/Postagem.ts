@@ -2,15 +2,14 @@ import { Comentario } from './Comentario';
 import { Usuario } from "./usuario";
 
 export interface Postagem {
-  id: number,
+  id: number
+  titulo:string  
+  texto:string
   comentarios:Comentario[]
   curtidas:number
-  data:Date
   porcao:number
   preparo:number
+  data:Date
   referencias:string
-  texto:string
-  titulo:string
-  user:Usuario
-
+  user:Usuario 
 }

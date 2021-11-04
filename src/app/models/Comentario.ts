@@ -1,6 +1,6 @@
 import { Usuario } from './usuario';
 export interface Comentario{
-  usuario:Usuario;
+  user:Usuario;
   title:string;
   body:string;
 }

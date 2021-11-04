@@ -2,8 +2,6 @@
 import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { Usuario } from 'src/app/models/usuario';
-
 
 
 @Component({
@@ -26,6 +24,7 @@ export class LoginComponent implements OnInit {
     this.service.login(this.usuario,this.senha).subscribe((token)=>{
 
       this.usuarioLogado= token;
+      
       window.sessionStorage.setItem("usuario",JSON.stringify(token))
       window.sessionStorage.setItem('token', JSON.stringify(this.usuarioLogado.token))
       this.service.showMensage("Sucesso no login!");
