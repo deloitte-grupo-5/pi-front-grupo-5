@@ -1,5 +1,5 @@
 <section>
-<div class="edit" [ngStyle]="{'display': display}">
+<div class="edit" *ngIf="usuarioAdm">
       <mat-icon aria-hidden="false" aria-label="Example home icon" class=".lixeira" (click)="delete()">delete</mat-icon>
       <mat-icon aria-hidden="false" aria-label="Example home icon" class=".update" (click)="updade()">edit</mat-icon>
 </div>

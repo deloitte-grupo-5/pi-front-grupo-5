@@ -3,7 +3,7 @@ import { CartService } from './../../services/cart.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/models/Product';
 import { ProductService } from 'src/app/services/product.service';
-import { style } from '@angular/animations';
+
 
 @Component({
   selector: 'app-product',
@@ -15,36 +15,20 @@ export class ProductComponent implements OnInit {
   @Output() onOpenDescription:EventEmitter<Product> = new EventEmitter();
   @Output() onEdit:EventEmitter<Product> = new EventEmitter();
   @Input() produto!:Product;
+  usuarioAdm = false
   constructor(private service:ProductService,private cartService:CartService) {
-    let usuario = window.sessionStorage.getItem("usuario")
-    let id = JSON.parse(usuario!)   
-    this.id = id.id
+    if(window.sessionStorage.getItem("usuario")){
+      let usuario = window.sessionStorage.getItem("usuario")
+      let usuarioObj = JSON.parse(usuario!);
+      if(usuarioObj.id == 1){
+        this.usuarioAdm= true;
+      }
+    }
    }
-   
-   id:any;
 
-   user = {
-    id: 1,
-    nome: '',
-    usuario: '',
-    senha: '',
-    token: '',
-  };
-
-  display = 'listview'
-
-  mudarDisplay(){
-    this.display='none';
-  }
 
   ngOnInit(): void {
-    this.user.id = this.id;
-    console.log(this.id)
-    console.log(this.user.id)
-    if(this.id != 1) {
-      // let none = document.getElementsByClassName("edit")
-      this.mudarDisplay()
-    }
+
   }
   addToCart(){
     this.cartService.addtoCart(this.produto);

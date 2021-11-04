@@ -21,9 +21,9 @@
           <input type="text" name="frete" placeholder="Digite o frete do produto"[(ngModel)]="produto.valorFrete">
           <label for="">Quantidade no estoque:</label>
           <input type="number" name="quantidade_estoque" placeholder="Digite a quantidade do estoque" [(ngModel)]="produto.quantidade_estoque">
-          <button (click)="update()">Concluir</button>
           <label for="">Descrição:</label>
           <textarea name="descricao" placeholder="Digite a descrição do produto" [(ngModel)]="produto.descricao"></textarea>
+          <button (click)="update()">Concluir</button>
         </form>
 
     </section>
