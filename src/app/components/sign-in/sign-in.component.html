@@ -11,7 +11,7 @@
           <input type="text" placeholder="telefone" name="telefone" [(ngModel)]="telefone">
           <input type="text" placeholder="usuário" name="usurio" [(ngModel)]="usuario">
           <input type="email" placeholder="email" name="email" [(ngModel)]="email">
-          <input type="password" placeholder="senha" name="senha" [(ngModel)]="senha">
+          <input type="password" placeholder="senha" name="senha" (keyup.enter)="cadastrarUsuario()" [(ngModel)]="senha">
           <button type="submit" (click)="cadastrarUsuario()">Enviar</button>
           <ul class="erros">
             <li *ngFor="let erro of erros">{{erro}}</li>

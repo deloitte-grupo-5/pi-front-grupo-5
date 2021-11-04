@@ -1,22 +1,34 @@
 footer {
     box-sizing: border-box;
     background-color: #157143;
-    height: 60px;
     max-width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
     bottom: 0;
     font-family: Nunito, Sans-serif;
     font-weight: 400;
+    padding: 7px 0;
 }
 
-footer p {
+div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+p,
+span {
     max-width: 100%;
     color: #fff;
-    
-    font-size: 18px;
     text-align: center;
     margin: 0 20px;
+}
+p {
+    font-size: 18px;
+}
+span {
+    font-size: 14px;
 }
