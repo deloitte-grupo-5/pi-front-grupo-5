@@ -1,3 +1,4 @@
+<div>
 <h1>Cadastro de Produtos</h1>
 <section>
   <div class="cropper">
@@ -64,14 +65,17 @@
     </div>
   </div>
   <form>
-    <input type="text" name="codigo" placeholder="Digite o código do produto">
+    <input type="text" name="codigo" placeholder="Digite o código do produto" [(ngModel)]="codigo">
     <input type="text" name="nome" placeholder="Digite o nome do produto" [(ngModel)]="nome" >
-    <input type="text" name="cientifico" placeholder="Digite o nome científico do produto">
-    <input type="text" name="outrosNomes" placeholder="Digite os demais nomes do produto">
+    <input type="text" name="cientifico" placeholder="Digite o nome científico do produto" [(ngModel)]="nomeCientifico">
+    <input type="text" name="outrosNomes" placeholder="Digite os demais nomes do produto" [(ngModel)]="outrosNomes">
+    <input type="text" name="img" placeholder="Digite o link da imagem do produto" [(ngModel)]="img">
     <input type="number" name="valor" placeholder="Digite o valor do produto" [(ngModel)]="valor">
+    <input type="number" name="valorFrete" placeholder="Digite o valor do frete" [(ngModel)]="valorFrete">
     <input type="number" name="quantidade_estoque" placeholder="Digite a quantidade do estoque" [(ngModel)]="quantidade_estoque">
-    <textarea name="descricao" placeholder="Digite a descrição do produto" [(ngModel)]="desc"></textarea>
+    <textarea  name="descricao" placeholder="Digite a descrição do produto" [(ngModel)]="descricao"></textarea>
     <button (click)="criarProduto()">Criar</button>
 
   </form>
 </section>
+</div>

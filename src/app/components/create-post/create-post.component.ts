@@ -11,12 +11,13 @@ export class CreatePostComponent implements OnInit {
   @Output() onCreatePost: EventEmitter<any> = new EventEmitter();
 
   constructor(private postService: PostagemService, private router: Router) {
-    let usuario = window.sessionStorage.getItem("usuario")
-    let id = JSON.parse(usuario!)   
-    this.id = id.id
+    if(!window.sessionStorage.getItem("token")){
+      this.postService.showMensage("Faça login para continuar !")
+      this.router.navigateByUrl("/login")
+    }
   }
 
-  id:any 
+  id:any
 
   titulo = '';
   texto = '';
@@ -40,7 +41,7 @@ export class CreatePostComponent implements OnInit {
     this.postService
       .criarPostagem(
         this.titulo,
-        this.texto,       
+        this.texto,
         this.comentarios,
         this.curtidas,
         this.porcao,

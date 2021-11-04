@@ -19,21 +19,21 @@ export class ProductService {
 
     return this.http.get<Product[]>(url);
   }
-  criarProduto(nome:string,descricao:string,valor:number,quantidade_estoque:number){
-    const url = "http://localhost:8080/produto"
+  criarProduto(produto:any){
+    const url = "http://localhost:8080/produtos"
     let token = window.sessionStorage.getItem("token");
     let teste ='';
     if (token){
       teste =token!.replace(/"([^"]+(?="))"/g, '$1');
     }
 
-    return this.http.post(url,{descricao,nome,quantidade_estoque,valor},{headers:{Authorization:teste}})
+    return this.http.post(url,produto,{headers:{Authorization:teste}})
   }
 
   showMensage(msg:string){
     this.matSnackBar.open(msg,'',{duration:3000,horizontalPosition:"right",verticalPosition:"top"});
   }
-  
+
   delete(produto:Product):Observable<any>{
     const url = "http://localhost:8080/produtos"
     let token = window.sessionStorage.getItem("token");

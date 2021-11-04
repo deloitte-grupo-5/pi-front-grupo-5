@@ -6,7 +6,7 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../models/usuario';
 import { Comentario } from '../models/Comentario';
-// import { Usuario } from '../models/usuario';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -64,8 +64,7 @@ export class PostagemService {
       teste =token!.replace(/"([^"]+(?="))"/g, '$1');
     }
 
-    return this.http.post(url,{user, title, body},{headers:{Authorization:teste}})
-    
+    return this.http.post(url,{user, title, body},{headers:{Authorization:teste}})    
   }
 
   getComentarios():Observable<Comentario[]>{
@@ -87,6 +86,4 @@ export class PostagemService {
     let id = postagem.id.toString();
     return this.http.delete(url+`/${id}`,{headers:{Authorization:teste}})
   }
-
-
 }
