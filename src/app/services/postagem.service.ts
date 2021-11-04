@@ -27,17 +27,20 @@ export class PostagemService {
       return this.http.get<Postagem[]>(this.url+'/posts');
   }
   visualizar(postagem:Postagem){
+
+
     this.postagemVisualizar = postagem;
+
     this.postagemSubject.next(postagem);
     this.router.navigateByUrl("/view-post")
   }
   getPostagemVisualizar(){
     return this.postagemSubject.asObservable();
   }
- 
+
   criarPostagem(
-    titulo:string, 
-    texto:string, 
+    titulo:string,
+    texto:string,
     comentarios:Comentario[],
     curtidas:number,
     porcao:number,
@@ -55,7 +58,7 @@ export class PostagemService {
     return this.http.post(this.url + "/posts",{titulo,texto,comentarios,curtidas,porcao,preparo,referencias, user},{headers:{Authorization:teste}})
   }
 
-  criarComentario(       
+  criarComentario(
     user:Usuario,
     title:string,
     body:string,
@@ -67,7 +70,7 @@ export class PostagemService {
       teste =token!.replace(/"([^"]+(?="))"/g, '$1');
     }
 
-    return this.http.post(url,{user, title, body},{headers:{Authorization:teste}})    
+    return this.http.post(url,{user, title, body},{headers:{Authorization:teste}})
   }
 
   getComentarios():Observable<Comentario[]>{

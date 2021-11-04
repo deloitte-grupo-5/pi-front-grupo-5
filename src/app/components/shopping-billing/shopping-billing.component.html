@@ -19,15 +19,15 @@
                 <option value="">Escolha a forma de pagamento:</option>
                 <option value="boleto">Boleto</option>
                 <option value="credito">Cartão de crédito</option>
-                <option value="debito">Cartão de débito</option>                
+                <option value="debito">Cartão de débito</option>
             </select>
         </form>
         <div class="resumo">
             <p>Resumo</p>
             <div>
-                <span>Valor dos produtos:</span><span>R$30,00</span>
-                <span>Frete:</span><span>R$10,00</span>
-                <span class="total">VALOR TOTAL:</span><span>R$40,00</span>
+                <span>Valor dos produtos:</span><span>{{valorProdutos| currency}}</span>
+                <span>Frete:</span><span>{{frete|currency}}</span>
+                <span class="total">VALOR TOTAL:</span><span>{{valorTotal | currency}}</span>
             </div>
             <button class="finalizar" (click)="finalizar()">Finalizar</button>
             <button class="voltar" routerLink="/carrinho"> Voltar</button>

@@ -32,6 +32,10 @@ export class ShoppingCartComponent implements OnInit {
 
   }
 
+  consultar(){
+    this.frete = this.service.calcularFrete();
+  }
+
 
 
 

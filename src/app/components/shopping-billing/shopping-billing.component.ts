@@ -1,3 +1,4 @@
+import { CartService } from 'src/app/services/cart.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,11 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shopping-billing.component.css']
 })
 export class ShoppingBillingComponent implements OnInit {
-
-  constructor() { }
+  valorTotal= 0;
+  frete=0
+  valorProdutos = 0
+  constructor(private service:CartService) { }
 
   ngOnInit(): void {
+    this.valorTotal = this.service.getTotalPrice();
+    this.frete = this.service.calcularFrete();
+    this.valorProdutos = this.service.calcularProdutos();
   }
+
+
+
 
   finalizar(){
     let tudoCerto = true;

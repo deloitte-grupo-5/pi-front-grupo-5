@@ -5,7 +5,7 @@ export interface Postagem {
   id: number
   title:string
   texto:string
-  comentarios:Comentario[]
+  comentarios:any[]
   stars:number
   porcao:number
   preparo:number

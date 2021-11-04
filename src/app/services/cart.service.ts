@@ -121,6 +121,16 @@ export class CartService {
     return freteTotal;
 
   }
+  calcularProdutos(){
+    let total = 0;
+    this.cartItemList.map((a:any)=>{
+      total=+ a.valor
+      if(a.quantidade > 1 ){
+        total = a.quantidade * a.valor ;
+      }
+    })
+    return total
+  }
 
   finalizarCompra() {}
 }

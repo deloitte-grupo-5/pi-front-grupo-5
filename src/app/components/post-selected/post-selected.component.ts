@@ -33,6 +33,7 @@ export class PostSelectedComponent implements OnInit {
   // }
 
   postagem!: Postagem ;
+
   visualizar = false;
   constructor(private service: PostagemService) {
     let usuario = window.sessionStorage.getItem("usuario")
@@ -43,10 +44,9 @@ export class PostSelectedComponent implements OnInit {
   id:any
 
   ngOnInit(): void {
-    this.service.getPostagens().subscribe((postagem: Postagem[]) => {
-      this.visualizar = true;
-      this.postagem = postagem[0];
-    });
+    this.service.getPostagemVisualizar().subscribe((resp)=>{this
+      console.log(resp)
+    })
   }
 
   criarComentario() {
