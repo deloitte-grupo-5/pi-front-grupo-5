@@ -84,13 +84,13 @@ p {
 .description button.details {
     background-color: #FFEDAF;
 }
-.edit{
-  position: relative;
-  display: flex;
-  left: 40%;
-
-  cursor: pointer;
-
+.edit {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.edit mat-icon {
+    cursor: pointer;
 }
 
 
