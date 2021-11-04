@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
   adm = true
-  constructor() { }
+  constructor(private router:Router) {
+    if(window.sessionStorage.getItem("usuario")){
+      let usuario = window.sessionStorage.getItem("usuario")
+      let usuarioObj = JSON.parse(usuario!);
+      if(usuarioObj.id == 1){
+        this.usuarioAdm= true;
+      }
 
+    }else{
+      this.router.navigateByUrl('/login')
+    }
+
+  }
+  usuarioAdm= false
   ngOnInit(): void {
   }
-  
+
 }

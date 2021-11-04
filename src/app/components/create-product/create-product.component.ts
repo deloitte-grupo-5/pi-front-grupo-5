@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Product } from './../../models/Product';
 import { ProductService } from './../../services/product.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
@@ -22,8 +23,19 @@ export class CreateProductComponent implements OnInit {
   quantidade_estoque!: number
   valorFrete!: number
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService,private router: Router) {
+    if(window.sessionStorage.getItem("usuario")){
+      let usuario = window.sessionStorage.getItem("usuario")
+      let usuarioObj = JSON.parse(usuario!);
+      if(usuarioObj.id == 1){
+        this.usuarioAdm= true;
+      }
+    }
+    else{
+      this.router.navigateByUrl("/login")
+    }
   }
+  usuarioAdm = false
 
 
   ngOnInit(): void {
