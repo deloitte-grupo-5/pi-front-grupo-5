@@ -10,18 +10,21 @@ import { Comentario } from '../models/Comentario';
 @Injectable({
   providedIn: 'root'
 })
+
 export class PostagemService {
   asPostagensMudaram:EventEmitter<null>= new EventEmitter();
   postagemSubject: Subject<Postagem>;
   postagemVisualizar!:Postagem;
+
+  private readonly url = "https://api-jardimnapanela.herokuapp.com";
 
   constructor(private http:HttpClient,private router:Router, private matSnackBar:MatSnackBar) {
     this.postagemSubject = new Subject();
    }
 
   getPostagens():Observable<Postagem[]>{
-      let url ="http://localhost:8080/posts";
-      return this.http.get<Postagem[]>(url);
+      // let url ="http://localhost:8080/posts";
+      return this.http.get<Postagem[]>(this.url+'/posts');
   }
   visualizar(postagem:Postagem){
     this.postagemVisualizar = postagem;
@@ -42,14 +45,14 @@ export class PostagemService {
     referencias:string,
     user:Usuario
     ){
-    const url = "http://localhost:8080/posts"
+    // const url = "http://localhost:8080/posts"
     let token = window.sessionStorage.getItem("token");
     let teste ='';
     if (token){
       teste =token!.replace(/"([^"]+(?="))"/g, '$1');
     }
 
-    return this.http.post(url,{titulo,texto,comentarios,curtidas,porcao,preparo,referencias, user},{headers:{Authorization:teste}})
+    return this.http.post(this.url + "/posts",{titulo,texto,comentarios,curtidas,porcao,preparo,referencias, user},{headers:{Authorization:teste}})
   }
 
   criarComentario(       
@@ -68,8 +71,8 @@ export class PostagemService {
   }
 
   getComentarios():Observable<Comentario[]>{
-    let url ="http://localhost:8080/comentarios";
-    return this.http.get<Comentario[]>(url);
+    // let url ="http://localhost:8080/comentarios";
+    return this.http.get<Comentario[]>(this.url + "/comentarios");
 }
 
   showMensage(msg:string){
@@ -77,13 +80,13 @@ export class PostagemService {
   }
 
   delete(postagem:Postagem):Observable<any>{
-    const url = "http://localhost:8080/produtos"
+    // const url = "http://localhost:8080/produtos"
     let token = window.sessionStorage.getItem("token");
     let teste = ''
     if (token){
       teste =token!.replace(/"([^"]+(?="))"/g, '$1');
     }
     let id = postagem.id.toString();
-    return this.http.delete(url+`/${id}`,{headers:{Authorization:teste}})
+    return this.http.delete(this.url +"/produtos"+`/${id}`,{headers:{Authorization:teste}})
   }
 }

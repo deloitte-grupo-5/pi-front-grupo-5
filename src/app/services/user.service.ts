@@ -9,13 +9,15 @@ export class UserService {
 
   onlogar: EventEmitter<any> = new EventEmitter();
 
+  private readonly url = "https://api-jardimnapanela.herokuapp.com";
+
   constructor(
     private http: HttpClient,
     private matSnackBarModule: MatSnackBar
   ) {}
 
   login(usuario: string, senha: string) {
-    return this.http.post('http://localhost:8080/usuario/logar', {
+    return this.http.post(this.url + "/usuario/logar", {
       usuario,
       senha,
     });
@@ -36,9 +38,9 @@ export class UserService {
     senha: string,
     usuario: string
   ) {
-    const url = 'http://localhost:8080/usuario/cadastrar';
+    // const url = 'http://localhost:8080/usuario/cadastrar';
     //return this.http.post(url,{nome,email,sobrenome,telefone,senha,usuario})
-    return this.http.post(url, {
+    return this.http.post(this.url + "/usuario/cadastrar", {
       nome,
       email,
       sobrenome,

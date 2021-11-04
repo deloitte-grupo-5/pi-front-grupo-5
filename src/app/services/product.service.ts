@@ -10,14 +10,15 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class ProductService {
   onProdutosMudaram:EventEmitter<null>= new EventEmitter();
+  private readonly url = "https://api-jardimnapanela.herokuapp.com";
 
 
   constructor(private http:HttpClient,private matSnackBar:MatSnackBar) { }
 
   getProducts():Observable<Product[]>{
-    const url ="http://localhost:8080/produtos"
+    // const url ="http://localhost:8080/produtos"
 
-    return this.http.get<Product[]>(url);
+    return this.http.get<Product[]>(this.url + "/produtos");
   }
   criarProduto(nome:string,descricao:string,valor:number,quantidade_estoque:number){
     const url = "http://localhost:8080/produtos"
@@ -35,25 +36,25 @@ export class ProductService {
   }
   
   delete(produto:Product):Observable<any>{
-    const url = "http://localhost:8080/produtos"
+    // const url = "http://localhost:8080/produtos"
     let token = window.sessionStorage.getItem("token");
     let teste = ''
     if (token){
       teste =token!.replace(/"([^"]+(?="))"/g, '$1');
     }
     let id = produto.id.toString();
-    return this.http.delete(url+`/${id}`,{headers:{Authorization:teste}})
+    return this.http.delete(this.url + "/produtos"+`/${id}`,{headers:{Authorization:teste}})
   }
 
   update(produto:Product){
-    const url = "http://localhost:8080/produtos"
+    // const url = "http://localhost:8080/produtos"
     let token = window.sessionStorage.getItem("token");
     let teste = ''
     if (token){
       teste =token!.replace(/"([^"]+(?="))"/g, '$1');
     }
     console.log(produto)
-    return this.http.put(url,produto,{headers:{Authorization:teste}})
+    return this.http.put(this.url + "/produtos",produto,{headers:{Authorization:teste}})
 
   }
 
