@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   id:number=0;
 
   usuarioLogado!:any;
+  erros:string[]= [];
   constructor(private service:UserService,private router:Router) { }
 
   ngOnInit(): void {
@@ -24,7 +25,7 @@ export class LoginComponent implements OnInit {
     this.service.login(this.usuario,this.senha).subscribe((token)=>{
 
       this.usuarioLogado= token;
-      
+
       window.sessionStorage.setItem("usuario",JSON.stringify(token))
       window.sessionStorage.setItem('token', JSON.stringify(this.usuarioLogado.token))
       this.service.showMensage("Sucesso no login!");

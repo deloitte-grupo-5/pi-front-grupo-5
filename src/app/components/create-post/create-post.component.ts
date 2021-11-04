@@ -37,25 +37,6 @@ export class CreatePostComponent implements OnInit {
   ngOnInit(): void {}
 
   criarPostagem() {
-    this.user.id = this.id;
-    this.postService
-      .criarPostagem(
-        this.titulo,
-        this.texto,
-        this.comentarios,
-        this.curtidas,
-        this.porcao,
-        this.preparo,
-        this.referencias,
-        this.user
-      )
-      .subscribe(
-        (dados) => {
-          this.postService.showMensage('Post criado com sucesso');
-          this.router.navigateByUrl('/comunidade');
-          console.log(dados);
-        },
-        (error) => this.postService.showMensage('Falha ao criar post!')
-      );
+
   }
 }

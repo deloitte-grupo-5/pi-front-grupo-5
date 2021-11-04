@@ -70,6 +70,12 @@ span {
     text-transform: lowercase;
     cursor: pointer;
 }
+.erros{
+  color: red;
+}
+.erros li {
+  margin: 3px auto;
+}
 
 @media (max-width: 950px) {
 
@@ -92,6 +98,7 @@ span {
         margin: 13px 0;
     }
 }
+
 
 @media (max-width: 650px) {
 
