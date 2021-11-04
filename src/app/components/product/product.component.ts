@@ -15,10 +15,6 @@ export class ProductComponent implements OnInit {
   @Output() onOpenDescription:EventEmitter<Product> = new EventEmitter();
   @Output() onEdit:EventEmitter<Product> = new EventEmitter();
   @Input() produto!:Product;
-<<<<<<< HEAD
-
-  constructor(private service:ProductService,private cartService:CartService) { }
-=======
   usuarioAdm = false
   constructor(private service:ProductService,private cartService:CartService) {
     if(window.sessionStorage.getItem("usuario")){
@@ -30,7 +26,6 @@ export class ProductComponent implements OnInit {
     }
    }
 
->>>>>>> 79e9ad31432a011a8e394605926104b837aaac8c
 
   ngOnInit(): void {
 
