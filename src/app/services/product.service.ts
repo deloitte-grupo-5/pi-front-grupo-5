@@ -20,7 +20,7 @@ export class ProductService {
     return this.http.get<Product[]>(url);
   }
   criarProduto(nome:string,descricao:string,valor:number,quantidade_estoque:number){
-    const url = "http://localhost:8080/produto"
+    const url = "http://localhost:8080/produtos"
     let token = window.sessionStorage.getItem("token");
     let teste ='';
     if (token){

@@ -15,11 +15,38 @@ export class CreateProductComponent implements OnInit {
   quantidade_estoque!:number
   valor!:number;
 
+  constructor(private productService:ProductService) { 
+    let usuario = window.sessionStorage.getItem("usuario")
+    let id = JSON.parse(usuario!)   
+    this.id = id.id
+  }
 
-  constructor(private productService:ProductService) { }
+  id:any
+  user = {
+    id: 1,
+    nome: '',
+    usuario: '',
+    senha: '',
+    token: '',
+  };
+
+  display = 'listview'
+
+  mudarDisplay(){
+    this.display='none';
+  }
 
   ngOnInit(): void {
+    this.user.id = this.id;
+    console.log(this.id)
+    console.log(this.user.id)
+    if(this.id != 1) {
+      // let none = document.getElementsByClassName("edit")
+      this.mudarDisplay()
+
   }
+}
+
   limparCampos(){
     this.nome='';
     this.desc='';
