@@ -14,18 +14,22 @@ export class ProductComponent implements OnInit {
   @Output() onOpenDescription:EventEmitter<Product> = new EventEmitter();
   @Output() onEdit:EventEmitter<Product> = new EventEmitter();
   @Input() produto!:Product;
+
   constructor(private service:ProductService,private cartService:CartService) { }
 
   ngOnInit(): void {
   }
+
+  adm = true;
+
   addToCart(){
     this.cartService.addtoCart(this.produto);
   }
 
-
   openDetails(){
     this.onOpenDescription.emit(this.produto);
   }
+
   delete(){
     this.service.delete(this.produto).subscribe(
       (resposta)=>{
@@ -36,9 +40,9 @@ export class ProductComponent implements OnInit {
 
     )
   }
+
   updade(){
     this.onEdit.emit(this.produto);
   }
-
 
 }

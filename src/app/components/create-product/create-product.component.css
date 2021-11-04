@@ -46,6 +46,7 @@ form{
 
 input,
 label,
+textarea,
 p{
   font-family: Nunito, Sans-serif;
   font-size: 16px;
@@ -53,12 +54,16 @@ p{
   margin: 7px 0;
 }
 
-input{
+input, textarea{
   cursor: pointer;
   border: 1px solid #686868;
   padding: 1px 2px;
   width: 290px;
   max-width: 290px;
+}
+textarea {
+  resize: none;
+  min-height: 100px
 }
 
 button{

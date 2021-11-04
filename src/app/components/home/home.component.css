@@ -39,7 +39,7 @@ img {
     align-items: center;
 }
 .to_products carousel.produtos {
-    background-color: rgba(255, 210, 95, 0.8);
+    background-image: url("/assets/images/fundo.jpg");
     margin-top: 10px;
     border-radius: 20px;
     padding-top: 15px;    
@@ -94,6 +94,9 @@ img {
     width: 100px;
     cursor: pointer;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.know_more img:active{
+    box-shadow: none;
 }
 
 .to_recipes {
