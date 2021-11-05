@@ -1,7 +1,7 @@
 <div>
   <section>
     <article class="img">
-      <h1></h1>
+      <h1>{{postagem.titulo | uppercase}}</h1>
       <mat-icon aria-hidden="false" aria-label="Example home icon" class=".lixeira" (click)="delete()">delete</mat-icon>
       <mat-icon aria-hidden="false" aria-label="Example home icon" class=".update">edit</mat-icon>
       <img
@@ -19,7 +19,7 @@
       <div>
         <img src="../../../assets/images/cloche.png" alt="" draggable="false" />
         <h5>Rendimento</h5>
-        <h6>5 porções</h6>
+        <h6>{{postagem.porcao}}porções</h6>
       </div>
       <div>
         <img src="../../../assets/images/heart.png" alt="" draggable="false" />
@@ -59,7 +59,7 @@
       <div class="comentario" >
         <div class="infos-comment" >
           <h3></h3>
-          <p>08/11/2021</p>
+          <p>{{postagem.data}}</p>
         </div>
         <div>
           <p class="text">

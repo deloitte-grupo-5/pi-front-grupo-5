@@ -32,7 +32,7 @@ export class PostSelectedComponent implements OnInit {
   //   user: this.user
   // }
 
-  postagem!: Postagem ;
+  postagem: any;
 
   visualizar = false;
   constructor(private service: PostagemService) {
@@ -44,8 +44,10 @@ export class PostSelectedComponent implements OnInit {
   id:any
 
   ngOnInit(): void {
+    this.postagem= {}
     this.service.getPostagemVisualizar().subscribe((resp)=>{this
-      console.log(resp)
+      this.postagem = resp
+      console.log(this.postagem)
     })
   }
 

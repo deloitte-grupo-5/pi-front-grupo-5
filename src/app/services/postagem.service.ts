@@ -1,6 +1,6 @@
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, BehaviorSubject } from 'rxjs';
 import { Postagem } from './../models/Postagem';
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -13,13 +13,13 @@ import { Comentario } from '../models/Comentario';
 
 export class PostagemService {
   asPostagensMudaram:EventEmitter<null>= new EventEmitter();
-  postagemSubject: Subject<Postagem>;
-  postagemVisualizar!:Postagem;
 
+  postagemVisualizar!:Postagem;
+  public postagem = new BehaviorSubject<any>({});
   private readonly url = "https://api-jardimnapanela.herokuapp.com";
 
   constructor(private http:HttpClient,private router:Router, private matSnackBar:MatSnackBar) {
-    this.postagemSubject = new Subject();
+
    }
 
   getPostagens():Observable<Postagem[]>{
@@ -27,15 +27,11 @@ export class PostagemService {
       return this.http.get<Postagem[]>(this.url+'/posts');
   }
   visualizar(postagem:Postagem){
-
-
-    this.postagemVisualizar = postagem;
-
-    this.postagemSubject.next(postagem);
+    this.postagem.next(postagem)
     this.router.navigateByUrl("/view-post")
   }
   getPostagemVisualizar(){
-    return this.postagemSubject.asObservable();
+    return this.postagem.asObservable();
   }
 
   criarPostagem(
