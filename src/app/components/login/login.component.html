@@ -9,8 +9,8 @@
         <input type="password" placeholder="senha" [(ngModel)]="senha" (keyup.enter)="login()">
         <button type="submit" (click)="login()">Entrar</button>
         <span routerLink="/cadastrar">Ainda não tenho cadastro</span>
+        <ul class="erros">
+          <li *ngFor="let erro of erros">{{erro}}</li>
+        </ul>
     </div>
-    <ul class="erros">
-      <li *ngFor="let erro of erros">{{erro}}</li>
-    </ul>
 </section>

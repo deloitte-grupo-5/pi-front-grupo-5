@@ -1,26 +1,32 @@
 .container{
   display:flex;
-  justify-content:center;
+  flex-direction: column;
   align-items:center;
-  width: 96%;
-
-}
-div{
-  margin: 0 auto;
-  width: 96vw;
-  margin: 100px auto;
-}
-.button-visualizar{
+  width: 1200px;
+  max-width: 90%;
   margin: 30px auto;
+}
+
+.button-visualizar{
+  margin: 30px 10px;
   background-color: rgba(191, 143, 19, 1);
   font-family: 'Poppins', sans-serif;
   color: aliceblue;
-  width: 30%;
-  font-size:16px;
+  width: 350px;
+  max-width: 100%;
+  font-size: 16px;
   border: none;
 
 }
-
 .button-visualizar:hover{
   background-color: rgba(191, 143, 19, 0.7);
+}
+
+section {
+  display:flex;
+  flex-direction: column;
+}
+
+app-post {
+padding: 10px;
 }

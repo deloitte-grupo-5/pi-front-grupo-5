@@ -105,7 +105,7 @@ img {
     align-items: center;
 }
 .to_recipes .receitas {
-    background-color: rgba(255, 210, 95, 0.8);
+    background-image: url("/assets/images/fundo2.jpg");
     margin-top: 10px;
     border-radius: 20px;
     width: 90%;
