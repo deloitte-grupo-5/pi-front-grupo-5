@@ -88,6 +88,7 @@ export class PostSelectedComponent implements OnInit {
   }
   updateClose(){
     this.update = false;
+    this.service.getPostagemVisualizar().subscribe((resp)=>this.postagem = resp)
 
   }
 
