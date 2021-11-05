@@ -1,3 +1,4 @@
+import { PageEvent } from '@angular/material/paginator';
 import { PostagemService } from './../../services/postagem.service';
 import { Component, OnInit, Output } from '@angular/core';
 import { Postagem } from 'src/app/models/Postagem';
@@ -8,7 +9,8 @@ import { Postagem } from 'src/app/models/Postagem';
   styleUrls: ['./lista-postagem.component.css'],
 })
 export class ListaPostagemComponent implements OnInit {
-   @Output() postagens: Postagem[] = [
+  postagemExibidas:Postagem[] = []
+  @Output() postagens: Postagem[] = [
   //   {
   //     comentarios: [
   //       {
@@ -81,6 +83,7 @@ export class ListaPostagemComponent implements OnInit {
   getPostagem() {
     this.postagemService.getPostagens().subscribe((postagens: Postagem[]) => {
       this.postagens = postagens
+      this.atualizarPostagensExibidos();
     })
   }
 
@@ -88,7 +91,22 @@ export class ListaPostagemComponent implements OnInit {
     this.postagemService.getPostagens().subscribe((postagens)=>{
       this.postagens = postagens;
       console.log(postagens)
+      this.atualizarPostagensExibidos();
     });
   }
+  OnPageChange(event: PageEvent) {
+    const startIndex = event.pageIndex * event.pageSize;
+    let endIndex = startIndex + event.pageSize;
+    if (endIndex > this.postagens.length) {
+      endIndex = this.postagens.length;
+    }
+    this.postagemExibidas = this.postagens.slice(startIndex, endIndex);
+  }
+
+  atualizarPostagensExibidos() {
+    this.postagemExibidas = this.postagens.slice(0, 3);
+  }
+
+
 }
 

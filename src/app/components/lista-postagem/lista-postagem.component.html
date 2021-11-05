@@ -1,6 +1,12 @@
 <div class="container">
   <button class="button-visualizar new-post" routerLink="/create-post">Criar nova postagem</button>
   <section>
-    <app-post *ngFor="let postagem of postagens" [postagem]="postagem"></app-post>
+    <app-post *ngFor="let postagem of postagemExibidas" [postagem]="postagem"></app-post>
   </section>
 </div>
+<mat-paginator class="paginacao"
+[length]="postagens.length"
+[pageSize]="3"
+[pageSizeOptions]="[1,3,6,9]"
+(page)="OnPageChange($event)">
+</mat-paginator>
