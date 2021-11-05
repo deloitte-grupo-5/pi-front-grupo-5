@@ -28,7 +28,7 @@ export class ProductService {
       teste =token!.replace(/"([^"]+(?="))"/g, '$1');
     }
 
-    return this.http.post(url,produto,{headers:{Authorization:teste}})
+    return this.http.post(this.url,produto,{headers:{Authorization:teste}})
   }
 
   showMensage(msg:string){
