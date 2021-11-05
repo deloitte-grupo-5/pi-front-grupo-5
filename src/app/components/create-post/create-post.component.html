@@ -6,6 +6,12 @@
         <input type="text" placeholder="tempo de preparo" name="tempo de preparo" [(ngModel)]="preparo">
         <input type="number" placeholder="rendimento" name="rendimento" [(ngModel)]="porcao">
         <input type="text" placeholder="referencias" name="referencias" [(ngModel)]="referencias">
+        <span *ngFor="let ingradiente of ingredientes; let i = index; trackBy: track;">
+          <input type="text"  placeholder="ingrediente" name="ingrediente_{{i}}" [(ngModel)]="ingredientes[i]">
+          <button *ngIf="i==0" (click)="addIngradiente()" class="controllers">+</button>
+          <button *ngIf="i!=0"(click)="removeIngrediente(i)" class="controllers" >-</button>
+        </span>
+        <input type="text" placeholder="link da imagem" name="referencias" [(ngModel)]="img">
         <button type="submit" (click)="criarPostagem()">Enviar</button>
     </div>
 </section>

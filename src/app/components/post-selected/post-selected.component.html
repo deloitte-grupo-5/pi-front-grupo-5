@@ -5,7 +5,7 @@
       <mat-icon aria-hidden="false" aria-label="Example home icon" class=".lixeira" (click)="delete()">delete</mat-icon>
       <mat-icon aria-hidden="false" aria-label="Example home icon" class=".update">edit</mat-icon>
       <img
-        src="../../../assets/images/lambari-da-horta.jpg"
+        src="{{postagem.img}}"
         alt=""
         draggable="false"
       />
@@ -35,11 +35,7 @@
     <article class="ingredients">
       <h2>Ingredientes</h2>
       <ul>
-        <li>ingrediente 1</li>
-        <li>ingrediente 2</li>
-        <li>ingrediente 3</li>
-        <li>ingrediente 4</li>
-        <li>ingrediente 5</li>
+        <li *ngFor="let ingrediente of postagem.ingredientes">{{ingrediente}}</li>
       </ul>
     </article>
     <article class="preparation" >
@@ -59,7 +55,7 @@
       <div class="comentario" >
         <div class="infos-comment" >
           <h3></h3>
-          <p>{{postagem.data | date:'long'}} </p>
+          <p>{{postagem.data | date:'medium'}} </p>
         </div>
         <div>
           <p class="text">

@@ -42,8 +42,20 @@ export class PostagemService {
     porcao:number,
     preparo:number,
     referencias:string,
-    user:Usuario
+    user:Usuario,
+    ingredientes:string[],
+    img:string
     ){
+      console.log({ titulo:titulo,
+        texto:texto,
+        comentarios:comentarios,
+        curtidas:10,
+        porcao:10,
+        preparo:10,
+        referencias:referencias,
+        user:user,
+        ingredientes:ingredientes,
+        img:img})
     // const url = "http://localhost:8080/posts"
     let token = window.sessionStorage.getItem("token");
     let teste ='';
@@ -51,7 +63,7 @@ export class PostagemService {
       teste =token!.replace(/"([^"]+(?="))"/g, '$1');
     }
 
-    return this.http.post(this.url + "/posts",{titulo,texto,comentarios,curtidas,porcao,preparo,referencias, user},{headers:{Authorization:teste}})
+    return this.http.post(this.url + "/posts",{titulo,texto,comentarios,curtidas,porcao,preparo,referencias, user,ingredientes,img},{headers:{Authorization:teste}})
   }
 
   criarComentario(
