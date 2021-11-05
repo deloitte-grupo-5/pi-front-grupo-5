@@ -1,9 +1,13 @@
 <div>
+
   <section>
+    <div class="editores">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class=".lixeira" (click)="delete()">delete</mat-icon>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class=".update" (click)="updatePostagem()">edit</mat-icon>
+    </div>
     <article class="img">
       <h1>{{postagem.titulo | uppercase}}</h1>
-      <mat-icon aria-hidden="false" aria-label="Example home icon" class=".lixeira" (click)="delete()">delete</mat-icon>
-      <mat-icon aria-hidden="false" aria-label="Example home icon" class=".update">edit</mat-icon>
+
       <img
         src="{{postagem.img}}"
         alt=""
@@ -67,3 +71,5 @@
     </article>
   </section>
 </div>
+
+<app-update-post [postagem]="postagem" *ngIf="update" (onClose)="updateClose()"></app-update-post>

@@ -9,6 +9,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class PostSelectedComponent implements OnInit {
   @Output() onDelete: EventEmitter<any> = new EventEmitter();
+  update = false;
+
   user = {
     id: 1,
     nome: '',
@@ -47,12 +49,10 @@ export class PostSelectedComponent implements OnInit {
 
   ngOnInit(): void {
     window.scrollTo({ top: 0})
-  
+
     this.postagem= {}
-    this.service.getPostagemVisualizar().subscribe((resp)=>{this
-      this.postagem = resp
-      console.log(this.postagem)
-    })
+    this.getPostagem();
+
   }
 
   criarComentario() {
@@ -74,7 +74,7 @@ export class PostSelectedComponent implements OnInit {
   delete() {
     this.service.delete(this.postagem).subscribe(
       (resposta) => {
-        this.service.showMensage('Produto excluido com sucesso!');
+        this.service.showMensage('Postagem excluido com sucesso!');
         this.onDelete.emit();
       },
       (error) => {
@@ -83,5 +83,19 @@ export class PostSelectedComponent implements OnInit {
     );
   }
 
+  updatePostagem(){
+    this.update = true;
+  }
+  updateClose(){
+    this.update = false;
+
+  }
+
   enviarComentario() {}
+
+  getPostagem(){
+    this.service.getPostagemVisualizar().subscribe((resp)=>{this
+      this.postagem = resp
+    });
+}
 }
