@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 export class ProductListComponent implements OnInit {
   produtos: Product[] = [];
 
+  texto = ""
+
   @Input() produtoSelecionado!: Product;
 
   @Input() produtoEditando!:any;
@@ -35,7 +37,6 @@ export class ProductListComponent implements OnInit {
     this.service.getProducts().subscribe((produtos: Product[]) => {
       this.produtos = produtos;
       this.produtos.map((a) => (a.quantidade = 1));
-      console.log(produtos);
       this.atualizarProdutosExibidos();
     });
   }
@@ -81,5 +82,12 @@ export class ProductListComponent implements OnInit {
     this.viewEdit= false;
     this.atualizarPagina();
 
+  }
+
+  procurarProduto(texto:string) {
+    texto = this.texto;
+    this.service.procurarProduto(texto).subscribe(()=> {
+      console.log(this.produtosExibidos)
+    })           
   }
 }

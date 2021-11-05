@@ -16,6 +16,10 @@ export class HomeComponent implements OnInit {
   receitas: Postagem[] = [];
   images: any[] = [];
 
+  cellstoshowController() {
+    
+  }  
+
   constructor(
     private service: ProductService,
     private postService: PostagemService,

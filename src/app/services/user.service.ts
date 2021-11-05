@@ -9,7 +9,7 @@ export class UserService {
 
   onlogar: EventEmitter<any> = new EventEmitter();
 
-  private readonly url = "https://api-jardimnapanela.herokuapp.com";
+  private readonly url = "http://191.252.203.182:8080";
 
   constructor(
     private http: HttpClient,
@@ -53,6 +53,7 @@ export class UserService {
 
     this.onlogar.emit(usuarioLogado);
   }
+  
   logout() {
     window.sessionStorage.removeItem("token")
     window.sessionStorage.removeItem("usuario")
@@ -62,5 +63,4 @@ export class UserService {
   buscar(cep:string) {
     return this.http.get(`https://viacep.com.br/ws/${cep}/json`)
   }
-
 }
