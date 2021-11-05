@@ -11,7 +11,10 @@ export class HomeComponent implements OnInit {
   produtos: Product[] = [];
   images: any[] = []
 
-
+  cellstoshowController() {
+    
+  }
+  
 
   constructor(
     private service: ProductService

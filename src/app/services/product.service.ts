@@ -10,7 +10,8 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class ProductService {
   onProdutosMudaram:EventEmitter<null>= new EventEmitter();
-  private readonly url = "https://api-jardimnapanela.herokuapp.com";
+  // private readonly url = "https://api-jardimnapanela.herokuapp.com";
+  private readonly url = "http://191.252.203.182:8080";
   // private readonly url = "http://localhost:8080";
 
 

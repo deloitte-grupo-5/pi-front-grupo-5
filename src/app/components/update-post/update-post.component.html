@@ -1,0 +1,24 @@
+<div class="modal">
+
+  <section>
+
+    <div class="signIn">
+      <div class="close_button">
+        <mat-icon class="material-icons-outlined" (click)="close()">close</mat-icon>
+      </div>
+        <p>Editor de Postagem</p>
+        <input type="text" placeholder="titulo" name="titulo" [(ngModel)]="postagem.titulo">
+        <textarea placeholder="texto" [(ngModel)]="postagem.texto"></textarea>
+        <input type="text" placeholder="tempo de preparo" name="tempo de preparo" [(ngModel)]="postagem.preparo">
+        <input type="number" placeholder="rendimento" name="rendimento" [(ngModel)]="postagem.porcao">
+        <input type="text" placeholder="referencias" name="referencias" [(ngModel)]="postagem.referencias">
+        <span *ngFor="let ingradiente of postagem.ingredientes; let i = index; trackBy: track;">
+          <input type="text"  placeholder="ingrediente" name="ingrediente_{{i}}" [(ngModel)]="postagem.ingredientes[i]">
+         <button *ngIf="i==0" (click)="addIngradiente()" class="controllers">+</button>
+        <button *ngIf="i!=0"(click)="removeIngrediente(i)" class="controllers" >-</button>
+        </span>
+        <input type="text" placeholder="link da imagem" name="referencias" [(ngModel)]="postagem.img">
+        <button type="submit" (click)="updatePostagem()">Enviar</button>
+    </div>
+  </section>
+</div>

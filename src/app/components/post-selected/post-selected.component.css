@@ -126,3 +126,18 @@ div.comments div p.text {
 
 
 }
+.editores{
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin:50px auto;
+  width: 50%;
+
+}
+.editores mat-icon{
+  cursor: pointer;
+}
+.editores mat-icon:hover{
+  opacity:0.6
+}
+
