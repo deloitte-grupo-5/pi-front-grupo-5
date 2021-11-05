@@ -14,7 +14,6 @@ export class ProductDetailComponent implements OnInit {
   constructor(private cartService:CartService) { }
 
   ngOnInit(): void {
-    window.scrollTo({ top: 0})
   }
 
   addToCart(){

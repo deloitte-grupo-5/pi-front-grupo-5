@@ -16,7 +16,6 @@
     [autoplayInterval]="800"
     [transitionDuration]="2000"
     [loop]="true"
-    (click)="handleCarouselEvents()"
     >
         <div class="carousel-cell" *ngFor="let produto of produtos">
             <img src="{{produto.img}}" alt="">
@@ -39,43 +38,13 @@
     </p>
     <carousel class="receitas"
     [arrowsOutside]="true"
-    [loop]="true"
     [autoplay]="true"
     [autoplayInterval]="800"
-    [transitionDuration]="2000"
-    (click)="handleCarouselEvents()"
+    [transitionDuration]="2000"    
+    [loop]="true"
     >
-    <div class="carousel-cell">
-        <img src="../../../assets/images/plants/castanha-do-maranhao.png" alt="">
-        <!-- <p>Castanha-do-maranhão</p> -->
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/images/plants/shisso.png" alt="">
-        <!-- <p>Shissô</p> -->
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/images/plants/bertalha-coracao.png" alt="">
-        <!-- <p>Bertalha-coração</p> -->
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/images/plants/taioba.png" alt="">
-        <!-- <p>Taioba</p> -->
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/images/plants/caxi.png" alt="">
-        <!-- <p>Caxi</p> -->
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/images/plants/beldroega.png" alt="">
-        <!-- <p>Beldroega</p> -->
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/images/plants/capicoba.png" alt="">
-        <!-- <p>Capicoba</p> -->
-    </div>
-    <div class="carousel-cell">
-        <img src="../../../assets/images/plants/celosia.png" alt="">
-        <!-- <p>Celósia</p> -->
+    <div class="carousel-cell" *ngFor="let receita of receitas">
+        <img src="{{receita.img}}" alt="">
     </div>
     </carousel>
 </section>
