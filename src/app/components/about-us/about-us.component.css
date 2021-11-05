@@ -55,11 +55,23 @@ img {
     flex-wrap: wrap;
     justify-content: center;
 }
-.carousel {
+carousel.receitas {
+    background-image: url("/assets/images/fundo2.jpg");
     margin-top: 15px;
     background-color: #CCF1E4;
     max-width: 100%;
     width: 95%;
+    border-radius: 20px;
+}
+carousel.receitas .carousel-cell {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+carousel.receitas .carousel-cell img {
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
 }
 
 @media (max-width: 1122px) {

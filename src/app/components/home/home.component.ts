@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Postagem } from 'src/app/models/Postagem';
 import { Product } from 'src/app/models/Product';
+import { PostagemService } from 'src/app/services/postagem.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -9,14 +12,17 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class HomeComponent implements OnInit {
   produtos: Product[] = [];
-  images: any[] = []
 
-
+  receitas: Postagem[] = [];
+  images: any[] = [];
 
   constructor(
-    private service: ProductService
+    private service: ProductService,
+    private postService: PostagemService,
+    private router: Router
   ) {
     this.getProducts();
+    this.getPostagem();
   }
 
   getProducts() {
@@ -26,16 +32,26 @@ export class HomeComponent implements OnInit {
       console.log(produtos);
     });
   }
-
-  ngOnInit(): void {
-    window.scrollTo({ top: 0})
-  
-    this.getProducts()
-    this.produtos.map((a: any) => this.images.push(a.img));
+  getPostagem() {
+    this.postService.getPostagens().subscribe((receitas: Postagem[]) => {
+      this.receitas = receitas;
+      console.log(this.receitas);
+      this.receitas.map((a) => (this.images.push({path: a.img})))
+      console.log(this.images)
+    })
   }
   
-  handleCarouselEvents(){
-    
+
+  ngOnInit(): void {
+    window.scrollTo({ top: 0 })
+
+    this.getProducts()
+    this.getPostagem()
+  }
+
+  handleCarouselEvents() {
+
+    this.router.navigateByUrl("/produtos")
   }
 }
 
