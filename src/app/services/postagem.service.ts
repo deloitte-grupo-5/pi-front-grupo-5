@@ -120,7 +120,7 @@ export class PostagemService {
       teste =token!.replace(/"([^"]+(?="))"/g, '$1');
     }
     let id = postagem.id.toString();
-    return this.http.delete(this.url +"/produtos"+`/${id}`,{headers:{Authorization:teste}})
+    return this.http.delete(this.url +"/posts"+`/${id}`,{headers:{Authorization:teste}})
   }
 
   update(postagem:Postagem){
