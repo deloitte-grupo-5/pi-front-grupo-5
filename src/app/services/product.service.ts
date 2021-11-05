@@ -54,7 +54,16 @@ export class ProductService {
     }
     console.log(produto)
     return this.http.put(`${this.url}/produtos`,produto,{headers:{Authorization:teste}})
-
   }
 
+  procurarProduto(descricao:string){
+    let token = window.sessionStorage.getItem("token");
+    let teste = ''
+    if(token) {
+      teste = token!.replace(/"([^"]+(?="))"/g, '$1');
+    }
+    console.log(`${this.url}/produtos/descricao/${descricao}`)
+    this.getProducts();
+    return this.http.get<Product[]>(`${this.url}/produtos/descricao/${descricao}`,{headers:{Authorization:teste}});
+  }
 }

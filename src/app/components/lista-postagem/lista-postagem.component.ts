@@ -73,9 +73,6 @@ export class ListaPostagemComponent implements OnInit {
   //     }
     // }
 
-
-
-
   ];
   constructor(private postagemService: PostagemService,teste: MatPaginatorIntl) {
     teste.nextPageLabel = 'Proxima pagina';
@@ -91,14 +88,14 @@ export class ListaPostagemComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    window.scrollTo({ top: 0})
-  
+    window.scrollTo({ top: 0})  
     this.postagemService.getPostagens().subscribe((postagens)=>{
-      this.postagens = postagens;
+      this.postagens = postagens.reverse();
       console.log(postagens)
       this.atualizarPostagensExibidos();
     });
   }
+
   OnPageChange(event: PageEvent) {
     const startIndex = event.pageIndex * event.pageSize;
     let endIndex = startIndex + event.pageSize;
@@ -111,7 +108,5 @@ export class ListaPostagemComponent implements OnInit {
   atualizarPostagensExibidos() {
     this.postagemExibidas = this.postagens.slice(0, 3);
   }
-
-
 }
 
