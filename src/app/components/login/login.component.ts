@@ -23,11 +23,12 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    this.service.login(this.usuario,this.senha).subscribe((token)=>{
+    this.service.login(this.usuario,this.senha).subscribe((token:any)=>{
 
-      this.usuarioLogado= token;
+      let usuario = {id:token.id,usuario:token.usuario}
 
-      window.sessionStorage.setItem("usuario",JSON.stringify(token))
+      this.usuarioLogado = token
+      window.sessionStorage.setItem("usuario",JSON.stringify(usuario))
       window.sessionStorage.setItem('token', JSON.stringify(this.usuarioLogado.token))
       this.service.showMensage("Sucesso no login!");
       this.router.navigateByUrl("/")

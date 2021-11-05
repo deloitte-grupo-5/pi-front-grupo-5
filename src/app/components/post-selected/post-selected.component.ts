@@ -75,7 +75,6 @@ export class PostSelectedComponent implements OnInit {
     this.service.delete(this.postagem).subscribe(
       (resposta) => {
         this.service.showMensage('Postagem excluido com sucesso!');
-        this.onDelete.emit();
       },
       (error) => {
         this.service.showMensage('Falha ao excluir produto!');
@@ -86,9 +85,13 @@ export class PostSelectedComponent implements OnInit {
   updatePostagem(){
     this.update = true;
   }
-  updateClose(){
+  updateClose(event:any){
+    console.log(event)
+    if(!event){
+
+      this.getPostagem()
+    }
     this.update = false;
-    this.service.getPostagemVisualizar().subscribe((resp)=>this.postagem = resp)
 
   }
 
@@ -96,7 +99,13 @@ export class PostSelectedComponent implements OnInit {
 
   getPostagem(){
     this.service.getPostagemVisualizar().subscribe((resp)=>{this
-      this.postagem = resp
+      this.postagem = JSON.parse(JSON.stringify(resp))
     });
+}
+
+atualizarPostagem(event:any){
+  console.log(event)
+  this.postagem = event;
+
 }
 }

@@ -14,7 +14,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class UpdateProductComponent implements OnInit {
   @Input () produto!:Product
   @Output () onCloseUpdate:EventEmitter<null> = new EventEmitter();
-
+  mudou =false
   id!:number;
   codigo!:string;
   nome!:string;
@@ -30,7 +30,7 @@ export class UpdateProductComponent implements OnInit {
 
   ngOnInit(): void {
     window.scrollTo({ top: 0})
-  
+
     if(!window.sessionStorage.getItem('token')){
       this.router.navigateByUrl("/login")
     }else{
@@ -67,7 +67,9 @@ export class UpdateProductComponent implements OnInit {
     }
     update(){
       this.productService.update(this.produto).subscribe(
-        (resp)=>this.productService.showMensage("Produto alterado com sucesso!"),
+        (resp)=>{this.productService.showMensage("Produto alterado com sucesso!")
+        this.mudou = true
+      },
         (error)=>this.productService.showMensage("Falha ao alterar produto")
       );
     }

@@ -84,4 +84,5 @@ export class CreatePostComponent implements OnInit {
       removeIngrediente(pos:number):void{
         this.ingredientes.splice(pos,1);
       }
+
 }

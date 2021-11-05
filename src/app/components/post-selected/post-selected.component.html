@@ -72,4 +72,4 @@
   </section>
 </div>
 
-<app-update-post [postagem]="postagem" *ngIf="update" (onClose)="updateClose()"></app-update-post>
+<app-update-post [postagem]="postagem" *ngIf="update" (onClose)="updateClose($event)" (onMudar)="atualizarPostagem($event)"></app-update-post>

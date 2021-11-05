@@ -10,6 +10,8 @@ import { Postagem } from 'src/app/models/Postagem';
 export class UpdatePostComponent implements OnInit {
   @Input ()postagem!:any;
   @Output() onClose:EventEmitter<any> = new EventEmitter();
+  @Output() onMudar:EventEmitter<any> = new EventEmitter();
+  mudou =false;
   constructor(private service:PostagemService) { }
 
   ngOnInit(): void {
@@ -21,10 +23,11 @@ export class UpdatePostComponent implements OnInit {
     this.service.update(this.postagem).subscribe(
       (resp)=>{
         this.service.showMensage("Postagem alterada com sucesso")
-
+        this.mudou = true
+        this.onMudar.emit(this.postagem)
       },
       (error)=>{
-        console.log(error)
+        this.service.showMensage("Erro ao alterar postagem")
       }
 
     );
@@ -33,7 +36,7 @@ export class UpdatePostComponent implements OnInit {
 
   close(){
     console.log("close")
-    this.onClose.emit()
+    this.onClose.emit(this.mudou)
   }
   addIngradiente(){
     this.postagem.ingredientes.push("")
