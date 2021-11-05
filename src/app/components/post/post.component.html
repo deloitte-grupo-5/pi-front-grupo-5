@@ -13,7 +13,7 @@
 
   <h2 class="titulo">{{postagem.titulo | uppercase}}</h2>
   <p class="texto">{{descricao}}</p>
-  <p>{{postagem.data | date :'long'}}</p>
+  <p>{{postagem.data | date :'short'}}</p>
 
     <p class="enviado">Enviado por {{postagem.user.nome}}</p>
       <button class="button-visualizar"  (click)="visualizar()">visualizar</button>
