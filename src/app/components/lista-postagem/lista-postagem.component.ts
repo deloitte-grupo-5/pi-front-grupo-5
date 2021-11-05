@@ -1,4 +1,4 @@
-import { PageEvent } from '@angular/material/paginator';
+import { PageEvent, MatPaginatorIntl } from '@angular/material/paginator';
 import { PostagemService } from './../../services/postagem.service';
 import { Component, OnInit, Output } from '@angular/core';
 import { Postagem } from 'src/app/models/Postagem';
@@ -77,7 +77,10 @@ export class ListaPostagemComponent implements OnInit {
 
 
   ];
-  constructor(private postagemService: PostagemService) {
+  constructor(private postagemService: PostagemService,teste: MatPaginatorIntl) {
+    teste.nextPageLabel = 'Proxima pagina';
+    teste.itemsPerPageLabel = 'Itens por pagina';
+    teste.previousPageLabel = 'Pagina anterior';
   }
 
   getPostagem() {
