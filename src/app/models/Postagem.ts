@@ -5,6 +5,8 @@ export interface Postagem {
   id: number
   title:string
   texto:string
+  img:string
+  ingredientes:string[]
   comentarios:any[]
   stars:number
   porcao:number

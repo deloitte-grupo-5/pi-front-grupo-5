@@ -20,7 +20,8 @@ export class CreatePostComponent implements OnInit {
   }
 
   id:any
-
+  img=""
+  ingredientes:string[]= ['']
   titulo = '';
   texto = '';
   comentarios = [];
@@ -60,7 +61,9 @@ export class CreatePostComponent implements OnInit {
         this.porcao,
         this.preparo,
         this.referencias,
-        this.user
+        this.user,
+        this.ingredientes,
+        this.img
       )
       .subscribe(
         (dados) => {
@@ -70,5 +73,15 @@ export class CreatePostComponent implements OnInit {
         },
         (error) => this.postService.showMensage('Falha ao criar post!')
       );
+      }
+      track(index:number, value:string){
+        return index;
+      }
+
+      addIngradiente(){
+        this.ingredientes.push("")
+      }
+      removeIngrediente(pos:number):void{
+        this.ingredientes.splice(pos,1);
       }
 }
