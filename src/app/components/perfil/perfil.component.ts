@@ -14,6 +14,7 @@ export class PerfilComponent implements OnInit {
   resultadoLocalidade = '';
   resultadoUf = '';
   adm = true;
+  
   constructor(private router: Router) {
     if (window.sessionStorage.getItem('usuario')) {
       let usuario = window.sessionStorage.getItem('usuario');
