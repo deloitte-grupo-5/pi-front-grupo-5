@@ -15,6 +15,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { LoginComponent } from './components/login/login.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 //ajustando currency
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
@@ -72,7 +73,7 @@ registerLocaleData(localePt,"pt");
     MatTableModule,
     MatSortModule,
     ImageCropperModule,
-    IvyCarouselModule
+    IvyCarouselModule,
   ],
   providers: [
     {provide: LOCALE_ID, useValue:"pt"},
