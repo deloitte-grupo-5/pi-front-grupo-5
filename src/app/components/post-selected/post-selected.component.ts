@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Postagem } from 'src/app/models/Postagem';
 import { PostagemService } from 'src/app/services/postagem.service';
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
@@ -37,7 +38,7 @@ export class PostSelectedComponent implements OnInit {
   postagem: any;
 
   visualizar = false;
-  constructor(private service: PostagemService) {
+  constructor(private service: PostagemService,private router:Router) {
     if(window.sessionStorage.getItem("usuario")){
     let usuario = window.sessionStorage.getItem("usuario")
     let id = JSON.parse(usuario!)
@@ -74,7 +75,8 @@ export class PostSelectedComponent implements OnInit {
   delete() {
     this.service.delete(this.postagem).subscribe(
       (resposta) => {
-        this.service.showMensage('Postagem excluido com sucesso!');
+        this.service.showMensage('Postagem excluida com sucesso!');
+        this.router.navigateByUrl("/comunidade")
       },
       (error) => {
         this.service.showMensage('Falha ao excluir produto!');
