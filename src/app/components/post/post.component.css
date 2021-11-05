@@ -4,9 +4,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content:space-around;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   padding: 20px 0;
+  width: 60%;
+  margin:40px auto
 }
 
 .titulo{
@@ -62,7 +64,7 @@
 hr{
 
   width: 100%;
-  margin: 50px auto ;
+  margin: 100px auto ;
 }
 
 @media (max-width: 900px) {

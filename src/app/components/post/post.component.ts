@@ -8,11 +8,12 @@ import { PostagemService } from 'src/app/services/postagem.service';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  @Input() postagem!:Postagem;
+  @Input() postagem!:any;
   onVisualizarClick:EventEmitter<Postagem> = new EventEmitter();
   constructor(private postService:PostagemService) { }
 
   ngOnInit(): void {
+    console.log(this.postagem)
   }
 
   visualizar(){

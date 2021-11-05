@@ -3,14 +3,15 @@
 
   <section class="postagem">
 
+    <img src="\assets\images\Rectangle 2 .png" alt="" class="img-postagem">
 
-  <img src="\assets\images\Rectangle 2 .png" alt="" class="img-postagem">
 
 
 <article class="postagem-article">
 
 
-  <h2 class="titulo">{{postagem.title}}</h2>
+
+  <h2 class="titulo">{{postagem.titulo | uppercase}}</h2>
   <p class="texto">{{postagem.texto}}</p>
   <p>{{postagem.data | date :'long'}}</p>
 
