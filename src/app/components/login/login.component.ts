@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   constructor(private service:UserService,private router:Router) { }
 
   ngOnInit(): void {
+    window.scrollTo({ top: 0})
   }
 
   login(){

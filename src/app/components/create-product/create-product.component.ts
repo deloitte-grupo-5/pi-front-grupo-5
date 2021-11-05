@@ -39,6 +39,7 @@ export class CreateProductComponent implements OnInit {
 
 
   ngOnInit(): void {
+    window.scrollTo({ top: 0})
   }
 
 

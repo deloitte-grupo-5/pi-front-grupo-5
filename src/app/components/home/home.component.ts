@@ -28,6 +28,8 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    window.scrollTo({ top: 0})
+  
     this.getProducts()
     this.produtos.map((a: any) => this.images.push(a.img));
   }

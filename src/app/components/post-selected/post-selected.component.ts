@@ -46,6 +46,8 @@ export class PostSelectedComponent implements OnInit {
   id:any
 
   ngOnInit(): void {
+    window.scrollTo({ top: 0})
+  
     this.postagem= {}
     this.service.getPostagemVisualizar().subscribe((resp)=>{this
       this.postagem = resp

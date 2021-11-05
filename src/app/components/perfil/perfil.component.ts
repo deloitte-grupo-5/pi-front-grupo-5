@@ -39,5 +39,7 @@ export class PerfilComponent implements OnInit {
   }
 
   usuarioAdm = false;
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    window.scrollTo({ top: 0})
+  }
 }

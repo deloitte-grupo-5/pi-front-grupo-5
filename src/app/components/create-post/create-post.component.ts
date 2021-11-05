@@ -38,7 +38,9 @@ export class CreatePostComponent implements OnInit {
     token: '',
   };
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    window.scrollTo({ top: 0})
+  }
 
   criarPostagem() {
     let id:any

@@ -27,6 +27,7 @@ export class SignInComponent implements OnInit {
 
   }
   ngOnInit(): void {
+    window.scrollTo({ top: 0})
   }
   
   cadastrarUsuario(){

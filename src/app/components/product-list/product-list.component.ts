@@ -40,6 +40,8 @@ export class ProductListComponent implements OnInit {
     });
   }
   ngOnInit(): void {
+    window.scrollTo({ top: 0})
+  
     this.service.onProdutosMudaram.subscribe(() => {
       this.getProducts();
     });

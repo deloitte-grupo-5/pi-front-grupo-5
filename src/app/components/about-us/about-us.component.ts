@@ -24,6 +24,7 @@ export class AboutUsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    window.scrollTo({ top: 0})
   }
 
 }

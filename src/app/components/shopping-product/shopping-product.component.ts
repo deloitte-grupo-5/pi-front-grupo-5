@@ -14,7 +14,7 @@ export class ShoppingProductComponent implements OnInit {
 
 
   ngOnInit(): void {
-
+    window.scrollTo({ top: 0})
   }
   diminuirProduto(){
     if(this.produto.quantidade>1){

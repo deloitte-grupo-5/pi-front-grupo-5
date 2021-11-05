@@ -28,7 +28,7 @@ export class ProductComponent implements OnInit {
 
 
   ngOnInit(): void {
-
+    window.scrollTo({ top: 0})
   }
 
   adm = true;

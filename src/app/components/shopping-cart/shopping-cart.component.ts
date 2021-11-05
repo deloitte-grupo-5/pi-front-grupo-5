@@ -17,7 +17,8 @@ export class ShoppingCartComponent implements OnInit {
 
 
   ngOnInit(): void {
-
+    window.scrollTo({ top: 0})
+  
 
     this.service.getProducts().subscribe((resp:Product[]) => {
       this.products= resp;

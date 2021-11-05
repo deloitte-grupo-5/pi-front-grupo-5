@@ -29,6 +29,8 @@ export class UpdateProductComponent implements OnInit {
   constructor(private productService:ProductService,private router:Router) { }
 
   ngOnInit(): void {
+    window.scrollTo({ top: 0})
+  
     if(!window.sessionStorage.getItem('token')){
       this.router.navigateByUrl("/login")
     }else{

@@ -91,6 +91,8 @@ export class ListaPostagemComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    window.scrollTo({ top: 0})
+  
     this.postagemService.getPostagens().subscribe((postagens)=>{
       this.postagens = postagens;
       console.log(postagens)
