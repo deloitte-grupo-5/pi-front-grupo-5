@@ -43,9 +43,13 @@ export class PostSelectedComponent implements OnInit {
     let usuario = window.sessionStorage.getItem("usuario")
     let id = JSON.parse(usuario!)
     this.id = id.id
+
+
+
+
     }
   }
-
+  mostrar = false
   id:any
 
   ngOnInit(): void {
@@ -53,6 +57,9 @@ export class PostSelectedComponent implements OnInit {
 
     this.postagem= {}
     this.getPostagem();
+    if(this.id == this.postagem.user.id|| this.id == 1){
+      this.mostrar = true
+    }
 
   }
 

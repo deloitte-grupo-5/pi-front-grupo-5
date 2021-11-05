@@ -16,6 +16,8 @@ export class CreatePostComponent implements OnInit {
     if(!window.sessionStorage.getItem("token")){
       this.postService.showMensage("Faça login para continuar !")
       this.router.navigateByUrl("/login")
+    }else{
+
     }
   }
 
@@ -45,13 +47,15 @@ export class CreatePostComponent implements OnInit {
 
   criarPostagem() {
     let id:any
+    let usuario:any
     if(window.sessionStorage.getItem("usuario")){
-      let usuario = window.sessionStorage.getItem("usuario")
+      usuario = window.sessionStorage.getItem("usuario")
       id = JSON.parse(usuario!).id
       this.id = id
+
     }
 
-    this.user.id = this.id;
+
     this.postService
       .criarPostagem(
         this.titulo,

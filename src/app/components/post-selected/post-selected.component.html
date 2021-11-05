@@ -1,7 +1,7 @@
 <div>
 
   <section>
-    <div class="editores">
+    <div class="editores" *ngIf="mostrar">
       <mat-icon aria-hidden="false" aria-label="Example home icon" class=".lixeira" (click)="delete()">delete</mat-icon>
       <mat-icon aria-hidden="false" aria-label="Example home icon" class=".update" (click)="updatePostagem()">edit</mat-icon>
     </div>
