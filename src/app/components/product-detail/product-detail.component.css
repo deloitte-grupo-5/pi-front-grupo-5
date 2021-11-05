@@ -116,6 +116,7 @@ section .second_part span {
 section .second_part p {
     font-size: 18px;
     font-weight: 400;
+    text-align: justify;
 }
 
 section .second_part .buttons{

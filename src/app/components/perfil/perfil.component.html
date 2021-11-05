@@ -3,19 +3,32 @@
 </section>
 <section class="info">
   <div class="main">
+      <label for="nome">Nome:</label>
       <input type="text" name="nome" placeholder="nome">
+      <label for="usuario">Usuário:</label>
       <input type="text" name="usuario" placeholder="usuário">
+      <label for="email">Email:</label>
       <input type="email" name="email" placeholder="email">
-      <input type="password" name="senha" placeholder="senha">
+      <label for="telefone">Telefone:</label>
       <input type="tel" name="telefone" placeholder="telefone" mask="(00)00000-0000">
+      <label for="senha">Senha:</label>
+      <input type="password" name="senha" placeholder="alterar senha">
+      <button>Salvar dados</button>
   </div>
   <div class="deliver">
+      <label for="cep">CEP:</label>
       <input type="text" name="cep" placeholder="cep" [(ngModel)]="cep" (change)="fetchCep()">
+      <label for="endereço:">Endereço:</label>
       <input type="text" name="endereco" placeholder="endereco" [value] = "resultadoLogradouro" >
+      <label for="numero">Número:</label>
       <input type="text" name="numero" placeholder="número">
+      <label for="complemento">Complemento:</label>
       <input type="text" name="complemento" placeholder="complemento">
+      <label for="bairro">Bairro:</label>
       <input type="text" name="bairro" placeholder="bairro" [value] = "resultadoBairro">
+      <label for="cidade">Cidade:</label>
       <input type="text" name="cidade" placeholder="cidade" [value] = "resultadoLocalidade">
+      <label for="estado">Estado:</label>
       <input type="text" name="estado" placeholder="estado" [value] = "resultadoUf">
 
       <button>Salvar dados</button>

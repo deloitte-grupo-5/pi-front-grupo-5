@@ -1,10 +1,6 @@
-
 <div class="container">
   <button class="button-visualizar new-post" routerLink="/create-post">Criar nova postagem</button>
+  <section>
+    <app-post *ngFor="let postagem of postagens" [postagem]="postagem"></app-post>
+  </section>
 </div>
-  <div>
-  <app-post *ngFor="let postagem of postagens" [postagem]="postagem"  ></app-post>
-  </div>
-
-
-
