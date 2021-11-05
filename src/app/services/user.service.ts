@@ -59,4 +59,8 @@ export class UserService {
     this.onlogoff.emit();
   }
 
+  buscar(cep:string) {
+    return this.http.get(`https://viacep.com.br/ws/${cep}/json`)
+  }
+
 }

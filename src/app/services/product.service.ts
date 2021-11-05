@@ -21,14 +21,14 @@ export class ProductService {
     return this.http.get<Product[]>(this.url + "/produtos");
   }
   criarProduto(produto:any){
-    const url = "http://localhost:8080/produtos"
+    // const url = "http://localhost:8080/produtos"
     let token = window.sessionStorage.getItem("token");
     let teste ='';
     if (token){
       teste =token!.replace(/"([^"]+(?="))"/g, '$1');
     }
 
-    return this.http.post(url,produto,{headers:{Authorization:teste}})
+    return this.http.post(this.url + "/produtos",{headers:{Authorization:teste}})
   }
 
   showMensage(msg:string){

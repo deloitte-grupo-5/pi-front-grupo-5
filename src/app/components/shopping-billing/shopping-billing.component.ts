@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 import { Component, OnInit } from '@angular/core';
 import { CepService } from 'src/app/services/cep.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-shopping-billing',
@@ -15,7 +16,7 @@ export class ShoppingBillingComponent implements OnInit {
   valorProdutos = 0
 
 
-  constructor(private service:CartService,private router:Router, private http:HttpClient, private cepService: CepService) {
+  constructor(private service:CartService,private router:Router, private http:HttpClient, private cepService: UserService) {
     if(!window.sessionStorage.getItem("token")){
       this.service.showMensage("Faça login para continuar")
       this.router.navigateByUrl("/login")
