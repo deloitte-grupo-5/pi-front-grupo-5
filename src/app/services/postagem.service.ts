@@ -58,6 +58,7 @@ export class PostagemService {
     user:Usuario,
     title:string,
     body:string,
+    post:any
     ) {
       const url = "http://localhost:8080/comentarios"
     let token = window.sessionStorage.getItem("token");
@@ -66,7 +67,7 @@ export class PostagemService {
       teste =token!.replace(/"([^"]+(?="))"/g, '$1');
     }
 
-    return this.http.post(url,{user, title, body},{headers:{Authorization:teste}})
+    return this.http.post(url,{user, title, body,post},{headers:{Authorization:teste}})
   }
 
   getComentarios():Observable<Comentario[]>{
@@ -79,13 +80,13 @@ export class PostagemService {
   }
 
   delete(postagem:Postagem):Observable<any>{
-    // const url = "http://localhost:8080/produtos"
+    const url = "http://localhost:8080/produtos"
     let token = window.sessionStorage.getItem("token");
     let teste = ''
     if (token){
       teste =token!.replace(/"([^"]+(?="))"/g, '$1');
     }
     let id = postagem.id.toString();
-    return this.http.delete(this.url +"/produtos"+`/${id}`,{headers:{Authorization:teste}})
+    return this.http.delete(url +"/produtos"+`/${id}`,{headers:{Authorization:teste}})
   }
 }

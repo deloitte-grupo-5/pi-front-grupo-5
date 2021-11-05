@@ -54,13 +54,14 @@ export class PostSelectedComponent implements OnInit {
   }
 
   criarComentario() {
+    let post = this.postagem.id
     if(this.id){
     this.service.criarComentario({id:this.id ,nome: '',
     usuario: '',
     senha: '',
     telefone:"",
     sobrenome:"",
-    token: '',},this.title,this.body).subscribe(
+    token: '',},this.title,this.body,this.postagem).subscribe(
       (resp)=>console.log("teste")
     )
     }else{

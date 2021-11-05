@@ -1,7 +1,7 @@
 section {
     width: 1400px;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -114,7 +114,7 @@ section app-shopping-product:nth-child(even) ::ng-deep .description button.add{
     }
 }
 @media (max-width: 570px) {
-    
+
     .buttons {
         flex-direction: column-reverse;
         align-items: center;
@@ -127,4 +127,18 @@ section app-shopping-product:nth-child(even) ::ng-deep .description button.add{
     .inputs input {
         width:150px;
     }
+
 }
+.Empty{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  margin: 0px auto;
+}
+.Empty .botao{
+    width:100%;
+    font-size:2em;
+}
+
+
