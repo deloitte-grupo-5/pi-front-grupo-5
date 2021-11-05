@@ -36,9 +36,11 @@ export class PostSelectedComponent implements OnInit {
 
   visualizar = false;
   constructor(private service: PostagemService) {
+    if(window.sessionStorage.getItem("usuario")){
     let usuario = window.sessionStorage.getItem("usuario")
     let id = JSON.parse(usuario!)
     this.id = id.id
+    }
   }
 
   id:any
@@ -52,7 +54,18 @@ export class PostSelectedComponent implements OnInit {
   }
 
   criarComentario() {
-
+    if(this.id){
+    this.service.criarComentario({id:this.id ,nome: '',
+    usuario: '',
+    senha: '',
+    telefone:"",
+    sobrenome:"",
+    token: '',},this.title,this.body).subscribe(
+      (resp)=>console.log("teste")
+    )
+    }else{
+    this.service.showMensage("Faça o login para comentar")
+    }
   }
 
   delete() {

@@ -69,7 +69,4 @@ export class CreatePostComponent implements OnInit {
         (error) => this.postService.showMensage('Falha ao criar post!')
       );
       }
-
-
-
 }

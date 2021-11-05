@@ -58,4 +58,9 @@ export class UserService {
     window.sessionStorage.removeItem("usuario")
     this.onlogoff.emit();
   }
+
+  buscar(cep:string) {
+    return this.http.get(`https://viacep.com.br/ws/${cep}/json`)
+  }
+
 }

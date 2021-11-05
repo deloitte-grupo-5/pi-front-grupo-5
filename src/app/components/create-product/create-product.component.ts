@@ -12,7 +12,6 @@ import { ImageCroppedEvent } from 'ngx-image-cropper';
 export class CreateProductComponent implements OnInit {
   @Output() onCreateProduct: EventEmitter<any> = new EventEmitter();
 
-
   codigo!: string
   nome!: string
   nomeCientifico!: string
