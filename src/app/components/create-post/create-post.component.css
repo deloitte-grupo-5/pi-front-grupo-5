@@ -1,53 +1,43 @@
 section {
-    padding-top: 3px;
+    padding: 40px;
     box-sizing: border-box;
-    margin: 30px auto 0;
-    width: 1400px;
-    max-width: 100%;
+    margin: 30px auto;
+    width: 1000px;    
+    box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.25);
+    max-width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 
-img.logo {
-    width: 600px;
-    max-width: 90%;
-    margin: 60px 30px;
-}
-
-img.sideImage {
-    width: 510px;
-    max-width: 100%;
-}
-
 .signIn {
-    padding: 40px 75px;
     background: #FFFFFF;
-    box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 600px;
+    max-width: 100%
 }
 
 p {
-    margin: 0 0 35px;
+    margin-bottom: 35px;
     color: #BF8F13;
     font-family: Nunito, Sans-serif;
     font-size: 40px;
     font-weight: 800;
     text-transform: uppercase;
+    text-align: center;
 }
 
-input, textarea {
+input, textarea, span input {
     background: #FFFFFF;
     font-family: Nunito, Sans-serif;
     font-size: 16px;
     border: 1px solid #686868;
     margin-bottom: 15px;
-    width: 600px;
     height: 32px;
-    padding: 0 15px;
+    padding: 0 7px;
+    max-width: 100%;
 }
 
 textarea{
@@ -57,16 +47,17 @@ textarea{
 }
 
 button {
-    background: #BF8F13;
-    padding: 5px 100px;
-    border: none;
-    color: #FFF;
     font-family: Nunito, Sans-serif;
     font-size: 16px;
     font-weight: 800;
+    color: #FFF;
     text-transform: lowercase;
-    margin: 13px 0;
+    border: none;
     cursor: pointer;
+    max-width:100%
+}
+span input {
+    width: 100%;
 }
 
 span {
@@ -75,36 +66,25 @@ span {
     font-size: 16px;
     font-weight: 600;
     text-transform: lowercase;
-    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
 }
-
-@media (max-width: 950px) {
-
-    img.sideImage {
-        width: 350px;
-        max-width: 100%;
-    }
-    .signIn {
-        padding: 30px;
-    }
-    p {
-        font-size: 36px;
-        margin: 0 0 15px;
-    }
-    input, textarea {
-        width:80%;
-    }
-    button {
-        padding: 5px 80px;
-        margin: 13px 0;
-    }
+button.add {
+    background-color: #608d35;
+    border-radius: 100%;
+    padding: 6px 12.3px;
 }
-
-@media (max-width: 650px) {
-
-    img.sideImage {
-        display: none;
-    }
+button.remove {
+    background-color: #da1212;
+    border-radius: 100%;
+    padding: 6px 13.6px;
 }
-
-
+button.enviar {
+    background: #BF8F13;
+    margin: 0 auto;
+    width: 245px;
+    height:34px;
+}
