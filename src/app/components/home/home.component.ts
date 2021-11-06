@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from 'src/app/models/Postagem';
 import { Product } from 'src/app/models/Product';
 import { PostagemService } from 'src/app/services/postagem.service';
@@ -23,7 +23,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private service: ProductService,
     private postService: PostagemService,
-    private router: Router
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) {
     this.getProducts();
     this.getPostagem();
@@ -52,10 +53,9 @@ export class HomeComponent implements OnInit {
     this.getProducts()
     this.getPostagem()
   }
-
-  handleCarouselEvents() {
-
-    this.router.navigateByUrl("/produtos")
+  
+  @Input() produto!:Product;
+  clickProduto() {
   }
 }
 

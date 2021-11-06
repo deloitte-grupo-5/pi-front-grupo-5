@@ -22,6 +22,7 @@ export class SignInComponent implements OnInit {
   errosUsuario:string[]= [];
   errosEmail:string[]= [];
   errosSenha:string[]= [];
+  senhaConf:string=""
 
   constructor(private service:UserService,private router:Router) {
 
@@ -81,6 +82,10 @@ export class SignInComponent implements OnInit {
     if(this.senha.length>100){
       validacao = false
       this.errosSenha.push("• Máximo 100 cacteres")
+    }
+    if(this.senha != "" && this.senha.length>5 && this.senha.length<100 && this.senha != this.senhaConf){
+      validacao = false
+      this.errosSenha.push("• As senhas devem ser iguais")
     }
 
 

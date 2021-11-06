@@ -26,7 +26,11 @@
             <h6>{{errosEmail}}</h6>
           </div>
           <div>
-            <input type="password" placeholder="* senha" name="senha" (keyup.enter)="cadastrarUsuario()" [(ngModel)]="senha">
+            <input type="password" placeholder="* senha" name="senha" [(ngModel)]="senha">
+            <h6>{{errosSenha}}</h6>
+          </div>
+          <div>
+            <input type="password" placeholder="* confirme sua senha" name="senha" (keyup.enter)="cadastrarUsuario()" [(ngModel)]="senhaConf">
             <h6>{{errosSenha}}</h6>
           </div>
           <button type="submit" (click)="cadastrarUsuario()">Enviar</button>

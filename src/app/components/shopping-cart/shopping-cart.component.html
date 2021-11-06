@@ -1,15 +1,15 @@
 <section>
-    <h1 *ngIf="products.length>0" >Carrinho</h1 >
+    <h1 *ngIf="products.length>0" >Cestinha</h1 >
 </section>
 <section class="products">
     <app-shopping-product *ngFor="let produto of products" [produto]="produto"></app-shopping-product>
     <div class="Empty"*ngIf="products.length ==0" >
-      <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
-      <h4>Seu carrinho esta vazio</h4>
-      <button routerLink="/produtos" class="botao">Ir as Compras</button>
+      <img src="../../../assets/images/empty.png" alt="">
+      <h4>Sua cesta está vazia!</h4>
+      <button routerLink="/produtos" class="botao">Ir às Compras</button>
 
   </div>
-  </section>
+</section>
 <section class="bottom" >
     <hr>
     <div class="inputs">
@@ -31,9 +31,6 @@
         <button class="keep_shopping" routerLink="/produtos">Continuar comprando</button>
         <button class="finish" routerLink="/billing" >Finalizar compra</button>
     </div>
-</section>
-<section class="no_itens">
-
 </section>
 
 

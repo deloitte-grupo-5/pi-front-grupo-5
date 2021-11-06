@@ -136,9 +136,15 @@ section app-shopping-product:nth-child(even) ::ng-deep .description button.add{
   align-items:center;
   margin: 0px auto;
 }
+.Empty img {
+    width: 500px;
+    max-width: 90%;
+}
 .Empty .botao{
-    width:100%;
+    width:80%;
     font-size:2em;
+    border: solid 3px #157143;
+    border-radius:10px
 }
 
 

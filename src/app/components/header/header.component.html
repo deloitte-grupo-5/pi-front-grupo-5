@@ -36,7 +36,7 @@
     <a routerLink="sobre" (click)="toggleDropdown()">Sobre</a>
     <a class="hide" routerLink="perfil" (click)="toggleDropdown()">Meu perfil</a>
   </div>
-  <div class="search" [ngClass]="showSearch ? 'showSearch' : 'notShowSearch'">
+  <div class="search" *ngIf="showSearch">
     <input type="text" placeholder="O que procura?">
     <button type="submit" (click)="toggleSearch()"><img src="../../../assets/images/icon-search.png" alt=""></button>
   </div>

@@ -121,6 +121,9 @@ p {
         width: 260px;
         flex-direction: column;
     }
+    p {
+       text-align: center;
+    }
 }
 
 @media (max-width: 480px) {

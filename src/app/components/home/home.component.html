@@ -17,7 +17,7 @@
     [transitionDuration]="2000"
     [loop]="true"
     >
-        <div class="carousel-cell" *ngFor="let produto of produtos">
+        <div class="carousel-cell" *ngFor="let produto of produtos" (click)="clickProduto()">
             <img src="{{produto.img}}" alt="">
             <p>{{produto.nome}}</p>
         </div>
