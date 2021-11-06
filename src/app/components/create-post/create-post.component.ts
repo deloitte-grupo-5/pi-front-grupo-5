@@ -48,12 +48,12 @@ export class CreatePostComponent implements OnInit {
   criarPostagem() {
     let id:any
     let usuario:any
-    if(window.sessionStorage.getItem("usuario")){
+
       usuario = window.sessionStorage.getItem("usuario")
       id = JSON.parse(usuario!).id
-      this.id = id
+      this.user.id = id
 
-    }
+
 
 
     this.postService
