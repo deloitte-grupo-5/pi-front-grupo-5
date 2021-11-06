@@ -1,0 +1,40 @@
+section {
+  position: fixed;
+  width: 100%;
+  padding: 15px 0;
+  background-color: rgba(214, 245, 221, 0.95);
+  bottom: 0;
+  z-index: 50000;
+}
+
+h3 {
+  font-family: Nunito, Sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+p {
+  font-family: Nunito, Sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  text-align: justify;
+}
+
+div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+  width: 1000px;
+  max-width: 80%;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 7px;
+}
+
+button {
+  cursor: pointer;  
+}

@@ -37,6 +37,7 @@ import { CreatePostComponent } from './components/create-post/create-post.compon
 import { ShoppingBillingComponent } from './components/shopping-billing/shopping-billing.component';
 import { UpdateProductComponent } from './components/update-product/update-product.component';
 import { UpdatePostComponent } from './components/update-post/update-post.component';
+import { CookiesComponent } from './components/cookies/cookies.component';
 registerLocaleData(localePt,"pt");
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ registerLocaleData(localePt,"pt");
     ShoppingBillingComponent,
     UpdateProductComponent,
     UpdatePostComponent,
+    CookiesComponent,
 
   ],
   imports: [
