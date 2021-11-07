@@ -1,9 +1,10 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable, EventEmitter, Output } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Product } from '../models/Product';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class ProductService {
   // private readonly url = "http://localhost:8080";
 
 
-  constructor(private http:HttpClient,private matSnackBar:MatSnackBar) { }
+  constructor(private http:HttpClient,private matSnackBar:MatSnackBar, private router:Router) { }
 
   getProducts():Observable<Product[]>{
     return this.http.get<Product[]>(`${this.url}/produtos`);
@@ -67,5 +68,14 @@ export class ProductService {
     this.getProducts();
 
     return this.http.get<Product[]>(`${this.url}/produtos/descricao/${descricao}`,{headers:{Authorization:teste}});
-  }  
+  }
+
+  produto = new BehaviorSubject<any>({})
+  onRouterModal:EventEmitter<Product>= new EventEmitter();
+  routerModal(product:Product){
+    this.produto.next(product)
+    this.onRouterModal.emit(product)
+    this.router.navigateByUrl("/produtos");
+    return this.produto
+  }
 }

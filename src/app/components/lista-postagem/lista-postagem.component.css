@@ -39,3 +39,50 @@ section {
   justify-content: center;
   color: #000000;
 }
+
+.search {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search input {
+  width: 400px;
+  height: 30px;
+  border-radius: 10px 0 0 10px ;
+  border: solid 0.5px rgba(0, 0, 0, 0.5);
+}
+
+.search input::placeholder {
+  padding-left: 20px;
+}
+
+input:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+.search button {
+  background-color: #157143;
+  color: white;
+  /* padding: 9.5px; */
+  padding: 5.5px 20px;
+  border: none;
+  border-radius: 0px 10px 10px 0;
+}
+
+.search button img {
+    height: 20px
+}
+
+.search button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 550px) {
+  .search input {
+      width: 70%;
+  }
+}

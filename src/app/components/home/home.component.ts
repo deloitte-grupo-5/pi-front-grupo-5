@@ -55,13 +55,10 @@ export class HomeComponent implements OnInit {
     this.getPostagem()
   }
   
-  produtoSelecionado!:Product;
-  @Output() onOpenDescription:EventEmitter<Product> = new EventEmitter();
+  produtoSelecionado!:Product;    
   clickProduto(produto:Product) {
-    this.router.navigateByUrl("/teste");
-    // this.produtoSelecionado = produto;
-    // console.log(produto);
-    // this.onOpenDescription.emit(this.produtoSelecionado);
+    this.produtoSelecionado = produto;
+    this.service.routerModal(this.produtoSelecionado)
   }
 
   receitaSelecionada!:Postagem;
