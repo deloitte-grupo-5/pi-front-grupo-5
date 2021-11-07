@@ -1,6 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Endereço } from '../models/Endereço';
 @Injectable({
   providedIn: 'root',
 })
@@ -38,8 +39,6 @@ export class UserService {
     senha: string,
     usuario: string
   ) {
-    // const url = 'http://localhost:8080/usuario/cadastrar';
-    //return this.http.post(url,{nome,email,sobrenome,telefone,senha,usuario})
     return this.http.post(this.url + "/usuario/cadastrar", {
       nome,
       email,
