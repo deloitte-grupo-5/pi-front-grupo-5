@@ -46,11 +46,24 @@ export class ProductListComponent implements OnInit {
     this.service.onProdutosMudaram.subscribe(() => {
       this.getProducts();
     });
+    this.service.onRouterModal.subscribe((resp)=> {
+      this.AbrirDoHome(resp)
+    })
+  }
+
+  homeSender = false
+  
+  AbrirDoHome(resp:Product){
+      console.log(resp)
+      this.viewDetails = true;
+      this.produtoSelecionado = resp;
+      console.log(this.viewDetails)
   }
 
   showDetails(produto: Product) {
     this.viewDetails = true;
     this.produtoSelecionado = produto;
+    console.log(this.viewDetails)
   }
 
   closeDetails() {
@@ -90,4 +103,6 @@ export class ProductListComponent implements OnInit {
       console.log(this.produtosExibidos)
     })           
   }
+ 
+
 }
