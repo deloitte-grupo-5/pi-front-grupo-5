@@ -29,7 +29,7 @@
     </div>
     <div class="buttons">
         <button class="keep_shopping" routerLink="/produtos">Continuar comprando</button>
-        <button class="finish" routerLink="/billing" >Finalizar compra</button>
+        <button class="finish" routerLink="/billing" [disabled]="products.length==0">Finalizar compra</button>
     </div>
 </section>
 
