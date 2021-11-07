@@ -42,7 +42,7 @@ export class ProductListComponent implements OnInit {
   }
   ngOnInit(): void {
     window.scrollTo({ top: 0})
-  
+
     this.service.onProdutosMudaram.subscribe(() => {
       this.getProducts();
     });
@@ -75,7 +75,7 @@ export class ProductListComponent implements OnInit {
   atualizarProdutosExibidos() {
     this.produtosExibidos = this.produtos.slice(0, 6);
   }
-  
+
   OnPageChange(event: PageEvent) {
     const startIndex = event.pageIndex * event.pageSize;
     let endIndex = startIndex + event.pageSize;
@@ -102,8 +102,12 @@ export class ProductListComponent implements OnInit {
     this.produtos = produtos;
       this.produtos.map((a) => (a.quantidade = 1));
       this.atualizarProdutosExibidos();
-    })           
+    })
   }
- 
+  limparPesquisa(){
+    this.service.onProdutosMudaram.emit();
+    this.atualizarProdutosExibidos();
+  }
+
 
 }
