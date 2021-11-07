@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 import { Postagem } from 'src/app/models/Postagem';
 import { Product } from 'src/app/models/Product';
 import { PostagemService } from 'src/app/services/postagem.service';
@@ -54,9 +55,21 @@ export class HomeComponent implements OnInit {
     this.getPostagem()
   }
   
-  @Input() produto!:Product;
-  clickProduto() {
+  produtoSelecionado!:Product;
+  @Output() onOpenDescription:EventEmitter<Product> = new EventEmitter();
+  clickProduto(produto:Product) {
+    this.router.navigateByUrl("/teste");
+    // this.produtoSelecionado = produto;
+    // console.log(produto);
+    // this.onOpenDescription.emit(this.produtoSelecionado);
   }
+
+  receitaSelecionada!:Postagem;
+  clickReceita(receita:Postagem){
+    this.receitaSelecionada = receita;
+    this.postService.visualizar(this.receitaSelecionada)
+  }
+
 }
 
 
