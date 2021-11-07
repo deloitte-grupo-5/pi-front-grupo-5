@@ -1,6 +1,8 @@
 import { CartService } from 'src/app/services/cart.service';
 import { Product } from 'src/app/models/Product';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Postagem } from 'src/app/models/Postagem';
+import { PostagemService } from 'src/app/services/postagem.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -11,15 +13,17 @@ export class ProductDetailComponent implements OnInit {
 
   @Output() onCloseDescription:EventEmitter<null> = new EventEmitter();
   @Input() produto!:Product;
-  constructor(private cartService:CartService) { }
+  constructor(private cartService:CartService, private postService:PostagemService) { }
 
   disponivel = true;
   indisponivel = false;
+
   ngOnInit(): void {
     if (this.produto.quantidade_estoque == 0) {
       this.disponivel = false;
       this.indisponivel = true;
     }
+    this.getReceitas()
   }
 
   addToCart(){
@@ -29,4 +33,25 @@ export class ProductDetailComponent implements OnInit {
   closeDetails(){
     this.onCloseDescription.emit();
   }
+
+  receitas: Postagem[] = [];
+  pancUtilizada: Postagem[] = [];
+  pancNao: Postagem[] = []
+  getReceitas(){
+    this.postService.getPostagens().subscribe((post: Postagem[]) => {
+      this.receitas = post;
+      this.receitas.map((a) => a.referencias==this.produto.nome||a.referencias==this.produto.outrosNomes ? this.pancUtilizada.push(a) : this.pancNao.push(a));
+      let i = 0;
+      do {
+        this.pancUtilizada.push(this.pancNao[i])
+        i++
+      } while (this.pancUtilizada.length < 4)
+      console.log(this.pancUtilizada[0].title);
+  })}
+  receitaSelecionada!:Postagem;
+  clickReceita(receita:Postagem){
+    this.receitaSelecionada = receita;
+    this.postService.visualizar(this.receitaSelecionada)
+  }
+
 }

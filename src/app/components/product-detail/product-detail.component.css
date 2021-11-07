@@ -197,9 +197,11 @@ section .bottom ul li{
 section .bottom ul li img{
     width: 180px;
     height: 135px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-section .bottom ul li a{
+/* section .bottom ul li a{
     background: rgba(196, 196, 196, 0.5);
     width: 180px;
     height: 135px;
@@ -216,7 +218,7 @@ section .bottom ul li a{
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 @media (max-width: 850px) {
 
@@ -304,12 +306,12 @@ section .bottom ul li a{
         text-align: center;
         font-size: 12px;
         font-family: Poppins, Sans-serif;
-        margin-bottom: 15px;
         
     }
     
-    section .bottom ul li.size{
-        display: none;
+    section .bottom ul{
+        justify-content: space-evenly;
+        gap:11px
     }
 }
 
@@ -334,12 +336,5 @@ section .bottom ul li a{
     section .second_part button {
         width: 115px;
     }
-        
-    section .bottom ul li.size{
-        display: block;
-    }
-
-    section .bottom ul li {
-        margin-bottom: 15px;
-    }
+    
 }

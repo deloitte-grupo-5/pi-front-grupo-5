@@ -35,15 +35,15 @@ export class HomeComponent implements OnInit {
     this.service.getProducts().subscribe((produtos: Product[]) => {
       this.produtos = produtos;
       this.produtos.map((a) => (a.quantidade = 1));
-      console.log(produtos);
+      // console.log(produtos);
     });
   }
   getPostagem() {
     this.postService.getPostagens().subscribe((receitas: Postagem[]) => {
       this.receitas = receitas;
-      console.log(this.receitas);
+      // console.log(this.receitas);
       this.receitas.map((a) => (this.images.push({path: a.img})))
-      console.log(this.images)
+      // console.log(this.images)
     })
   }
   
