@@ -26,11 +26,16 @@ export class ProductComponent implements OnInit {
     }
    }
 
+   indisponivel = false;
+   disponivel = true
 
   ngOnInit(): void {
     window.scrollTo({ top: 0})
+    if(this.produto.quantidade_estoque == 0){
+      this.indisponivel = true;
+      this.disponivel = false;
+    }
   }
-
   adm = true;
 
   addToCart(){

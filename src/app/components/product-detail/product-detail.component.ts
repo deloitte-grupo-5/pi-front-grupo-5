@@ -13,7 +13,13 @@ export class ProductDetailComponent implements OnInit {
   @Input() produto!:Product;
   constructor(private cartService:CartService) { }
 
+  disponivel = true;
+  indisponivel = false;
   ngOnInit(): void {
+    if (this.produto.quantidade_estoque == 0) {
+      this.disponivel = false;
+      this.indisponivel = true;
+    }
   }
 
   addToCart(){

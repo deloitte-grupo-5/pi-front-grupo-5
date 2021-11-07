@@ -126,6 +126,7 @@ section .second_part .buttons{
 }
 
 section .second_part button {
+    font-family: Nunito, Sans-serif;
     width: 170px;
     max-width: 100%;
     border: none;
@@ -147,6 +148,18 @@ section .second_part button:active{
 
 section .second_part button.back{
     background-color: #608d35;
+}
+
+section .second_part button.indisponivel {
+    background-color: rgb(214, 214, 214);
+    color: rgb(116, 116, 116);
+    cursor: auto;
+}
+section .second_part button.indisponivel:hover {
+    opacity: 1;
+}
+section .second_part button.indisponivel:active{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 section .bottom {
