@@ -23,7 +23,7 @@ export class UserService {
       senha,
     });
   }
- 
+
   showMensage(msg: string) {
     this.matSnackBarModule.open(msg, '', {
       duration: 3000,
@@ -52,7 +52,7 @@ export class UserService {
 
     this.onlogar.emit(usuarioLogado);
   }
-  
+
   logout() {
     window.sessionStorage.removeItem("token")
     window.sessionStorage.removeItem("usuario")
@@ -61,5 +61,16 @@ export class UserService {
 
   buscar(cep:string) {
     return this.http.get(`https://viacep.com.br/ws/${cep}/json`)
+  }
+
+
+  getUsuario(id : number){ let token = window.sessionStorage.getItem('token');
+  let teste = '';
+  if (token) {
+    teste = token!.replace(/"([^"]+(?="))"/g, '$1');
+  }
+
+    return this.http.get(`http://localhost:8080/usuario/${id}`,{headers:{Authorization:"Basic YWRtaW46YWRtaW4="}})
+
   }
 }
