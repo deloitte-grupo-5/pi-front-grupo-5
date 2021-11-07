@@ -4,15 +4,15 @@
 <section class="info">
   <div class="main">
       <label for="nome">Nome:</label>
-      <input type="text" name="nome" placeholder="nome">
+      <input type="text" name="nome" placeholder="nome" [(ngModel)]="usuario.nome">
       <label for="usuario">Usuário:</label>
-      <input type="text" name="usuario" placeholder="usuário">
+      <input type="text" name="usuario" placeholder="usuário" [(ngModel)]="usuario.usuario">
       <label for="email">Email:</label>
-      <input type="email" name="email" placeholder="email">
+      <input type="email" name="email" placeholder="email" [(ngModel)]="usuario.email">
       <label for="telefone">Telefone:</label>
-      <input type="tel" name="telefone" placeholder="telefone" mask="(00)00000-0000">
+      <input type="tel" name="telefone" placeholder="telefone" mask="(00)00000-0000" [(ngModel)]="usuario.telefone">
       <label for="senha">Senha:</label>
-      <input type="password" name="senha" placeholder="alterar senha">
+      <input type="password" name="senha" placeholder="alterar senha" [(ngModel)]="senha">
       <button>Salvar dados</button>
   </div>
   <div class="deliver">
