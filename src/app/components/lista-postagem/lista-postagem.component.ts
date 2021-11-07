@@ -1,7 +1,7 @@
+import { Postagem } from './../../models/Postagem';
 import { PageEvent, MatPaginatorIntl } from '@angular/material/paginator';
 import { PostagemService } from './../../services/postagem.service';
 import { Component, OnInit, Output } from '@angular/core';
-import { Postagem } from 'src/app/models/Postagem';
 
 @Component({
   selector: 'app-lista-postagem',
@@ -9,6 +9,7 @@ import { Postagem } from 'src/app/models/Postagem';
   styleUrls: ['./lista-postagem.component.css'],
 })
 export class ListaPostagemComponent implements OnInit {
+  texto = ""
   postagemExibidas:Postagem[] = []
   @Output() postagens: Postagem[] = [
   //   {
@@ -107,6 +108,14 @@ export class ListaPostagemComponent implements OnInit {
 
   atualizarPostagensExibidos() {
     this.postagemExibidas = this.postagens.slice(0, 3);
+  }
+
+  procurarPostagem(texto:string) {
+    this.postagemService.procurarPostagem(texto).subscribe((postagem: Postagem[]) => {
+      console.log("clicou")
+      this.postagens = postagem
+      this.atualizarPostagensExibidos();
+    })
   }
 }
 

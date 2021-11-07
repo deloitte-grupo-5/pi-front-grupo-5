@@ -1,23 +1,43 @@
 <div class="search">
-    <input type="text" placeholder="O que procura?" [(ngModel)] = "texto">
-    <button type="submit" (click)="procurarProduto(texto)" ><img src="../../../assets/images/icon-search.png" alt="" style="height: 10px;"></button>
-  </div>
+  <input type="text" placeholder="O que procura?" [(ngModel)]="texto" />
+  <button type="submit" (click)="procurarProduto(texto)">
+    <img
+      src="../../../assets/images/icon-search.png"
+      alt=""
+      style="height: 10px"
+    />
+  </button>
+</div>
 
-  {{texto}}
 <section>
-    <h1>Produtos</h1>
-    <div class="products">
-        <app-product (onOpenDescription)="showDetails($event)" *ngFor="let produto of produtosExibidos" [produto]="produto"  (onDelete)="atualizarPagina()" (onEdit)="update($event)"></app-product>
-    </div>
+  <h1>Produtos</h1>
+  <div class="products">
+    <app-product
+      (onOpenDescription)="showDetails($event)"
+      *ngFor="let produto of produtosExibidos"
+      [produto]="produto"
+      (onDelete)="atualizarPagina()"
+      (onEdit)="update($event)"
+    ></app-product>
+  </div>
 </section>
-<app-product-detail (onCloseDescription)="closeDetails()" *ngIf="viewDetails" [produto]="produtoSelecionado"></app-product-detail>
+<app-product-detail
+  (onCloseDescription)="closeDetails()"
+  *ngIf="viewDetails"
+  [produto]="produtoSelecionado"
+></app-product-detail>
 
-<mat-paginator class="paginacao"
-[length]="produtos.length"
-[pageSize]="6"
-[pageSizeOptions]="[6,9,12]"
-(page)="OnPageChange($event)">
+<mat-paginator
+  class="paginacao"
+  [length]="produtos.length"
+  [pageSize]="6"
+  [pageSizeOptions]="[6, 9, 12]"
+  (page)="OnPageChange($event)"
+>
 </mat-paginator>
 
-
-<app-update-product [produto]="produtoEditando" *ngIf="viewEdit" (onCloseUpdate)="closeUpdate()"></app-update-product>
+<app-update-product
+  [produto]="produtoEditando"
+  *ngIf="viewEdit"
+  (onCloseUpdate)="closeUpdate()"
+></app-update-product>

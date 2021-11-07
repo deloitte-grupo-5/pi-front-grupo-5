@@ -131,4 +131,15 @@ export class PostagemService {
     }
     return this.http.put(`${this.url}/posts`,postagem,{headers:{Authorization:teste}})
   }
+
+  procurarPostagem(texto:string):Observable<Postagem[]>{
+    let token = window.sessionStorage.getItem("token");
+    let teste = ''
+    if(token) {
+      teste = token!.replace(/"([^"]+(?="))"/g, '$1');
+    }
+
+    console.log(`${this.url}/posts/texto/${texto}`)
+    return this.http.get<Postagem[]>(`${this.url}/posts/texto/${texto}`,{headers:{Authorization:teste}});
+  }  
 }

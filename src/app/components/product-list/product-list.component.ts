@@ -86,8 +86,11 @@ export class ProductListComponent implements OnInit {
 
   procurarProduto(texto:string) {
     texto = this.texto;
-    this.service.procurarProduto(texto).subscribe(()=> {
-      console.log(this.produtosExibidos)
+    this.service.procurarProduto(texto).subscribe((produtos: Product[])=> {
+    console.log(produtos)
+    this.produtos = produtos;
+      this.produtos.map((a) => (a.quantidade = 1));
+      this.atualizarProdutosExibidos();
     })           
   }
 }

@@ -33,6 +33,17 @@ section app-product:nth-child(even) ::ng-deep .description button.details{
     background-color: #CCF1E4;
 }
 
+.search {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search input {
+    width: 300px;
+}
+
 @media (max-width: 550px) {
     section app-product {
         margin: 25px 0;

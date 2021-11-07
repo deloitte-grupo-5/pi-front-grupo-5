@@ -57,7 +57,7 @@ export class ProductService {
     return this.http.put(`${this.url}/produtos`,produto,{headers:{Authorization:teste}})
   }
 
-  procurarProduto(descricao:string){
+  procurarProduto(descricao:string):Observable<Product[]>{
     let token = window.sessionStorage.getItem("token");
     let teste = ''
     if(token) {
@@ -65,6 +65,7 @@ export class ProductService {
     }
     console.log(`${this.url}/produtos/descricao/${descricao}`)
     this.getProducts();
+
     return this.http.get<Product[]>(`${this.url}/produtos/descricao/${descricao}`,{headers:{Authorization:teste}});
-  }
+  }  
 }
