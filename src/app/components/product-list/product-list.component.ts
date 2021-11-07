@@ -51,8 +51,6 @@ export class ProductListComponent implements OnInit {
     })
   }
 
-  homeSender = false
-  
   AbrirDoHome(resp:Product){
       console.log(resp)
       this.viewDetails = true;

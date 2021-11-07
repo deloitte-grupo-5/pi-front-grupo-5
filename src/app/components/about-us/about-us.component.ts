@@ -27,4 +27,10 @@ export class AboutUsComponent implements OnInit {
       console.log(this.images)
     })
   }
+
+  receitaSelecionada!:Postagem;
+  clickReceita(receita:Postagem){
+    this.receitaSelecionada = receita;
+    this.postService.visualizar(this.receitaSelecionada)
+  }
 }

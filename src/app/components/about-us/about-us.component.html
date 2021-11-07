@@ -36,7 +36,7 @@
         [transitionDuration]="2000"    
         [loop]="true"
         >
-            <div class="carousel-cell" *ngFor="let receita of receitas">
+            <div class="carousel-cell" *ngFor="let receita of receitas" (click)="clickReceita(receita)">
                 <img src="{{receita.img}}" alt="">
             </div>
         </carousel>
