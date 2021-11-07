@@ -1,0 +1,696 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>pi-grupo5-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">pi-grupo5-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li
+  >
+  Properties</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/ivyсarousel_pro/slide.ts</code>
+        </p>
+
+
+
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#carouselProperties" 
+>
+                                            carouselProperties
+                                        </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="carouselProperties"></a>
+                                        <span class="name "><b>carouselProperties</b>
+                                            <a href="#carouselProperties">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>carouselProperties:         <code><a href="../classes/Carousel.html" target="_self" >CarouselProperties</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../classes/Carousel.html" target="_self" >CarouselProperties</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Properties as CarouselProperties} from &#x27;./interfaces&#x27;;
+
+export interface Properties {
+    carouselProperties: CarouselProperties;
+}
+
+export class Slide {
+    slideLength: number &#x3D; 0;
+    isSlideInProgress: boolean &#x3D; false;
+    direction: &#x27;left&#x27; | &#x27;right&#x27; | undefined;
+    counter: number &#x3D; 0;
+    _counter: number &#x3D; 0;
+    distance: number &#x3D; 0;
+    distanceAbs: number &#x3D; 0;
+    visibleWidth!: number;
+    isNotClickOnArrow: boolean &#x3D; false;
+    initialPositionX: number &#x3D; 0;
+    currentPositionX: number &#x3D; 0;
+
+    /* The slide length has been limited by the limitSlideLength() method */
+    isSlideLengthLimited: boolean &#x3D; false;
+
+    get fullCellWidth() {
+        return this.carouselProperties.cellWidth + this.carouselProperties.margin;
+    }
+
+    get margin() {
+        return this.carouselProperties.margin;
+    }
+
+    get minSwipeDistance() {
+        return this.carouselProperties.minSwipeDistance;
+    }
+
+    get numberOfVisibleCells() {
+        return this.utils.numberOfVisibleCells;
+    }
+
+    get visibleCellsOverflowContainer() {
+        return this.utils.visibleCellsOverflowContainer;
+    }
+
+    /* The position to which the container returns after each slide 
+     * in the light DUM tree mode. 
+     */
+    get fixedContainerPosition() {
+        return -(this.overflowCellsLimit * this.fullCellWidth);
+    }
+
+    get overflowCellsLimit() {
+        return this.utils.overflowCellsLimit;
+    }
+
+    get images() {
+        return this.carouselProperties.images;
+    }
+
+    /* Number of cell elements in the DUM tree */
+    get cellLength() {
+        if (this.isLightDOM) {
+            return this.cells.cellLengthInLightDOMMode;
+        } else {
+            if (this.images) {
+                return this.images.length;
+            } else {
+                return this.cells.cellLength;
+            }
+        }
+    }
+
+    get isLightDOM() {
+        return this.carouselProperties.lightDOM || this.carouselProperties.loop;
+    }
+
+    constructor(private carouselProperties: CarouselProperties,
+        private utils: any,
+        private cells: any,
+        private container: any) {
+
+        this.init();
+    }
+
+    updateProperties(carouselProperties: CarouselProperties) {
+        this.carouselProperties &#x3D; carouselProperties;
+        this.setVisibleWidth();
+    }
+
+    init() {
+        this.visibleWidth &#x3D; this.carouselProperties.visibleWidth || this.carouselProperties.hostElement.clientWidth;
+    }
+
+    handleTouchstart() {
+        /* Touchstart event is not called for arrow */
+        this.isNotClickOnArrow &#x3D; true;
+        this.isSlideLengthLimited &#x3D; false;
+
+        if (!this.isSlideInProgress) {
+            this.initialPositionX &#x3D; this.container.getCurrentPositionX();
+        }
+    }
+
+    handleTouchend() {
+        if (!this.isNotClickOnArrow) {
+            return;
+        }
+        this.currentPositionX &#x3D; this.container.getCurrentPositionX();
+        this.distanceAbs &#x3D; Math.abs(this.initialPositionX - this.currentPositionX);
+        this.distance &#x3D; this.initialPositionX - this.currentPositionX;
+        this.direction &#x3D; this.getDirection();
+        this.isNotClickOnArrow &#x3D; false;
+        this.handleSlide();
+    }
+
+    handleTransitionend() {
+        this.setCounter();
+        this.isSlideInProgress &#x3D; false;
+
+        if (this.isLightDOM) {
+            this.alignContainerFast();
+        }
+    }
+
+    handleSlide(customSlideLength: number | undefined &#x3D; undefined) {
+        let isUsingButton &#x3D; customSlideLength;
+        let newPositionX;
+
+        if (isUsingButton &amp;&amp; this.isSlideInProgress || !this.direction) {
+            return;
+        }
+
+        /* Custom slide length is used in arrows */
+        if (customSlideLength) {
+            this.slideLength &#x3D; this.limitSlideLength(customSlideLength);
+
+            if (!this.isSlideInProgress) {
+                this.initialPositionX &#x3D; this.container.getCurrentPositionX();
+            }
+        } else {
+            this.slideLength &#x3D; this.getSlideLength(this.distanceAbs);
+        }
+
+        /* Store intermediate counter value */
+        this._counter &#x3D; this.getPreliminaryCounter();
+
+        if (this.direction &#x3D;&#x3D;&#x3D; &#x27;left&#x27;) {
+            if (!customSlideLength) {
+                this.slideLength &#x3D; this.limitSlideLength(this.getSlideLength(this.distanceAbs));
+            }
+
+            this._counter &#x3D; this.getPreliminaryCounter();
+            let isSlidesEnd &#x3D; this.isSlidesEnd(this._counter);
+            newPositionX &#x3D; this.getPositionByIndex(this._counter);
+
+            if (isSlidesEnd) {
+                this._counter &#x3D; this.counter;
+
+                newPositionX &#x3D; this.getPositionByIndex(this.counter);
+                this.slideLength &#x3D; 0;
+            }
+        }
+
+        if (this.direction &#x3D;&#x3D;&#x3D; &#x27;right&#x27;) {
+            if (!customSlideLength) {
+                this.slideLength &#x3D; this.getSlideLength(this.distanceAbs);
+            }
+
+            if (this._counter &lt; 0) {
+                this._counter &#x3D; this.counter;
+                this.slideLength &#x3D; this.counter;
+            }
+
+            newPositionX &#x3D; this.getPositionByIndex(this.counter - this.slideLength);
+        }
+
+        if (this.container.getCurrentPositionX() !&#x3D;&#x3D; newPositionX) {
+            this.isSlideInProgress &#x3D; true;
+            this.container.transformPositionX(newPositionX);
+        }
+    }
+
+    next(length: number &#x3D; 1) {
+        this.direction &#x3D; &#x27;left&#x27;;
+        this.handleSlide(length);
+    }
+
+    prev(length: number &#x3D; 1) {
+        this.direction &#x3D; &#x27;right&#x27;;
+        this.handleSlide(length);
+    }
+
+    select(index: number) {
+        if (index &gt; this.cellLength - 1) {
+            return;
+        }
+
+        if (index &gt; this.counter) {
+            let length &#x3D; index - this.counter;
+            this.next(length);
+        }
+
+        if (index &lt; this.counter) {
+            let length &#x3D; this.counter - index;
+            this.prev(length);
+        }
+    }
+
+    getPreliminaryCounter() {
+        if (this.direction &#x3D;&#x3D;&#x3D; &#x27;left&#x27;) {
+            return this.counter + this.slideLength;
+        }
+
+        if (this.direction &#x3D;&#x3D;&#x3D; &#x27;right&#x27;) {
+            return this.counter - this.slideLength;
+        }
+
+        return 0;
+    }
+
+    /*  
+     * Limits the length of the slide during calls to the next() and prev() 
+     * methods if the specified position is outside the cell length 
+     */
+    limitSlideLength(slideLength: number) {
+        if (slideLength &gt; 1) {
+            for (var i &#x3D; 0; i &lt; slideLength; i++) {
+                let newCounter &#x3D; this.counter + (slideLength - i);
+
+                if (!this.isSlidesEnd(newCounter)) {
+                    slideLength &#x3D; slideLength - i;
+                    this.isSlideLengthLimited &#x3D; i &gt; 0;
+                    break;
+                }
+            }
+        }
+        return slideLength;
+    }
+
+    /* Offset the container to show the last cell completely */
+    getPositionCorrection(counter:number) {
+        let correction &#x3D; 0;
+        let isLastSlide &#x3D; this.isLastSlide(counter);
+
+        if (this.carouselProperties.loop || this.direction &#x3D;&#x3D;&#x3D; &quot;right&quot;) {
+            return 0;
+        }
+
+        if (this.isSlideLengthLimited || isLastSlide) {
+            let cellsWidth &#x3D; this.cells.cellLengthInLightDOMMode * this.fullCellWidth;
+
+            if (this.visibleWidth &lt; cellsWidth) {
+                correction &#x3D; -(this.numberOfVisibleCells * this.fullCellWidth - this.visibleWidth - this.margin);
+            }
+
+            if (correction &gt;&#x3D; -this.margin) {
+                correction &#x3D; 0;
+            }
+        }
+
+        return correction;
+    }
+
+    getSlideLength(distanceAbs: number) {
+        let isLastSlide &#x3D; this.isLastSlide(this.counter);
+
+        /* If the last cell does not fit entirely, then the 
+         * length of the swipe to the left, from the extreme 
+         * right position, may be shorter than usual. 
+         */
+        if (isLastSlide &amp;&amp; this.direction &#x3D;&#x3D;&#x3D; &quot;right&quot;) {
+            distanceAbs &#x3D; distanceAbs + this.visibleWidth % this.fullCellWidth;
+        }
+
+        let length &#x3D; Math.floor(distanceAbs / this.fullCellWidth);
+
+        if (distanceAbs % this.fullCellWidth &gt;&#x3D; this.minSwipeDistance) {
+            length++;
+        }
+
+        return length;
+    }
+
+    getDistanceAbs() {
+        return Math.abs(this.initialPositionX - this.currentPositionX);
+    }
+
+    getDirection() {
+        const direction &#x3D; Math.sign(this.initialPositionX - this.currentPositionX);
+
+        if (direction &#x3D;&#x3D;&#x3D; -1) {
+            return &#x27;right&#x27;;
+        }
+        if (direction &#x3D;&#x3D;&#x3D; 1) {
+            return &#x27;left&#x27;;
+        }
+
+        return undefined;
+    }
+
+    isSlidesEnd(counter: number) {
+        let margin &#x3D; this.visibleCellsOverflowContainer ? 1 : 0;
+        let imageLength &#x3D; this.images ? this.images.length : this.cells.cellLength;
+
+        if (this.carouselProperties.loop) {
+            return false;
+        } else {
+            return (imageLength - counter + margin) &lt; this.numberOfVisibleCells;
+        }
+    }
+
+    isLastSlide(counter: number) {
+        return this.isSlidesEnd(counter + 1)
+    }
+
+    setCounter() {
+        if (this.direction &#x3D;&#x3D;&#x3D; &#x27;left&#x27;) {
+            this.counter &#x3D; this.counter + this.slideLength;
+        }
+
+        if (this.direction &#x3D;&#x3D;&#x3D; &#x27;right&#x27;) {
+            this.counter &#x3D; this.counter - this.slideLength;
+        }
+    }
+
+    getPositionByIndex(_counter: number) {
+        let correction &#x3D; this.getPositionCorrection(this.counter + this.slideLength);
+        let position;
+
+        if (correction !&#x3D;&#x3D; 0) {
+            correction &#x3D; correction + this.fullCellWidth
+        }
+
+        if (this.direction &#x3D;&#x3D;&#x3D; &#x27;right&#x27;) {
+            correction &#x3D; 0;
+        }
+
+        if (this.isLightDOM &amp;&amp; this.isLightDOMMode(_counter) ||
+            this.isLightDOM &amp;&amp; this.ifLeftDOMModeAtEnd(_counter)) {
+
+            let initialPosition &#x3D; this.getPositionWithoutCorrection(this.initialPositionX);
+            let counterDifference &#x3D; _counter - this.counter;
+            position &#x3D; initialPosition - ((counterDifference * this.fullCellWidth) - correction);
+        } else {
+            position &#x3D; -((_counter * this.fullCellWidth) - correction);
+        }
+
+        position &#x3D; this.provideSafePosition(position);
+
+        return position;
+    }
+
+    provideSafePosition(position: number) {
+        const endPosition &#x3D; this.container.getEndPosition();
+
+        if (this.direction &#x3D;&#x3D;&#x3D; &#x27;left&#x27;) {
+            if (position &gt; 0) {
+                position &#x3D; 0;
+            }
+        }
+
+        if (this.direction &#x3D;&#x3D;&#x3D; &#x27;right&#x27;) {
+            if (position &lt; endPosition) {
+                position &#x3D; endPosition;
+            }
+        }
+
+        return position;
+    }
+
+    getPositionWithoutCorrection(value: number) {
+        let remainder &#x3D; Math.round(value) % this.fullCellWidth;
+
+        if (remainder !&#x3D;&#x3D; 0) {
+            return value - (this.fullCellWidth + remainder);
+        } else {
+            return value;
+        }
+    }
+
+    isNextArrowDisabled() {
+        return this.isLastSlide(this.counter) || 
+        (!this.visibleCellsOverflowContainer &amp;&amp; this.cellLength &lt;&#x3D; this.numberOfVisibleCells) ||
+        (this.visibleCellsOverflowContainer &amp;&amp; this.cellLength &lt; this.numberOfVisibleCells)
+    }
+
+    isPrevArrowDisabled() {
+        return this.counter &#x3D;&#x3D;&#x3D; 0;
+    }
+
+    alignContainerFast() {
+        if (this.isLightDOMMode(this.counter)) {
+            let positionX &#x3D; this.fixedContainerPosition;
+            this.container.transformPositionX(positionX, 0);
+
+            this.cells.setCounter(this.counter);
+            this.cells.lineUp();
+        } else if (this.ifLeftDOMModeToBeginning(this.counter)) {
+            /* If we have already exited the light DOM mode but 
+             * the cells are still out of place 
+             */
+            if (this.cells.ifSequenceOfCellsIsChanged()) {
+                let positionX &#x3D; -(this.counter * this.fullCellWidth);
+                this.container.transformPositionX(positionX, 0);
+
+                this.cells.setCounter(this.counter);
+                this.cells.lineUp();
+            }
+        } else if (this.ifLeftDOMModeAtEnd(this.counter)) {
+            let containerPositionX &#x3D; this.container.getCurrentPositionX();
+            let containerWidth &#x3D; this.container.getWidth();
+            this.visibleWidth;
+
+            if (this.isLastSlide(this.counter) &amp;&amp;
+                containerWidth + containerPositionX &gt;&#x3D; this.visibleWidth) {
+                return;
+            }
+
+            let correction &#x3D; this.getPositionCorrection(this.counter);
+
+            if (correction !&#x3D;&#x3D; 0) {
+                correction &#x3D; correction + this.fullCellWidth
+            }
+
+            if (this.direction &#x3D;&#x3D;&#x3D; &#x27;right&#x27;) {
+                correction &#x3D; 0;
+            }
+
+            let positionX &#x3D; this.fixedContainerPosition + correction;
+
+            this.container.transformPositionX(positionX, 0);
+            this.cells.setCounter(this.counter);
+            this.cells.lineUp();
+        }
+    }
+
+    isLightDOMMode(counter: number) {
+        let flag;
+        let remainderOfCells &#x3D; this.images.length - this.overflowCellsLimit - this.numberOfVisibleCells;
+
+        if (!this.isLightDOM) {
+            return false;
+        }
+
+        if (counter &gt; this.overflowCellsLimit &amp;&amp; this.direction &#x3D;&#x3D;&#x3D; &quot;left&quot; &amp;&amp;
+            counter &lt;&#x3D; remainderOfCells) {
+            flag &#x3D; true;
+        }
+
+        if (counter &gt;&#x3D; this.overflowCellsLimit &amp;&amp; this.direction &#x3D;&#x3D;&#x3D; &quot;right&quot; &amp;&amp;
+            counter &lt; remainderOfCells) {
+            flag &#x3D; true;
+        }
+
+        if (this.counter &gt; this.overflowCellsLimit &amp;&amp; this.direction &#x3D;&#x3D;&#x3D; &quot;left&quot; &amp;&amp;
+            this.counter &lt;&#x3D; remainderOfCells) {
+            flag &#x3D; true;
+        }
+
+        if (this.counter &gt;&#x3D; this.overflowCellsLimit &amp;&amp; this.direction &#x3D;&#x3D;&#x3D; &quot;right&quot; &amp;&amp;
+            this.counter &lt; remainderOfCells) {
+            flag &#x3D; true;
+        }
+
+        return flag;
+    }
+
+    ifLeftDOMModeAtEnd(counter: number) {
+        let flag;
+        let remainderOfCells &#x3D; this.images.length - this.overflowCellsLimit - this.numberOfVisibleCells;
+
+        if (counter &gt;&#x3D; remainderOfCells) {
+            flag &#x3D; true;
+        }
+
+        if (this.counter &gt;&#x3D; remainderOfCells) {
+            flag &#x3D; true;
+        }
+
+        return flag;
+    }
+
+    ifLeftDOMModeToBeginning(counter: number) {
+        let flag;
+
+        if (counter &lt;&#x3D; this.overflowCellsLimit) {
+            flag &#x3D; true;
+        }
+
+        if (this.counter &lt;&#x3D; this.overflowCellsLimit) {
+            flag &#x3D; true;
+        }
+
+        return flag;
+    }
+
+    setVisibleWidth() {
+        this.visibleWidth &#x3D; this.carouselProperties.visibleWidth || this.carouselProperties.hostElement.clientWidth;
+    }
+}</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'Properties-1.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,2491 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>pi-grupo5-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">pi-grupo5-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li >Container</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/ivyсarousel_pro/container.ts</code>
+        </p>
+
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#initialElementPositionX" >initialElementPositionX</a>
+                            </li>
+                            <li>
+                                <a href="#initialPositionX" >initialPositionX</a>
+                            </li>
+                            <li>
+                                <a href="#isLocked" >isLocked</a>
+                            </li>
+                            <li>
+                                <a href="#isPositionCorrection" >isPositionCorrection</a>
+                            </li>
+                            <li>
+                                <a href="#isSwipeInProgress" >isSwipeInProgress</a>
+                            </li>
+                            <li>
+                                <a href="#moveX" >moveX</a>
+                            </li>
+                            <li>
+                                <a href="#newPositionIndex" >newPositionIndex</a>
+                            </li>
+                            <li>
+                                <a href="#pullLimit" >pullLimit</a>
+                            </li>
+                            <li>
+                                <a href="#startTime" >startTime</a>
+                            </li>
+                            <li>
+                                <a href="#startX" >startX</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#clearInitialValues" >clearInitialValues</a>
+                            </li>
+                            <li>
+                                <a href="#detectPulled" >detectPulled</a>
+                            </li>
+                            <li>
+                                <a href="#finishMoving" >finishMoving</a>
+                            </li>
+                            <li>
+                                <a href="#getAlignedPositionOnPull" >getAlignedPositionOnPull</a>
+                            </li>
+                            <li>
+                                <a href="#getCurrentPositionX" >getCurrentPositionX</a>
+                            </li>
+                            <li>
+                                <a href="#getDirection" >getDirection</a>
+                            </li>
+                            <li>
+                                <a href="#getDistance" >getDistance</a>
+                            </li>
+                            <li>
+                                <a href="#getElementPosition" >getElementPosition</a>
+                            </li>
+                            <li>
+                                <a href="#getEndPosition" >getEndPosition</a>
+                            </li>
+                            <li>
+                                <a href="#getInertia" >getInertia</a>
+                            </li>
+                            <li>
+                                <a href="#getInitialElementPositionX" >getInitialElementPositionX</a>
+                            </li>
+                            <li>
+                                <a href="#getMovePositionX" >getMovePositionX</a>
+                            </li>
+                            <li>
+                                <a href="#getWidth" >getWidth</a>
+                            </li>
+                            <li>
+                                <a href="#handleHorizontalSwipe" >handleHorizontalSwipe</a>
+                            </li>
+                            <li>
+                                <a href="#handleTouchend" >handleTouchend</a>
+                            </li>
+                            <li>
+                                <a href="#handleTouchstart" >handleTouchstart</a>
+                            </li>
+                            <li>
+                                <a href="#init" >init</a>
+                            </li>
+                            <li>
+                                <a href="#move" >move</a>
+                            </li>
+                            <li>
+                                <a href="#setInitialPosition" >setInitialPosition</a>
+                            </li>
+                            <li>
+                                <a href="#setWidth" >setWidth</a>
+                            </li>
+                            <li>
+                                <a href="#slowdownOnPull" >slowdownOnPull</a>
+                            </li>
+                            <li>
+                                <a href="#transformPositionX" >transformPositionX</a>
+                            </li>
+                            <li>
+                                <a href="#updateProperties" >updateProperties</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#visibleWidth" >visibleWidth</a>
+                                </li>
+                                <li>
+                                    <a href="#overflowCellsLimit" >overflowCellsLimit</a>
+                                </li>
+                                <li>
+                                    <a href="#images" >images</a>
+                                </li>
+                                <li>
+                                    <a href="#element" >element</a>
+                                </li>
+                                <li>
+                                    <a href="#freeScroll" >freeScroll</a>
+                                </li>
+                                <li>
+                                    <a href="#fullCellWidth" >fullCellWidth</a>
+                                </li>
+                                <li>
+                                    <a href="#numberOfVisibleCells" >numberOfVisibleCells</a>
+                                </li>
+                                <li>
+                                    <a href="#transitionDuration" >transitionDuration</a>
+                                </li>
+                                <li>
+                                    <a href="#transitionTimingFunction" >transitionTimingFunction</a>
+                                </li>
+                                <li>
+                                    <a href="#cellLength" >cellLength</a>
+                                </li>
+                                <li>
+                                    <a href="#cellLengthInLightDOMMode" >cellLengthInLightDOMMode</a>
+                                </li>
+                                <li>
+                                    <a href="#tooFewCells" >tooFewCells</a>
+                                </li>
+                                <li>
+                                    <a href="#disabled" >disabled</a>
+                                </li>
+                                <li>
+                                    <a href="#margin" >margin</a>
+                                </li>
+                                <li>
+                                    <a href="#isLightDOM" >isLightDOM</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(carouselProperties: <a href="../classes/Carousel.html" target="_self">CarouselProperties</a>, utils: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, cells: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:88</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>carouselProperties</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/Carousel.html" target="_self" >CarouselProperties</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>utils</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cells</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initialElementPositionX"></a>
+                    <span class="name">
+                        <span ><b>initialElementPositionX</b></span>
+                        <a href="#initialElementPositionX"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:10</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initialPositionX"></a>
+                    <span class="name">
+                        <span ><b>initialPositionX</b></span>
+                        <a href="#initialPositionX"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:9</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isLocked"></a>
+                    <span class="name">
+                        <span ><b>isLocked</b></span>
+                        <a href="#isLocked"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:11</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isPositionCorrection"></a>
+                    <span class="name">
+                        <span ><b>isPositionCorrection</b></span>
+                        <a href="#isPositionCorrection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:8</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isSwipeInProgress"></a>
+                    <span class="name">
+                        <span ><b>isSwipeInProgress</b></span>
+                        <a href="#isSwipeInProgress"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="moveX"></a>
+                    <span class="name">
+                        <span ><b>moveX</b></span>
+                        <a href="#moveX"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="newPositionIndex"></a>
+                    <span class="name">
+                        <span ><b>newPositionIndex</b></span>
+                        <a href="#newPositionIndex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:7</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pullLimit"></a>
+                    <span class="name">
+                        <span ><b>pullLimit</b></span>
+                        <a href="#pullLimit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>100</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:12</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="startTime"></a>
+                    <span class="name">
+                        <span ><b>startTime</b></span>
+                        <a href="#startTime"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="startX"></a>
+                    <span class="name">
+                        <span ><b>startX</b></span>
+                        <a href="#startX"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clearInitialValues"></a>
+                    <span class="name">
+                        <span ><b>clearInitialValues</b></span>
+                        <a href="#clearInitialValues"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clearInitialValues()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="349"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:349</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="detectPulled"></a>
+                    <span class="name">
+                        <span ><b>detectPulled</b></span>
+                        <a href="#detectPulled"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>detectPulled()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="181"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:181</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{ edge: string; positionX: number; overflowX: any; }</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="finishMoving"></a>
+                    <span class="name">
+                        <span ><b>finishMoving</b></span>
+                        <a href="#finishMoving"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>finishMoving()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="251"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:251</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAlignedPositionOnPull"></a>
+                    <span class="name">
+                        <span ><b>getAlignedPositionOnPull</b></span>
+                        <a href="#getAlignedPositionOnPull"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAlignedPositionOnPull(newPositionX: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="276"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:276</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>newPositionX</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCurrentPositionX"></a>
+                    <span class="name">
+                        <span ><b>getCurrentPositionX</b></span>
+                        <a href="#getCurrentPositionX"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCurrentPositionX()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="294"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:294</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDirection"></a>
+                    <span class="name">
+                        <span ><b>getDirection</b></span>
+                        <a href="#getDirection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDirection()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="353"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:353</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>&quot;left&quot; | &quot;right&quot;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDistance"></a>
+                    <span class="name">
+                        <span ><b>getDistance</b></span>
+                        <a href="#getDistance"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDistance()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="176"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:176</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getElementPosition"></a>
+                    <span class="name">
+                        <span ><b>getElementPosition</b></span>
+                        <a href="#getElementPosition"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getElementPosition()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="340"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:340</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getEndPosition"></a>
+                    <span class="name">
+                        <span ><b>getEndPosition</b></span>
+                        <a href="#getEndPosition"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getEndPosition()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="300"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:300</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getInertia"></a>
+                    <span class="name">
+                        <span ><b>getInertia</b></span>
+                        <a href="#getInertia"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getInertia()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="267"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:267</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getInitialElementPositionX"></a>
+                    <span class="name">
+                        <span ><b>getInitialElementPositionX</b></span>
+                        <a href="#getInitialElementPositionX"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getInitialElementPositionX()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="344"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:344</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMovePositionX"></a>
+                    <span class="name">
+                        <span ><b>getMovePositionX</b></span>
+                        <a href="#getMovePositionX"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMovePositionX()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="171"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:171</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getWidth"></a>
+                    <span class="name">
+                        <span ><b>getWidth</b></span>
+                        <a href="#getWidth"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getWidth()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="320"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:320</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleHorizontalSwipe"></a>
+                    <span class="name">
+                        <span ><b>handleHorizontalSwipe</b></span>
+                        <a href="#handleHorizontalSwipe"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleHorizontalSwipe()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="111"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:111</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleTouchend"></a>
+                    <span class="name">
+                        <span ><b>handleTouchend</b></span>
+                        <a href="#handleTouchend"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleTouchend(simpleProcessing: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="127"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:127</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>simpleProcessing</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleTouchstart"></a>
+                    <span class="name">
+                        <span ><b>handleTouchstart</b></span>
+                        <a href="#handleTouchstart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleTouchstart()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="init"></a>
+                    <span class="name">
+                        <span ><b>init</b></span>
+                        <a href="#init"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>init()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:101</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="move"></a>
+                    <span class="name">
+                        <span ><b>move</b></span>
+                        <a href="#move"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>move()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="143"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:143</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setInitialPosition"></a>
+                    <span class="name">
+                        <span ><b>setInitialPosition</b></span>
+                        <a href="#setInitialPosition"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setInitialPosition(position: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="336"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:336</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>position</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setWidth"></a>
+                    <span class="name">
+                        <span ><b>setWidth</b></span>
+                        <a href="#setWidth"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setWidth()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="331"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:331</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="slowdownOnPull"></a>
+                    <span class="name">
+                        <span ><b>slowdownOnPull</b></span>
+                        <a href="#slowdownOnPull"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>slowdownOnPull(_positionX: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="203"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:203</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>_positionX</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="transformPositionX"></a>
+                    <span class="name">
+                        <span ><b>transformPositionX</b></span>
+                        <a href="#transformPositionX"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>transformPositionX(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, duration)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="311"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:311</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>duration</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>this.transitionDuration</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateProperties"></a>
+                    <span class="name">
+                        <span ><b>updateProperties</b></span>
+                        <a href="#updateProperties"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateProperties(carouselProperties: <a href="../classes/Carousel.html" target="_self">CarouselProperties</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/app/ivyсarousel_pro/container.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>carouselProperties</td>
+                                    <td>
+                                                <code><a href="../classes/Carousel.html" target="_self" >CarouselProperties</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="visibleWidth"></a>
+                        <span class="name"><b>visibleWidth</b><a href="#visibleWidth"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>visibleWidth()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:18</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="overflowCellsLimit"></a>
+                        <span class="name"><b>overflowCellsLimit</b><a href="#overflowCellsLimit"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>overflowCellsLimit()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:22</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="images"></a>
+                        <span class="name"><b>images</b><a href="#images"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>images()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:26</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="element"></a>
+                        <span class="name"><b>element</b><a href="#element"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>element()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:30</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="freeScroll"></a>
+                        <span class="name"><b>freeScroll</b><a href="#freeScroll"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>freeScroll()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:34</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fullCellWidth"></a>
+                        <span class="name"><b>fullCellWidth</b><a href="#fullCellWidth"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>fullCellWidth()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:38</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="numberOfVisibleCells"></a>
+                        <span class="name"><b>numberOfVisibleCells</b><a href="#numberOfVisibleCells"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>numberOfVisibleCells()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:42</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="transitionDuration"></a>
+                        <span class="name"><b>transitionDuration</b><a href="#transitionDuration"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>transitionDuration()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:46</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="transitionTimingFunction"></a>
+                        <span class="name"><b>transitionTimingFunction</b><a href="#transitionTimingFunction"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>transitionTimingFunction()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:50</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cellLength"></a>
+                        <span class="name"><b>cellLength</b><a href="#cellLength"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>cellLength()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:54</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cellLengthInLightDOMMode"></a>
+                        <span class="name"><b>cellLengthInLightDOMMode</b><a href="#cellLengthInLightDOMMode"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>cellLengthInLightDOMMode()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:62</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tooFewCells"></a>
+                        <span class="name"><b>tooFewCells</b><a href="#tooFewCells"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>tooFewCells()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:74</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disabled"></a>
+                        <span class="name"><b>disabled</b><a href="#disabled"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>disabled()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:78</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="margin"></a>
+                        <span class="name"><b>margin</b><a href="#margin"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>margin()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="82" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:82</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isLightDOM"></a>
+                        <span class="name"><b>isLightDOM</b><a href="#isLightDOM"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>isLightDOM()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/app/ivyсarousel_pro/container.ts:86</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Properties as CarouselProperties} from &#x27;./interfaces&#x27;;
+
+export class Container {
+    /* The index of the new position relative to 
+     * the active index, for example -1 or +1 
+     */
+    newPositionIndex: number &#x3D; 0;
+    isPositionCorrection: boolean &#x3D; false;
+    initialPositionX: number &#x3D; 0;
+    initialElementPositionX: number &#x3D; 0;
+    isLocked: boolean &#x3D; true;
+    pullLimit: number &#x3D; 100;
+    startTime: number &#x3D; 0;
+    startX: number &#x3D; 0;
+    moveX: number &#x3D; 0;
+    isSwipeInProgress: boolean &#x3D; false;
+
+    get visibleWidth() {
+        return this.utils.visibleWidth;
+    }
+
+    get overflowCellsLimit() {
+        return this.utils.overflowCellsLimit;
+    }
+
+    get images() {
+        return this.carouselProperties.images;
+    }
+
+    get element() {
+        return this.carouselProperties.cellsElement;
+    }
+
+    get freeScroll() {
+        return this.carouselProperties.freeScroll;
+    }
+
+    get fullCellWidth() {
+        return this.carouselProperties.cellWidth + this.carouselProperties.margin;
+    }
+
+    get numberOfVisibleCells() {
+        return this.utils.numberOfVisibleCells;
+    }
+
+    get transitionDuration() {
+        return this.carouselProperties.transitionDuration;
+    }
+
+    get transitionTimingFunction() {
+        return this.carouselProperties.transitionTimingFunction;
+    }
+
+    get cellLength() {
+        if (this.images) {
+            return this.images.length;
+        } else {
+            return this.cells.cellLength;
+        }
+    }
+
+    get cellLengthInLightDOMMode() {
+        if (this.images) {
+            let cellLength &#x3D; this.numberOfVisibleCells + this.overflowCellsLimit * 2;
+            if (cellLength &gt; this.images.length) {
+                cellLength &#x3D; this.images.length;
+            }
+            return cellLength;
+        } else {
+            return this.cellLength;
+        }
+    }
+
+    get tooFewCells() {
+        return this.numberOfVisibleCells &gt; this.cellLength;
+    }
+
+    get disabled() {
+        return this.tooFewCells;
+    }
+
+    get margin() {
+        return this.carouselProperties.margin;
+    }
+
+    get isLightDOM() {
+        return this.carouselProperties.lightDOM || this.carouselProperties.loop;
+    }
+
+    constructor(private carouselProperties: CarouselProperties,
+        private utils:any,
+        private cells:any) {
+
+        this.init()
+    }
+
+    updateProperties(carouselProperties: CarouselProperties) {
+        this.carouselProperties &#x3D; carouselProperties;
+    }
+
+    init() {
+        this.setWidth();
+    }
+
+    handleTouchstart() {
+        this.startX &#x3D; this.utils.getStartX(event);
+        this.startTime &#x3D; new Date().getTime();
+        this.initialElementPositionX &#x3D; this.getInitialElementPositionX();
+    }
+
+    handleHorizontalSwipe() {
+        if (this.disabled) {
+            return;
+        }
+
+        if (!this.isSwipeInProgress) {
+            this.startX &#x3D; this.utils.getStartX(event);
+            this.startTime &#x3D; new Date().getTime();
+            this.initialElementPositionX &#x3D; this.getInitialElementPositionX();
+        }
+
+        this.isSwipeInProgress &#x3D; true;
+        this.moveX &#x3D; this.utils.getMoveX(event);
+        this.move();
+    }
+
+    handleTouchend(simpleProcessing: boolean &#x3D; false) {
+        if (this.disabled) {
+            return;
+        }
+
+        /* If touchend was passed to the Slide class */
+        if (simpleProcessing) {
+            this.isSwipeInProgress &#x3D; false;
+            return;
+        }
+
+        this.isSwipeInProgress &#x3D; false;
+        this.finishMoving();
+        this.clearInitialValues();
+    }
+
+    move() {
+        let positionX: number &#x3D; this.getMovePositionX();
+        const isPulled &#x3D; this.detectPulled();
+        const direction &#x3D; this.getDirection();
+
+        if (isPulled) {
+            if (isPulled.edge &#x3D;&#x3D;&#x3D; &quot;left&quot; &amp;&amp; direction &#x3D;&#x3D;&#x3D; &quot;right&quot; ||
+                isPulled.edge &#x3D;&#x3D;&#x3D; &quot;right&quot; &amp;&amp; direction &#x3D;&#x3D;&#x3D; &quot;left&quot;) {
+                positionX &#x3D; this.slowdownOnPull(positionX);
+            }
+        }
+
+        this.transformPositionX(positionX, 0);
+
+        if (this.freeScroll) {
+            this.initialPositionX &#x3D; positionX;
+        }
+
+        if (isPulled) {
+            if (isPulled.edge &#x3D;&#x3D;&#x3D; &#x27;left&#x27; &amp;&amp; isPulled.overflowX &gt; this.pullLimit) {
+                this.initialPositionX &#x3D; 0;
+            }
+            if (isPulled.edge &#x3D;&#x3D;&#x3D; &#x27;right&#x27; &amp;&amp; isPulled.overflowX &gt; this.pullLimit) {
+                this.initialPositionX &#x3D; positionX;
+            }
+        }
+    }
+
+    getMovePositionX() {
+        const distance &#x3D; this.getDistance();
+        return this.initialElementPositionX - distance;
+    }
+
+    getDistance() {
+        return this.startX - this.moveX;
+    }
+
+    /* If the container is pulled out of the left or right border */
+    detectPulled() {
+        const currentPositionX &#x3D; this.getCurrentPositionX();
+
+        if (currentPositionX &gt; 0) {
+            return {
+                edge: &#x27;left&#x27;,
+                positionX: currentPositionX,
+                overflowX: Math.abs(currentPositionX)
+            }
+        }
+
+        if (currentPositionX &lt; this.getEndPosition()) {
+            return {
+                edge: &#x27;right&#x27;,
+                positionX: currentPositionX,
+                overflowX: Math.abs(currentPositionX - this.getEndPosition())
+            }
+        }
+
+        return undefined;
+    }
+
+    slowdownOnPull(_positionX: number) {
+        let distance &#x3D; Math.abs(this.getDistance());
+        const endPosition &#x3D; this.getEndPosition();
+        const isPulled &#x3D; this.detectPulled();
+
+        if (!isPulled) {
+            return 0;
+        }
+
+        const decelerationRatio &#x3D; 3 + isPulled.overflowX / 50;
+        let positionX:number &#x3D; 0;
+
+        if (isPulled.edge &#x3D;&#x3D;&#x3D; &#x27;left&#x27;) {
+
+            if (this.initialElementPositionX &lt; 0) {
+                distance &#x3D; distance - Math.abs(this.initialElementPositionX);
+            }
+
+            const rubberPositionX &#x3D; distance / decelerationRatio;
+            positionX &#x3D; rubberPositionX;
+
+            if (this.initialElementPositionX &gt; 0) {
+                positionX &#x3D; this.initialElementPositionX + rubberPositionX;
+            }
+
+            if (positionX &gt; this.pullLimit) {
+                positionX &#x3D; this.pullLimit;
+            }
+        }
+
+        if (isPulled.edge &#x3D;&#x3D;&#x3D; &#x27;right&#x27;) {
+            const rubberPositionX &#x3D; endPosition + (((this.initialElementPositionX - distance) - endPosition) / decelerationRatio);
+            const containerWidth &#x3D; this.getWidth();
+
+            positionX &#x3D; rubberPositionX;
+
+            if (this.initialElementPositionX &lt; -(containerWidth - this.visibleWidth)) {
+                positionX &#x3D; ((containerWidth - this.visibleWidth) + this.initialElementPositionX) + rubberPositionX;
+            }
+
+            if (positionX &lt; endPosition - this.pullLimit) {
+                positionX &#x3D; endPosition - this.pullLimit;
+            }
+        }
+
+        return positionX;
+    }
+
+    finishMoving() {
+        const positionX &#x3D; this.getMovePositionX();
+        let newPositionX:number &#x3D; 0;
+
+        if (this.freeScroll) {
+            newPositionX &#x3D; this.getInertia();
+        }
+
+        /* Align container while pulling */
+        newPositionX &#x3D; this.getAlignedPositionOnPull(newPositionX);
+
+        this.transformPositionX(newPositionX);
+        this.setInitialPosition(positionX);
+    }
+
+    /* Returns the new position of the container with inertia */
+    getInertia() {
+        const distance &#x3D; this.getDistance();
+        const currentTime &#x3D; new Date().getTime();
+        const tapLength &#x3D; currentTime - this.startTime;
+        let inertia &#x3D; (distance / tapLength) * 100;
+
+        return this.initialPositionX - inertia;
+    }
+
+    getAlignedPositionOnPull(newPositionX:number) {
+        const direction &#x3D; this.getDirection();
+
+        if (direction &#x3D;&#x3D;&#x3D; &#x27;left&#x27;) {
+            let endPosition &#x3D; this.getEndPosition();
+            if (newPositionX &lt; endPosition) {
+                return endPosition;
+            }
+        }
+        if (direction &#x3D;&#x3D;&#x3D; &#x27;right&#x27;) {
+            if (newPositionX &gt; 0) {
+                return 0;
+            }
+        }
+
+        return newPositionX;
+    }
+
+    getCurrentPositionX() {
+        const parentPosition &#x3D; this.element!.parentElement!.getBoundingClientRect();
+        const position &#x3D; this.element.getBoundingClientRect();
+        return position.left - parentPosition.left;
+    }
+
+    getEndPosition() {
+        if (this.isLightDOM) {
+            let imagesInContainer &#x3D; this.cells.imageUtils.getImages();
+            return -(imagesInContainer.length * this.fullCellWidth - this.visibleWidth - this.margin);
+        } else {
+            const width &#x3D; this.getWidth();
+            const visibleWidth &#x3D; this.element!.parentElement!.clientWidth;
+            return visibleWidth - width;
+        }
+    }
+
+    transformPositionX(value:number, duration &#x3D; this.transitionDuration) {
+        if (value &#x3D;&#x3D;&#x3D; undefined) {
+            return;
+        }
+
+        this.element.style.transition &#x3D; &#x27;transform &#x27; + duration + &#x27;ms &#x27; + this.transitionTimingFunction;
+        this.element.style.transform &#x3D; &#x27;translateX(&#x27; + value + &#x27;px)&#x27;;
+    }
+
+    getWidth() {
+        let width &#x3D; this.cellLengthInLightDOMMode * this.fullCellWidth;
+        let totalImageWidth &#x3D; this.cellLength * this.fullCellWidth;
+
+        if (totalImageWidth &lt; width) {
+            width &#x3D; totalImageWidth;
+        }
+
+        return this.isLightDOM ? width : totalImageWidth;
+    }
+
+    setWidth() {
+        const width &#x3D; this.getWidth();
+        this.element.style.width &#x3D; width + &quot;px&quot;;
+    }
+
+    setInitialPosition(position:number) {
+        this.initialPositionX &#x3D; position;
+    }
+
+    getElementPosition() {
+        return this.element.getBoundingClientRect();
+    }
+
+    getInitialElementPositionX() {
+        const carouselElementPosition &#x3D; this.utils.getCarouselElementPosition()[&#x27;left&#x27;];
+        return this.getElementPosition()[&#x27;left&#x27;] - carouselElementPosition;
+    }
+
+    clearInitialValues() {
+        this.startX &#x3D; this.moveX &#x3D; 0;
+    }
+
+    getDirection() {
+        const direction &#x3D; Math.sign(this.startX - this.moveX);
+
+        if (direction &#x3D;&#x3D;&#x3D; -1) {
+            return &#x27;right&#x27;;
+        }
+        if (direction &#x3D;&#x3D;&#x3D; 1) {
+            return &#x27;left&#x27;;
+        }
+
+        return undefined;
+    }
+}</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'Container.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
