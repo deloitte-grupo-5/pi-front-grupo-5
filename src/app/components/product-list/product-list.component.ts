@@ -104,6 +104,16 @@ export class ProductListComponent implements OnInit {
       this.atualizarProdutosExibidos();
     })           
   }
+
+  procurarProdutoDescricao(descricao:string) {
+    descricao = this.texto
+    this.service.procurarProduto(descricao).subscribe((produtos: Product[])=> {
+      console.log(produtos)
+      this.produtos = produtos;
+      this.produtos.map((a) => (a.quantidade = 1));
+      this.atualizarProdutosExibidos();
+    })
+  }
  
 
 }

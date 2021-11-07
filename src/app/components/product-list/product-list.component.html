@@ -1,6 +1,6 @@
 <div class="search">
   <input type="text" placeholder="O que procura?" [(ngModel)]="texto" />
-  <button type="submit" (click)="procurarProduto(texto)">
+  <button type="submit" (click)="procurarProduto(texto)" (click)="procurarProdutoDescricao(texto)">
     <img
       src="../../../assets/images/icon-search.png"
       alt=""
