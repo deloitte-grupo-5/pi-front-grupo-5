@@ -1,4 +1,4 @@
-div section {
+section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,19 +8,26 @@ div section {
 article {
   width: 600px;
 }
-
+article.img {
+  margin-top:30px;
+}
 article.img h1 {
   color: #BF8F13;
   font-family: Nunito, Sans-serif;
   font-size: 40px;
   line-height: 40px;
   font-weight: 700;
+  margin-top: 0;
 }
 
 article.img img {
-  width: 100%;
+  width: 600px;
+  height: 450px;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 40px;
+  background-image: url("/assets/images/no-pic.jpg");
+  background-size: cover;
 }
 
 .infos {
@@ -111,27 +118,40 @@ div.comments div p.text {
 }
 
 
-@media (max-width: 650px) {
-  article.img h1 {
-    font-size: 30px;
-  }
-
+@media (max-width: 790px) {
   article {
-    width: 80%;
+    width: 370px;
   }
-
-  div.comments {
-      flex-direction: column;
+  article.img img {
+    width: 370px;
+    height: 277.5px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    background-image: url("/assets/images/no-pic.jpg");
+    background-size: cover;
   }
-
-
 }
+@media (max-width: 400px) {
+  article {
+    width: 300px;
+  }
+  article.img img {
+    width: 300px;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    background-image: url("/assets/images/no-pic.jpg");
+    background-size: cover;
+  }
+}
+
 .editores{
   display: flex;
   justify-content: flex-end;
   gap: 30px;
-  margin:50px auto;
-  width: 50%;
+  width: 100%;
 
 }
 .editores mat-icon{

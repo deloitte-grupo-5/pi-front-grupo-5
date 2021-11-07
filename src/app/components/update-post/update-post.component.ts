@@ -25,6 +25,7 @@ export class UpdatePostComponent implements OnInit {
         this.service.showMensage("Postagem alterada com sucesso")
         this.mudou = true
         this.onMudar.emit(this.postagem)
+        this.close()
       },
       (error)=>{
         this.service.showMensage("Erro ao alterar postagem")

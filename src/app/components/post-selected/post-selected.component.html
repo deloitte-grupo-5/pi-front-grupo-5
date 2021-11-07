@@ -1,63 +1,57 @@
-<div>
-
-  <section>
+<section>
+  <article class="img">
     <div class="editores" *ngIf="mostrar">
       <mat-icon aria-hidden="false" aria-label="Example home icon" class=".lixeira" (click)="delete()">delete</mat-icon>
-      <mat-icon aria-hidden="false" aria-label="Example home icon" class=".update" (click)="updatePostagem()">edit</mat-icon>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" class=".update" (click)="updatePostagem()">edit
+      </mat-icon>
     </div>
-    <article class="img">
-      <h1>{{postagem.titulo | uppercase}}</h1>
-
-      <img
-        src="{{postagem.img}}"
-        alt=""
-        draggable="false"
-      />
-    </article>
-    <article class="infos">
-      <div>
-        <img src="../../../assets/images/clock.png" alt="" draggable="false" />
-        <h5>Preparo</h5>
-        <h6>50 min</h6>
-      </div>
-      <div>
-        <img src="../../../assets/images/cloche.png" alt="" draggable="false" />
-        <h5>Rendimento</h5>
-        <h6>{{postagem.porcao}} porções</h6>
-      </div>
-      <div>
-        <img src="../../../assets/images/heart.png" alt="" draggable="false" />
-        <h5>Curtidas</h5>
-        <h6>500</h6>
-      </div>
-      <div>
-        <img src="../../../assets/images/comentario.png" alt="" />
-        <h5>Comentários</h5>
-        <h6>200</h6>
-      </div>
-    </article>
-    <article class="ingredients">
-      <h2>Ingredientes</h2>
-      <ul>
-        <li *ngFor="let ingrediente of postagem.ingredientes">{{ingrediente}}</li>
-      </ul>
-    </article>
-    <article class="preparation" >
-      <h2>Modo de preparo</h2>
-      <p>
-        {{postagem.texto}}
-      </p>
-    </article>
-    <article class="send-comment">
-      <input type="text" name="tituloComentario" placeholder="Titulo do comentário" [(ngModel)]="title">
-      <textarea placeholder="Deixe seu comentário" [(ngModel)]="body"></textarea>
-      <button type="submit" (click)="criarComentario()">Enviar</button>
-    </article>
-    <article>
-      <h2>Comentários</h2>
-      <div class="comments">
-      <div class="comentario" >
-        <div class="infos-comment" >
+    <h1>{{postagem.titulo | uppercase}}</h1>
+    <img src="{{postagem.img}}" alt="" draggable="false" />
+  </article>
+  <article class="infos">
+    <div>
+      <img src="../../../assets/images/clock.png" alt="" draggable="false" />
+      <h5>Preparo</h5>
+      <h6>50 min</h6>
+    </div>
+    <div>
+      <img src="../../../assets/images/cloche.png" alt="" draggable="false" />
+      <h5>Rendimento</h5>
+      <h6>{{postagem.porcao}} porções</h6>
+    </div>
+    <div>
+      <img src="../../../assets/images/heart.png" alt="" draggable="false" />
+      <h5>Curtidas</h5>
+      <h6>500</h6>
+    </div>
+    <div>
+      <img src="../../../assets/images/comentario.png" alt="" />
+      <h5>Comentários</h5>
+      <h6>200</h6>
+    </div>
+  </article>
+  <article class="ingredients">
+    <h2>Ingredientes</h2>
+    <ul>
+      <li *ngFor="let ingrediente of postagem.ingredientes">{{ingrediente}}</li>
+    </ul>
+  </article>
+  <article class="preparation">
+    <h2>Modo de preparo</h2>
+    <p>
+      {{postagem.texto}}
+    </p>
+  </article>
+  <!-- <article class="send-comment">
+    <input type="text" name="tituloComentario" placeholder="Titulo do comentário" [(ngModel)]="title">
+    <textarea placeholder="Deixe seu comentário" [(ngModel)]="body"></textarea>
+    <button type="submit" (click)="criarComentario()">Enviar</button>
+  </article>
+  <article>
+    <h2>Comentários</h2>
+    <div class="comments">
+      <div class="comentario">
+        <div class="infos-comment">
           <h3></h3>
           <p>{{postagem.data | date:'medium'}} </p>
         </div>
@@ -68,8 +62,8 @@
         </div>
       </div>
     </div>
-    </article>
-  </section>
-</div>
+  </article> -->
+</section>
 
-<app-update-post [postagem]="postagem" *ngIf="update" (onClose)="updateClose($event)" (onMudar)="atualizarPostagem($event)"></app-update-post>
+<app-update-post [postagem]="postagem" *ngIf="update" (onClose)="updateClose($event)"
+  (onMudar)="atualizarPostagem($event)"></app-update-post>

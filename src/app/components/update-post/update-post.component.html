@@ -1,24 +1,28 @@
 <div class="modal">
 
-  <section>
-
-    <div class="signIn">
-      <div class="close_button">
-        <mat-icon class="material-icons-outlined" (click)="close()">close</mat-icon>
-      </div>
-        <p>Editor de Postagem</p>
-        <input type="text" placeholder="titulo" name="titulo" [(ngModel)]="postagem.titulo">
-        <textarea placeholder="texto" [(ngModel)]="postagem.texto"></textarea>
-        <input type="text" placeholder="tempo de preparo" name="tempo de preparo" [(ngModel)]="postagem.preparo">
-        <input type="number" placeholder="rendimento" name="rendimento" [(ngModel)]="postagem.porcao">
-        <input type="text" placeholder="referencias" name="referencias" [(ngModel)]="postagem.referencias">
-        <span *ngFor="let ingradiente of postagem.ingredientes; let i = index; trackBy: track;">
-          <input type="text"  placeholder="ingrediente" name="ingrediente_{{i}}" [(ngModel)]="postagem.ingredientes[i]">
-         <button *ngIf="i==0" (click)="addIngradiente()" class="controllers">+</button>
-        <button *ngIf="i!=0"(click)="removeIngrediente(i)" class="controllers" >-</button>
-        </span>
-        <input type="text" placeholder="link da imagem" name="referencias" [(ngModel)]="postagem.img">
-        <button type="submit" (click)="updatePostagem()">Enviar</button>
+  <section class="signIn">
+    <div class="close_button">
+      <mat-icon class="material-icons-outlined" (click)="close()">close</mat-icon>
     </div>
+    <p>Editor de Postagem</p>
+    <label for="titulo">Título:</label>
+    <input type="text" placeholder="titulo" name="titulo" [(ngModel)]="postagem.titulo">
+    <label for="tempo de preparo">Tempo de preparo:</label>
+    <input type="text" placeholder="tempo de preparo" name="tempo de preparo" [(ngModel)]="postagem.preparo">
+    <label for="rendimento">Rendimento:</label>
+    <input type="number" placeholder="rendimento" name="rendimento" [(ngModel)]="postagem.porcao">
+    <label for="referencias">Planta utilizada:</label>
+    <input type="text" placeholder="planta utilizada" name="referencias" [(ngModel)]="postagem.referencias">
+    <label for="ingredientes:">Ingredientes:</label>
+    <span *ngFor="let ingradiente of postagem.ingredientes; let i = index; trackBy: track;">
+      <input type="text" placeholder="ingrediente" name="ingrediente_{{i}}" [(ngModel)]="postagem.ingredientes[i]">
+      <button *ngIf="i==0" (click)="addIngradiente()" class="controllers add">+</button>
+      <button *ngIf="i!=0" (click)="removeIngrediente(i)" class="controllers remove">-</button>
+    </span>
+    <label for="texto">Modo de preparo:</label>
+    <textarea placeholder="modo de preparo" [(ngModel)]="postagem.texto"></textarea>
+    <label for="link imagem">Link da imagem:</label>
+    <input type="text" placeholder="link da imagem" name="link imagem" [(ngModel)]="postagem.img">
+    <button class="enviar" type="submit" (click)="updatePostagem()">Salvar</button>
   </section>
 </div>
