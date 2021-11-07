@@ -58,16 +58,16 @@ export class ProductService {
     return this.http.put(`${this.url}/produtos`,produto,{headers:{Authorization:teste}})
   }
 
-  procurarProduto(descricao:string):Observable<Product[]>{
+  procurarProduto(nome:string):Observable<Product[]>{
     let token = window.sessionStorage.getItem("token");
     let teste = ''
     if(token) {
       teste = token!.replace(/"([^"]+(?="))"/g, '$1');
     }
-    console.log(`${this.url}/produtos/descricao/${descricao}`)
+    console.log(`${this.url}/produtos/descricao/${nome}`)
     this.getProducts();
 
-    return this.http.get<Product[]>(`${this.url}/produtos/descricao/${descricao}`,{headers:{Authorization:teste}});
+    return this.http.get<Product[]>(`${this.url}/produtos/nome/${nome}`,{headers:{Authorization:teste}});
   }
 
   produto = new BehaviorSubject<any>({})
