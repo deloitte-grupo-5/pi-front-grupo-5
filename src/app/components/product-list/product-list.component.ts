@@ -107,6 +107,7 @@ export class ProductListComponent implements OnInit {
   limparPesquisa(){
     this.service.onProdutosMudaram.emit();
     this.atualizarProdutosExibidos();
+    this.texto =""
   }
 
 
