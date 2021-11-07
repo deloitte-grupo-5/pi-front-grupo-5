@@ -16,7 +16,7 @@
   max-width: 100%;
   font-size: 16px;
   border: none;
-
+  padding: 5px;
 }
 .button-visualizar:hover{
   background-color: rgba(191, 143, 19, 0.7);
@@ -26,11 +26,12 @@ section {
   display:flex;
   flex-direction: column;
   flex-wrap: wrap;
+  max-width: 100%;
+}
+.container section app-post {
+  max-width: 100%
 }
 
-app-post {
-padding: 10px;
-}
 .paginacao{
   display: flex;
   align-items: center;

@@ -48,7 +48,7 @@ img {
 .to_products carousel.produtos .carousel-cell {
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
 }
 .to_products carousel.produtos .carousel-cell p {
     font-size: 16px;
@@ -60,6 +60,8 @@ img {
     object-fit: cover;
     border-radius: 100%;
     cursor: pointer;
+    background-image: url("/assets/images/no-pic.jpg");
+    background-size: cover;
 }
 
 .to_about {
@@ -119,7 +121,8 @@ img {
     width: 200px;
     height: 150px;
     border-radius: 20px;
-
+    background-image: url("/assets/images/no-pic.jpg");
+    background-size: cover;
 }
 /* .to_recipes carousel.receitas .carousel-cell p {
     position: absolute;

@@ -1,50 +1,35 @@
-
-<div>
-
+<div class="container">
   <section class="postagem">
-
-    <img src={{postagem.img}} alt="" class="img-postagem">
-
-
-
-<article class="postagem-article">
-
-
-
-  <h2 class="titulo">{{postagem.titulo | uppercase}}</h2>
-  <p class="texto">{{descricao}}</p>
-  <p>{{postagem.data | date :'short'}}</p>
-
-    <p class="enviado">Enviado por {{postagem.user.nome}}</p>
-      <button class="button-visualizar"  (click)="visualizar()">visualizar</button>
-</article>
-
-
-</section>
-
-
-   <hr>
-<!-- </div>
-
-
-<div *ngIf="((postagem.id%2==0))" >
-<section class="postagem" >
-
-  <img src="assets\Rectangle 2.png" alt="" class="img-postagem">
-
-<article class="postagem-article">
-
-  <h2 class="titulo">{{postagem.tittle}}</h2>
-
-  <p class="texto">{{postagem.body}}</p>
-
-    <p class="enviado">Enviado por ******</p>
+    <img src={{postagem.img}} alt="" class="img-postagem" (click)="visualizar()">
+    <article class="postagem-article">
+      <div>
+        <h2 class="titulo">{{postagem.titulo | uppercase}}</h2>
+        <!-- <div class="heart">
+          <img src="{{imagem}}" alt="">
+          <span>{{postagem.like}} likes</span>
+        </div> -->
+      </div>
+      <p class="texto">{{descricao}}</p>
+      <p class="data">{{postagem.data | date :'short'}}</p>
+      <div class="last">
+        <p class="enviado">Enviado por {{postagem.user.nome}}</p>
+        <button class="button-visualizar" (click)="visualizar()">visualizar</button>
+      </div>
+    </article>
+  </section>
+  <hr>
+  <!-- </div>
+  <div *ngIf="((postagem.id%2==0))" >
+  <section class="postagem" >
+    <img src="assets\Rectangle 2.png" alt="" class="img-postagem">
+    <article class="postagem-article">
+      <h2 class="titulo">{{postagem.tittle}}</h2>
+      <p class="texto">{{postagem.body}}</p>
+      <p class="enviado">Enviado por ******</p>
       <button class="button-visualizar button-2" >visualizar</button>
-
-</article>
-
-</section>
-<hr> -->
+    </article>
+  </section>
+  <hr> -->
 </div>
 
 <!-- <app-create-product></app-create-product> -->

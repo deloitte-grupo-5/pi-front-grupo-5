@@ -9,6 +9,7 @@ import { PostagemService } from 'src/app/services/postagem.service';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
+  liked= true;
   @Input() postagem!:any;
   descricao:string =""
   onVisualizarClick:EventEmitter<Postagem> = new EventEmitter();
