@@ -10,7 +10,7 @@
       <a routerLink="sobre">Sobre</a>
     </div>
     <div class="icons">
-      <img src="../../../assets/images/icon-search.png" alt="Pesquisar" (click)="toggleSearch()" draggable="false">
+      <!-- <img src="../../../assets/images/icon-search.png" alt="Pesquisar" (click)="toggleSearch()" draggable="false"> -->
       <div class="login" *ngIf="((!usuarioLogou))">
         <img class="size" routerLink="login" src="../../../assets/images/icon-user.png" alt="Login">
         <p>{{usuarioLogado.usuario}}</p>
@@ -36,8 +36,8 @@
     <a routerLink="sobre" (click)="toggleDropdown()">Sobre</a>
     <a class="hide" routerLink="perfil" (click)="toggleDropdown()">Meu perfil</a>
   </div>
-  <div class="search" *ngIf="showSearch">
+  <!-- <div class="search" *ngIf="showSearch">
     <input type="text" placeholder="O que procura?">
     <button type="submit" (click)="toggleSearch()"><img src="../../../assets/images/icon-search.png" alt=""></button>
-  </div>
+  </div> -->
 </div>

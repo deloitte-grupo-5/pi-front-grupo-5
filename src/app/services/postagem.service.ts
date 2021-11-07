@@ -140,6 +140,6 @@ export class PostagemService {
     }
 
     console.log(`${this.url}/posts/titulo/${titulo}`)
-    return this.http.get<Postagem[]>(`${this.url}/posts/texto/${titulo}`,{headers:{Authorization:teste}});
+    return this.http.get<Postagem[]>(`${this.url}/posts/titulo/${titulo}`,{headers:{Authorization:teste}});
   }  
 }
