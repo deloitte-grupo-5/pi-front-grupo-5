@@ -43,7 +43,7 @@ section app-product:nth-child(even) ::ng-deep .description button.details{
 .search input {
     width: 400px;
     height: 30px;
-    border-radius: 10px 0 0 10px ;
+
     border: solid 0.5px rgba(0, 0, 0, 0.5);
 }
 
@@ -89,4 +89,9 @@ input:focus {
   align-items: center;
   justify-content: center;
   color: #000000;
+}
+.search .limparPesquiisa{
+  border-radius: 10px 0px 0px 10px ;
+  height: 34px;
+
 }
