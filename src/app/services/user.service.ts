@@ -80,12 +80,8 @@ export class UserService {
   if (token) {
     teste = token!.replace(/"([^"]+(?="))"/g, '$1');
   }
-<<<<<<< HEAD
+
 
     return this.http.get(`${this.url}/usuario/${id}`,{headers:{Authorization:teste}})
-
-=======
-    return this.http.get(`${this.url}/usuario/${id}`,{headers:{Authorization:teste}})
->>>>>>> ec01e2b6b831c6c2eedac1987b3de9b77a3ffa10
   }
 }
