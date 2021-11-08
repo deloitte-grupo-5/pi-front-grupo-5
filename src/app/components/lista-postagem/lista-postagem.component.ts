@@ -113,14 +113,14 @@ export class ListaPostagemComponent implements OnInit {
   procurarPostagem(texto:string) {
     this.postagemService.procurarPostagem(texto).subscribe((postagem: Postagem[]) => {
       console.log("clicou")
-      this.postagens = postagem
+      this.postagens = postagem.reverse();
       this.atualizarPostagensExibidos();
     })
   }
 
-  limparPesquisa(){
-    this.postagens = this.postagemExibidas
-    this.atualizarPostagensExibidos();
+  limparPesquisa(){    
+    this.ngOnInit();
+    this.texto = "";
   }
 }
 
