@@ -18,6 +18,15 @@ export class ProductDetailComponent implements OnInit {
   disponivel = true;
   indisponivel = false;
 
+  cozer:string = "";
+  cru:boolean = false;
+  cozido:boolean = false;
+  folha:boolean = false;
+  raiz:boolean = false;
+  fruto: boolean = false;
+  flor: boolean = false;
+  semente: boolean = false;
+
   ngOnInit(): void {
     if (this.produto.quantidade_estoque == 0) {
       this.disponivel = false;
