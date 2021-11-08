@@ -107,5 +107,6 @@ export class ProductListComponent implements OnInit {
   limparPesquisa(){
     this.produtos.map((a) => (a.quantidade = 1));
     this.atualizarProdutosExibidos();
+    this.texto =""
   }
 }
