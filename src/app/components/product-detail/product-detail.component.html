@@ -9,13 +9,13 @@
                 <img class="plant" src="{{produto.img}}" alt="Planta Moringa">
             </div>
             <ul>
-                <li *ngIf="cru"><img src="../../../assets/images/laterFromBank/care-raw.png" alt=""></li>
-                <li *ngIf="cozido"><img src="../../../assets/images/laterFromBank/care-cooked.png" alt=""></li>
-                <li *ngIf="folha"><img src="../../../assets/images/laterFromBank/care-leaf.png" alt=""></li>
-                <li *ngIf="raiz"><img src="../../../assets/images/laterFromBank/care-root.png" alt=""></li>
-                <li *ngIf="fruto"><img src="../../../assets/images/laterFromBank/care-fruit.png" alt=""></li>
-                <li *ngIf="flor"><img src="../../../assets/images/laterFromBank/care-flower.png" alt=""></li>
-                <li *ngIf="semente"><img src="../../../assets/images/laterFromBank/care-seed.png" alt=""></li>
+                <li *ngIf="produto.cozer =='pode'"><img src="../../../assets/images/laterFromBank/care-raw.png" alt=""></li>
+                <li *ngIf="produto.cozer == 'deve'"><img src="../../../assets/images/laterFromBank/care-cooked.png" alt=""></li>
+                <li *ngIf="produto.folha"><img src="../../../assets/images/laterFromBank/care-leaf.png" alt=""></li>
+                <li *ngIf="produto.raiz"><img src="../../../assets/images/laterFromBank/care-root.png" alt=""></li>
+                <li *ngIf="produto.fruto"><img src="../../../assets/images/laterFromBank/care-fruit.png" alt=""></li>
+                <li *ngIf="produto.flor"><img src="../../../assets/images/laterFromBank/care-flower.png" alt=""></li>
+                <li *ngIf="produto.semente"><img src="../../../assets/images/laterFromBank/care-seed.png" alt=""></li>
 
             </ul>
         </div>
