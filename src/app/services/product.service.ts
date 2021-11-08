@@ -64,10 +64,22 @@ export class ProductService {
     if(token) {
       teste = token!.replace(/"([^"]+(?="))"/g, '$1');
     }
-    console.log(`${this.url}/produtos/descricao/${nome}`)
+    console.log(`${this.url}/produtos/nome/${nome}`)
     this.getProducts();
 
     return this.http.get<Product[]>(`${this.url}/produtos/nome/${nome}`,{headers:{Authorization:teste}});
+  }
+
+  procurarProdutoDescricao(descricao:string):Observable<Product[]> {
+    let token = window.sessionStorage.getItem("token");
+    let teste = ''
+    if(token) {
+      teste = token!.replace(/"([^"]+(?="))"/g, '$1');
+    }
+    console.log(`${this.url}/produtos/descricao/${descricao}`)
+    this.getProducts();
+
+    return this.http.get<Product[]>(`${this.url}/produtos/descricao/${descricao}`,{headers:{Authorization:teste}});
   }
 
   produto = new BehaviorSubject<any>({})

@@ -18,6 +18,15 @@ export class ProductDetailComponent implements OnInit {
   disponivel = true;
   indisponivel = false;
 
+  cozer:string = "";
+  cru:boolean = false;
+  cozido:boolean = false;
+  folha:boolean = false;
+  raiz:boolean = false;
+  fruto: boolean = false;
+  flor: boolean = false;
+  semente: boolean = false;
+
   ngOnInit(): void {
     if (this.produto.quantidade_estoque == 0) {
       this.disponivel = false;
@@ -34,11 +43,11 @@ export class ProductDetailComponent implements OnInit {
     this.onCloseDescription.emit();
   }
 
-  receitas: Postagem[] = [];
-  pancUtilizada: Postagem[] = [];
-  pancNao: Postagem[] = []
+  receitas: any[] = [];
+  pancUtilizada: any[] = [];
+  pancNao: any[] = []
   getReceitas(){
-    this.postService.getPostagens().subscribe((post: Postagem[]) => {
+    this.postService.getPostagens().subscribe((post: any[]) => {
       this.receitas = post;
       this.receitas.map((a) => a.referencias==this.produto.nome||a.referencias==this.produto.outrosNomes ? this.pancUtilizada.push(a) : this.pancNao.push(a));
       let i = 0;

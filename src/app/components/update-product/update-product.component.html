@@ -17,6 +17,52 @@
         <img class="productImageToSave" [src]="croppedImage" />
       </div>
 
+      <div class="obs">
+        <p>Selecione as características:</p>
+        <div>
+          <input type="radio" id="pode" name="cozer">
+          <label for="pode">
+            <img src="../../../assets/images/laterFromBank/care-raw.png" alt="">
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="deve" name="cozer">
+          <label for="deve">
+            <img src="../../../assets/images/laterFromBank/care-cooked.png" alt="">
+          </label>
+        </div>
+        <div>
+          <input type="checkbox" id="folha">
+          <label for="folha">
+            <img src="../../../assets/images/laterFromBank/care-leaf.png" alt="">
+          </label>
+        </div>
+        <div>
+          <input type="checkbox" id="raiz">
+          <label for="raiz">
+            <img src="../../../assets/images/laterFromBank/care-root.png" alt="">
+          </label>
+        </div>
+        <div>
+          <input type="checkbox" id="fruto">
+          <label for="fruto">
+            <img src="../../../assets/images/laterFromBank/care-fruit.png" alt="">
+          </label>
+        </div>
+        <div>
+          <input type="checkbox" id="flor">
+          <label for="flor">
+            <img src="../../../assets/images/laterFromBank/care-flower.png" alt="">
+          </label>
+        </div>
+        <div>
+          <input type="checkbox" id="semente">
+          <label for="semente">
+            <img src="../../../assets/images/laterFromBank/care-seed.png" alt="">
+          </label>
+        </div>
+      </div>
+      
       <form class=>
         <label for="">Codigo Produto:</label>
         <input type="text" name="codigo" placeholder="Digite o código do produto" [(ngModel)]="produto.codigo">

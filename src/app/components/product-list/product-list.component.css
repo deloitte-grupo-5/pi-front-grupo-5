@@ -90,8 +90,10 @@ input:focus {
   justify-content: center;
   color: #000000;
 }
+.search button {
+    cursor: pointer;
+}
 .search .limparPesquiisa{
   border-radius: 10px 0px 0px 10px ;
   height: 34px;
-
 }

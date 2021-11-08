@@ -9,11 +9,13 @@
                 <img class="plant" src="{{produto.img}}" alt="Planta Moringa">
             </div>
             <ul>
-                <li><img src="../../../assets/images/laterFromBank/care-raw.png" alt=""></li>
-                <li><img src="../../../assets/images/laterFromBank/care-leaf.png" alt=""></li>
-                <li><img src="../../../assets/images/laterFromBank/care-root.png" alt=""></li>
-                <li><img src="../../../assets/images/laterFromBank/care-fruit.png" alt=""></li>
-                <li><img src="../../../assets/images/laterFromBank/care-flower.png" alt=""></li>
+                <li *ngIf="cru"><img src="../../../assets/images/laterFromBank/care-raw.png" alt=""></li>
+                <li *ngIf="cozido"><img src="../../../assets/images/laterFromBank/care-cooked.png" alt=""></li>
+                <li *ngIf="folha"><img src="../../../assets/images/laterFromBank/care-leaf.png" alt=""></li>
+                <li *ngIf="raiz"><img src="../../../assets/images/laterFromBank/care-root.png" alt=""></li>
+                <li *ngIf="fruto"><img src="../../../assets/images/laterFromBank/care-fruit.png" alt=""></li>
+                <li *ngIf="flor"><img src="../../../assets/images/laterFromBank/care-flower.png" alt=""></li>
+                <li *ngIf="semente"><img src="../../../assets/images/laterFromBank/care-seed.png" alt=""></li>
 
             </ul>
         </div>
@@ -37,10 +39,10 @@
         <div class="bottom">
             <p>Veja algumas receitas disponíveis na nossa comunidade:</p>
             <ul>
-                <li><img src="{{pancUtilizada[0].img}}" alt="" (click)="clickReceita(pancUtilizada[0])"><a>{{pancUtilizada[0].title}}</a></li>
-                <li><img src="{{pancUtilizada[1].img}}" alt="" (click)="clickReceita(pancUtilizada[1])"><a>{{pancUtilizada[1].title}}</a></li>
-                <li><img src="{{pancUtilizada[2].img}}" alt="" (click)="clickReceita(pancUtilizada[2])"><a>{{pancUtilizada[2].title}}</a></li>
-                <li><img src="{{pancUtilizada[3].img}}" alt="" (click)="clickReceita(pancUtilizada[3])"><a>{{pancUtilizada[3].title}}</a></li>
+                <li><img src="{{pancUtilizada[0].img}}" alt="" (click)="clickReceita(pancUtilizada[0])"><a>{{pancUtilizada[0].titulo}}</a></li>
+                <li><img src="{{pancUtilizada[1].img}}" alt="" (click)="clickReceita(pancUtilizada[1])"><a>{{pancUtilizada[1].titulo}}</a></li>
+                <li><img src="{{pancUtilizada[2].img}}" alt="" (click)="clickReceita(pancUtilizada[2])"><a>{{pancUtilizada[2].titulo}}</a></li>
+                <li><img src="{{pancUtilizada[3].img}}" alt="" (click)="clickReceita(pancUtilizada[3])"><a>{{pancUtilizada[3].titulo}}</a></li>
             </ul>
         </div>
     </div>

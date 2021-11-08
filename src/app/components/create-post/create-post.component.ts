@@ -53,9 +53,6 @@ export class CreatePostComponent implements OnInit {
       id = JSON.parse(usuario!).id
       this.user.id = id
 
-
-
-
     this.postService
       .criarPostagem(
         this.titulo,

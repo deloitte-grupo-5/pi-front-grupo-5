@@ -1,6 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Endereço } from '../models/Endereço';
 @Injectable({
   providedIn: 'root',
 })
@@ -40,8 +41,6 @@ export class UserService {
     senha: string,
     usuario: string
   ) {
-    // const url = 'http://localhost:8080/usuario/cadastrar';
-    //return this.http.post(url,{nome,email,sobrenome,telefone,senha,usuario})
     return this.http.post(this.url + "/usuario/cadastrar", {
       nome,
       email,
@@ -66,14 +65,27 @@ export class UserService {
     return this.http.get(`https://viacep.com.br/ws/${cep}/json`)
   }
 
+  criarEndereco(endereco:Endereço) {
+    let token = window.sessionStorage.getItem('token');
+    let teste = '';
+    if (token) {
+      teste = token!.replace(/"([^"]+(?="))"/g, '$1');
+    }
+    return this.http.post(`${this.url}/enderecos`, endereco,{headers:{Authorization:teste}} )
+  }
+
 
   getUsuario(id : number){ let token = window.sessionStorage.getItem('token');
   let teste = '';
   if (token) {
     teste = token!.replace(/"([^"]+(?="))"/g, '$1');
   }
+<<<<<<< HEAD
 
     return this.http.get(`${this.url}/usuario/${id}`,{headers:{Authorization:teste}})
 
+=======
+    return this.http.get(`${this.url}/usuario/${id}`,{headers:{Authorization:teste}})
+>>>>>>> ec01e2b6b831c6c2eedac1987b3de9b77a3ffa10
   }
 }
