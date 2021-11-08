@@ -22,43 +22,44 @@
   <div class="obs">
     <p>Selecione as características:</p>
     <div>
-      <input type="radio" id="pode" name="cozer">
+      <input type="radio" id="pode" name="cozer" value="pode" [(ngModel)]="whichRadio">
       <label for="pode">
         <img src="../../../assets/images/laterFromBank/care-raw.png" alt="">
       </label>
     </div>
     <div>
-      <input type="radio" id="deve" name="cozer">
+      <input type="radio" id="deve" name="cozer" value="deve" [(ngModel)]="whichRadio">
       <label for="deve">
         <img src="../../../assets/images/laterFromBank/care-cooked.png" alt="">
       </label>
     </div>
+
     <div>
-      <input type="checkbox" id="folha">
+      <input type="checkbox" id="folha" [(ngModel)]="isCheckedFolha">
       <label for="folha">
         <img src="../../../assets/images/laterFromBank/care-leaf.png" alt="">
       </label>
     </div>
     <div>
-      <input type="checkbox" id="raiz">
+      <input type="checkbox" id="raiz" [(ngModel)]="isCheckedRaiz">
       <label for="raiz">
         <img src="../../../assets/images/laterFromBank/care-root.png" alt="">
       </label>
     </div>
     <div>
-      <input type="checkbox" id="fruto">
+      <input type="checkbox" id="fruto" [(ngModel)]="isCheckedFruto">
       <label for="fruto">
         <img src="../../../assets/images/laterFromBank/care-fruit.png" alt="">
       </label>
     </div>
     <div>
-      <input type="checkbox" id="flor">
+      <input type="checkbox" id="flor" [(ngModel)]="isCheckedFlor">
       <label for="flor">
         <img src="../../../assets/images/laterFromBank/care-flower.png" alt="">
       </label>
     </div>
     <div>
-      <input type="checkbox" id="semente">
+      <input type="checkbox" id="semente" [(ngModel)]="isCheckedSemente">
       <label for="semente">
         <img src="../../../assets/images/laterFromBank/care-seed.png" alt="">
       </label>
@@ -81,3 +82,4 @@
   </form>
 </section>
 </div>
+<div>

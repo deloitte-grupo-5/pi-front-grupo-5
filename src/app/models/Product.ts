@@ -11,4 +11,10 @@ export interface Product{
   quantidade_estoque:number
   quantidade:number;
   valorFrete:number;
+  cozer:string,
+  folha:boolean,
+  raiz:boolean,
+  fruto:boolean,
+  flor:boolean,
+  semente:boolean
 }

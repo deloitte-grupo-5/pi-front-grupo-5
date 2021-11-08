@@ -22,6 +22,12 @@ export class CreateProductComponent implements OnInit {
   quantidade_estoque!: number
   valorFrete!: number
   erros:string[] = []
+  isCheckedFolha!: boolean
+  isCheckedRaiz!: boolean
+  isCheckedFruto!: boolean
+  isCheckedFlor!: boolean
+  isCheckedSemente!: boolean
+  whichRadio!: string
 
   constructor(private productService: ProductService,private router: Router) {
     if(window.sessionStorage.getItem("usuario")){
@@ -49,17 +55,24 @@ export class CreateProductComponent implements OnInit {
   criarProduto() {
     let validacao = false
 
+
     let produto= {
-    codigo: this.codigo,
-    nome: this.nome,
-    nomeCientifico: this.nomeCientifico,
-    outrosNomes: this.outrosNomes,
-    descricao: this.descricao,
-    img: this.img,
-    valor:this.valor,
-    quantidade_estoque: this.quantidade_estoque,
-    valorFrete: this.valorFrete
-    }
+      codigo: this.codigo,
+      nome: this.nome,
+      nomeCientifico: this.nomeCientifico,
+      outrosNomes: this.outrosNomes,
+      descricao: this.descricao,
+      img: this.img,
+      valor:this.valor,
+      quantidade_estoque: this.quantidade_estoque,
+      valorFrete: this.valorFrete,
+      cozer: this.whichRadio,
+      folha: this.isCheckedFolha,
+      raiz: this.isCheckedRaiz,
+      fruto: this.isCheckedFruto,
+      flor: this.isCheckedFlor,
+      semente: this.isCheckedSemente
+      }
     this.productService.criarProduto(produto).subscribe(
       dados => {
         this.productService.showMensage("Produto criado com sucesso!")

@@ -88,6 +88,8 @@ export class ProductListComponent implements OnInit {
   update(produto:Product) {
     this.produtoEditando = produto;
     this.viewEdit= true;
+    this.service.onProdutosMudaram.emit()
+    this.atualizarPagina();
   }
   closeUpdate(){
     this.viewEdit= false;

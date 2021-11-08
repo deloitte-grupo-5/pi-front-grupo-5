@@ -5,11 +5,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   providedIn: 'root',
 })
 export class UserService {
+
+  private readonly url = "http://191.252.203.182:8080";
   onlogoff: EventEmitter<any> = new EventEmitter();
 
   onlogar: EventEmitter<any> = new EventEmitter();
 
-  private readonly url = "http://191.252.203.182:8080";
+
 
   constructor(
     private http: HttpClient,
@@ -71,7 +73,7 @@ export class UserService {
     teste = token!.replace(/"([^"]+(?="))"/g, '$1');
   }
 
-    return this.http.get(`http://localhost:8080/usuario/${id}`,{headers:{Authorization:"Basic YWRtaW46YWRtaW4="}})
+    return this.http.get(`${this.url}/usuario/${id}`,{headers:{Authorization:teste}})
 
   }
 }
