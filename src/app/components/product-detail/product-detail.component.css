@@ -201,7 +201,7 @@ section .bottom ul li img{
     border-radius: 10px;
 }
 
-/* section .bottom ul li a{
+section .bottom ul li a{
     background: rgba(196, 196, 196, 0.5);
     width: 180px;
     height: 135px;
@@ -218,7 +218,7 @@ section .bottom ul li img{
     display: flex;
     align-items: center;
     justify-content: center;
-} */
+}
 
 @media (max-width: 850px) {
 
