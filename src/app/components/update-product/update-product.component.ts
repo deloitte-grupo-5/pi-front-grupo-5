@@ -15,15 +15,7 @@ export class UpdateProductComponent implements OnInit {
   @Input () produto!:Product
   @Output () onCloseUpdate:EventEmitter<null> = new EventEmitter();
   mudou =false
-  id!:number;
-  codigo!:string;
-  nome!:string;
-  nomeCientifico!:string;
-  outrosNomes!:string;
-  descricao!:string;
-  valor!:number;
-  quantidade_estoque!:number;
-  valorFrete!:number;
+
 
 
   constructor(private productService:ProductService,private router:Router) { }
