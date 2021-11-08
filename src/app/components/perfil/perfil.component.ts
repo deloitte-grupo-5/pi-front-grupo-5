@@ -16,7 +16,11 @@ export class PerfilComponent implements OnInit {
   resultadoUf = '';
   adm = true;
   usuario:any
+  nome = ""
   senha = ""
+  email = ""
+  telefone = ""
+
   constructor(private router: Router,private service:UserService) {
     if (window.sessionStorage.getItem('usuario')) {
       let usuario = window.sessionStorage.getItem('usuario');
@@ -50,9 +54,10 @@ export class PerfilComponent implements OnInit {
     })
   }
 
+
+
   salvarDadosUsuario(){
     if(this.senha = ""){
-
 
     }
 

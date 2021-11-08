@@ -63,14 +63,21 @@ export class UserService {
     return this.http.get(`https://viacep.com.br/ws/${cep}/json`)
   }
 
+  criarEndereco(endereco:Endereço) {
+    let token = window.sessionStorage.getItem('token');
+    let teste = '';
+    if (token) {
+      teste = token!.replace(/"([^"]+(?="))"/g, '$1');
+    }
+    return this.http.post(`${this.url}/enderecos`, endereco,{headers:{Authorization:teste}} )
+  }
+
 
   getUsuario(id : number){ let token = window.sessionStorage.getItem('token');
   let teste = '';
   if (token) {
     teste = token!.replace(/"([^"]+(?="))"/g, '$1');
   }
-
-    return this.http.get(`http://localhost:8080/usuario/${id}`,{headers:{Authorization:"Basic YWRtaW46YWRtaW4="}})
-
+    return this.http.get(`${this.url}/usuario/${id}`,{headers:{Authorization:teste}})
   }
 }

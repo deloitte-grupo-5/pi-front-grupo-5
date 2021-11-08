@@ -117,5 +117,10 @@ export class ListaPostagemComponent implements OnInit {
       this.atualizarPostagensExibidos();
     })
   }
+
+  limparPesquisa(){
+    this.postagens = this.postagemExibidas
+    this.atualizarPostagensExibidos();
+  }
 }
 
